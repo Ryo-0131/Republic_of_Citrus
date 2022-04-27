@@ -26,3 +26,6 @@ https://docs.google.com/spreadsheets/d/1ZCJzbP8E-JMhBnML81W99TWb8m7_5vvOsB21fUtz
 
 [![Image from Gyazo](https://i.gyazo.com/bf386d87e5bb0e76f2cb89dd1d70e5df.png)](https://gyazo.com/bf386d87e5bb0e76f2cb89dd1d70e5df)
 
+# 画面遷移図
+
+[![Image from Gyazo](https://i.gyazo.com/a289a803ae6245b5435eb1c06ed63d03.png)](https://gyazo.com/a289a803ae6245b5435eb1c06ed63d03)
