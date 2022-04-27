@@ -20,7 +20,8 @@
 <br>また、ブログや農協のサイトで、比較記事は多数存在するが、記載されているのは投稿者の感じた味と美味しい季節くらいだけで「食べやすさ」「口コミ」というユーザー目線の項目はほぼ無いことにも気づき、その点にフォーカスして作ろうと思った。</br>
 
 # 洗い出した要件
-https://docs.google.com/spreadsheets/d/1ZCJzbP8E-JMhBnML81W99TWb8m7_5vvOsB21fUtznfY/edit?usp=sharing
+[要件定義シート](https://docs.google.com/spreadsheets/d/1ZCJzbP8E-JMhBnML81W99TWb8m7_5vvOsB21fUtznfY/edit?usp=sharing)
+
 
 # データベース設計
 
