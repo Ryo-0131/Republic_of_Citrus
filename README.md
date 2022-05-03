@@ -50,3 +50,68 @@
 # 画面遷移図
 
 [![Image from Gyazo](https://i.gyazo.com/a289a803ae6245b5435eb1c06ed63d03.png)](https://gyazo.com/a289a803ae6245b5435eb1c06ed63d03)
+
+# テーブル設計
+
+## users テーブル
+
+| Column             | Type    | Options                  |
+| ------------------ | ------- | ------------------------ |
+| email              | string  | null: false, unique: true|
+| encrypted_password | string  | null: false              |
+| nickname           | string  | null: false              |
+| prefecture_id      | integer | null: false              |
+| favorite_id        | integer | null: false              |
+| introduction       | text    | null: false              |
+
+### Association
+
+- has_many :reviews, dependent: :destroy
+- has_many :likes, dependent: :destroy
+
+
+## items テーブル
+
+| Column             | Type    | Options                  |
+| ------------------ | ------- | ------------------------ |
+| item_name          | string  | null: false              |
+| description        | text    | null: false              |
+| image_url          | string  | null: false              |
+| star               | float   | null: false              |
+
+### Association
+
+- has_many :reviews, dependent: :destroy
+- has_many :likes, dependent: :destroy
+
+
+## reviews テーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------  | ------------------------------ |
+| comment            | text       | null: false                    |
+| all_rating         | integer    | null: false                    |
+| rating1            | integer    | null: false                    |
+| rating2            | integer    | null: false                    |
+| rating3            | integer    | null: false                    |
+| rating4            | integer    | null: false                    |
+| user_id            | references | null: false, foreign_key: true |
+| item_id            | references | null: false, foreign_key: true |
+
+### Association
+
+belongs_to :user
+belongs_to :item
+
+
+## likes テーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------  | ------------------------------ |
+| user_id            | references | null: false, foreign_key: true |
+| item_id            | references | null: false, foreign_key: true |
+
+### Association
+
+belongs_to :user
+belongs_to :item
