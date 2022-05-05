@@ -55,23 +55,21 @@
       <label class="form-text">お住まい</label>
       <span class="indispensable">必須</span>
     </div>
-        <%= f.text_field :email, class:"input-default", id:"prefecture_id", placeholder:"お住まいを選択してください", autofocus: true %>
-<%# <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %> 
-  </div>
+       <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>   
+    </div>
 
     <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">お気に入り</label>
+      <label class="form-text">お気に入りの柑橘類</label>
       <span class="indispensable">必須</span>
     </div>
-        <%= f.text_field :favorite_id, class:"input-default", id:"favorite_id", placeholder:"お気に入りの柑橘類をどうぞ", autofocus: true %>
-<%# <%= f.collection_select(:favorite_id, Favorite.all, :id, :name, {}, {class:"select-box", id:"favorite"}) %> 
-  </div>
+        <%= f.collection_select(:favorite_id, Favorite.all, :id, :name, {}, {class:"select-box", id:"favorite"}) %>   
+    </div>
 
       <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">自己紹介</label>
-      <span class="indispensable">必須</span>
+      <span class="indispensable">任意</span>
     </div>
         <%= f.text_field :introduction, class:"input-default", id:"introduction", placeholder:"ご自由に記入ください", autofocus: true %>
   </div>

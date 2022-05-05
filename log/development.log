@@ -2456,3 +2456,200 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 11790)
 
 
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:59:09 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 205)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2575)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2603ms (Views: 2559.8ms | ActiveRecord: 13.9ms | Allocations: 1707048)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:01:04 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 47.6ms | Allocations: 9007)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 74.3ms | ActiveRecord: 0.0ms | Allocations: 18738)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:03:43 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2666)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 14566)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:08:26 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 5169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 24.2ms | ActiveRecord: 32.0ms | Allocations: 23712)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:08:52 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 4990)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 27925)
+
+
+Started POST "/users" for ::1 at 2022-05-05 16:10:22 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"0RvNNEJXoubIi7T4ipDrmNSlT6Cnswory81sg+qrWPpBn3/kqOYKOBRWzBm36HzaFaMqUWN2tvg1WNdZNLi1Jg==", "user"=>{"nickname"=>"", "email"=>"takemoto@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"1", "favorite_id"=>"1", "introduction"=>"a"}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (20.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto@com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 528)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4715)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 385ms (Views: 16.6ms | ActiveRecord: 23.4ms | Allocations: 26366)
+
+
+Started GET "/users" for ::1 at 2022-05-05 16:32:55 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:33:00 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 744)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 6476)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2439ms (Views: 2362.3ms | ActiveRecord: 38.1ms | Allocations: 1726614)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:35:02 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4196)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 16311)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:35:10 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 16283)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:35:16 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 4189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 17146)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:35:22 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.0ms | Allocations: 16306)
+
+
+Started POST "/users" for ::1 at 2022-05-05 16:35:54 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"R1NEh+gXbF6DXMMYWlwNdhI0C7aCwMSfr8wQaufa1bzX1/ZXAqbEgF+Bu/lnJJo00zJuR0YFeExRWauwOck4YA==", "user"=>{"nickname"=>"", "email"=>"takemoto@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"1", "favorite_id"=>"1", "introduction"=>""}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto@com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 528)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4709)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 359ms (Views: 38.5ms | ActiveRecord: 4.5ms | Allocations: 35667)
+
+
+Started GET "/users" for ::1 at 2022-05-05 16:36:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:36:38 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 4289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 22.1ms | ActiveRecord: 7.4ms | Allocations: 21604)
+
+
