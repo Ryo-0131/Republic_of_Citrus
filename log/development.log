@@ -2653,3 +2653,1641 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 55ms (Views: 22.1ms | ActiveRecord: 7.4ms | Allocations: 21604)
 
 
+Started GET "/" for ::1 at 2022-05-05 16:40:21 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 683)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 68.7ms | ActiveRecord: 0.0ms | Allocations: 16706)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 16:40:25 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 632)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 3320)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms | Allocations: 13006)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:40:29 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 5021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 14157)
+
+
+Started GET "/" for ::1 at 2022-05-05 16:40:45 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 531)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 9851)
+
+
+Started GET "/" for ::1 at 2022-05-05 16:43:01 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms | Allocations: 13125)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 16:43:03 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 543)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.3ms | Allocations: 2172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.0ms | Allocations: 12655)
+
+
+Started GET "/" for ::1 at 2022-05-05 16:45:01 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 10692)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 16:45:03 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 538)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 12613)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:45:06 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 5018)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 14995)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 16:46:26 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 22.6ms | ActiveRecord: 7.2ms | Allocations: 22394)
+
+
+Started POST "/users" for ::1 at 2022-05-05 16:47:03 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"RxKtXgXX5b6o65IWMLWisO4jhNEnfL61nirF+NEjSD3Xlh+O72ZNYHQ26vcNzTXyLyXhIOO5AmZgv34iDzCl4Q==", "user"=>{"nickname"=>"aaaaaa", "email"=>"takemoto@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"3", "favorite_id"=>"4", "introduction"=>""}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto@com' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 626)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 5037)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 326ms (Views: 22.8ms | ActiveRecord: 5.5ms | Allocations: 36461)
+
+
+Started POST "/users" for ::1 at 2022-05-05 16:48:08 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"mzHFTMKLEIJ8Sp9FbIcf9azwLvsPFloKjsVWyzoraBoLtXecKDq4XKCX56RR/4i3bfZLCsvT5tlwUO0R5DiFxg==", "user"=>{"nickname"=>"aaaaa", "email"=>"takemoto@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"5", "favorite_id"=>"4", "introduction"=>""}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (23.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto@com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 778)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4990)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 329ms (Views: 21.8ms | ActiveRecord: 23.4ms | Allocations: 21935)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:22:27 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"FABkpSrD+Bblkl3Z59zIbEeXshhZRn2uRLNTpwyhELeEhNZ1wHJQyDlPJTjapF8uhpHX6Z2DwX26Juh90rL9aw==", "user"=>{"nickname"=>"", "email"=>"takemoto@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"6", "favorite_id"=>"8", "introduction"=>""}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto@com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 778)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 5018)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 316ms (Views: 36.0ms | ActiveRecord: 2.7ms | Allocations: 35577)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:26:27 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"z0Xck4CsVlrhiDW+tkw17JHgP8dfo42iw8BISr5Q+5JfwW5Dah3+hD1VTV+LNKKuUOZaNptmMXE9VfOQYEMWTg==", "user"=>{"nickname"=>"aaaaaa", "email"=>"takemoto", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"5", "favorite_id"=>"4", "introduction"=>"aaaa"}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 759)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 5016)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 294ms (Views: 23.2ms | ActiveRecord: 2.3ms | Allocations: 35515)
+
+
+Started GET "/users" for ::1 at 2022-05-05 17:27:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-05-05 17:27:45 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.5ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 5020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 15733)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:27:57 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZdG0Nhse4wVphtGsdCfN2gksox5b0Pt0cL5utWcXE/b1VQbm8a9L27VbqU1JX1qYyCrG758VR6eOK9VvuQT+Kg==", "user"=>{"nickname"=>"aaaaaa", "email"=>"aaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"3", "favorite_id"=>"5", "introduction"=>""}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'aaaa' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 759)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 5010)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 337ms (Views: 27.7ms | ActiveRecord: 1.3ms | Allocations: 36527)
+
+
+Started GET "/users" for ::1 at 2022-05-05 17:39:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-05-05 17:39:12 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 48.9ms | ActiveRecord: 0.0ms | Allocations: 22481)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:39:35 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"fGASvS4J1e8b1ng7ht4Pr9KUJ4ze9fq6yL81nWEGVXLs5KBtxLh9MccLANq7ppjtE5JCfRowRmk2Ko5HvxW4rg==", "user"=>{"nickname"=>"aaaa", "email"=>"aaaaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"7", "favorite_id"=>"4", "introduction"=>""}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'aaaaaaa' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 223)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 4744)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 362ms (Views: 52.5ms | ActiveRecord: 1.8ms | Allocations: 33503)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:40:00 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"LftXIn0Dq+LF37UVIlHQJ4WoBAjdryKFXBcptZyU7D+9f+Xyl7IDPBkCzfQfKUdlRK5h+RlqnlaigpJvQocB4w==", "user"=>{"nickname"=>"aaaaaaa", "email"=>"aaaaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"6", "favorite_id"=>"7", "introduction"=>"aaaaaa"}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'aaaaaaa' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 222)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 5018)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 374ms (Views: 41.9ms | ActiveRecord: 3.6ms | Allocations: 26267)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:41:32 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"HGjoIa0DlFVCCyFjQpvwpRj7QjvT9TXVZBBzYT+2d/KM7FrxR7I8i57WWYJ/42fn2f0nyhcwiQaahci74aWaLg==", "user"=>{"nickname"=>"", "email"=>"aaaaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"1", "favorite_id"=>"1", "introduction"=>""}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'aaaaaaa' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 891)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 5119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 22.6ms | ActiveRecord: 6.1ms | Allocations: 31338)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:45:18 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"oD0i/OHLHJe+rYoDEUy1bcsENkHxHwHFpvh58cydqdAwuZAsC3q0SWJw8uIsNCIvCgJTsDXavRZYbcIrEo5EDA==", "user"=>{"nickname"=>"aaaaa", "email"=>"aaaaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"6", "favorite_id"=>"5", "introduction"=>""}, "commit"=>"会員登録"}
+[31mUnpermitted parameters: :nickname, :prefecture_id, :favorite_id, :introduction[0m
+  [1m[35m (13.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'aaaaaaa' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.5ms | Allocations: 964)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 20.1ms | Allocations: 6420)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2531ms (Views: 2121.4ms | ActiveRecord: 33.0ms | Allocations: 1700966)
+
+
+Started GET "/users" for ::1 at 2022-05-05 17:47:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-05-05 17:47:42 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 5082)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 41.0ms | ActiveRecord: 8.3ms | Allocations: 24492)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 17:48:59 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4897)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 15666)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:49:20 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"BBbAV6amyEdRSiiWO2F46+TL4asJkfLfIXlGGh9jTASUknKHTBdgmY2XUHcGGe+pJc2EWs1UTgzf7P3AwXCh2A==", "user"=>{"nickname"=>"かんきつ太郎", "email"=>"kankitsutaro@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"5", "favorite_id"=>"2", "introduction"=>""}, "commit"=>"会員登録"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kankitsutaro@com' LIMIT 1[0m
+  [1m[36mUser Create (5.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `prefecture_id`, `favorite_id`, `introduction`, `created_at`, `updated_at`) VALUES ('kankitsutaro@com', '$2a$12$vI6Xbk0DpgV/K/8pX5a9guV0bD2xEn0HLQkGuWVgH23Ak2lONkXwK', 'かんきつ太郎', 5, 2, '', '2022-05-05 08:49:21.004648', '2022-05-05 08:49:21.004648')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 6.3ms | Allocations: 8549)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Field 'birthday' doesn't have a default value):
+  
+mysql2 (0.5.3) lib/mysql2/client.rb:131:in `_query'
+mysql2 (0.5.3) lib/mysql2/client.rb:131:in `block in query'
+mysql2 (0.5.3) lib/mysql2/client.rb:130:in `handle_interrupt'
+mysql2 (0.5.3) lib/mysql2/client.rb:130:in `query'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:201:in `block (2 levels) in execute'
+activesupport (6.0.4.8) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (6.0.4.8) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (6.0.4.8) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:200:in `block in execute'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract_adapter.rb:728:in `block (2 levels) in log'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract_adapter.rb:727:in `block in log'
+activesupport (6.0.4.8) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract_adapter.rb:718:in `log'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:199:in `execute'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/mysql/database_statements.rb:41:in `execute'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:210:in `execute_and_free'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/mysql/database_statements.rb:46:in `exec_query'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract/database_statements.rb:135:in `exec_insert'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract/database_statements.rb:166:in `insert'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract/query_cache.rb:22:in `insert'
+activerecord (6.0.4.8) lib/active_record/persistence.rb:375:in `_insert_record'
+activerecord (6.0.4.8) lib/active_record/persistence.rb:932:in `_create_record'
+activerecord (6.0.4.8) lib/active_record/counter_cache.rb:166:in `_create_record'
+activerecord (6.0.4.8) lib/active_record/locking/optimistic.rb:79:in `_create_record'
+activerecord (6.0.4.8) lib/active_record/attribute_methods/dirty.rb:211:in `_create_record'
+activerecord (6.0.4.8) lib/active_record/callbacks.rb:331:in `block in _create_record'
+activesupport (6.0.4.8) lib/active_support/callbacks.rb:135:in `run_callbacks'
+activesupport (6.0.4.8) lib/active_support/callbacks.rb:825:in `_run_create_callbacks'
+activerecord (6.0.4.8) lib/active_record/callbacks.rb:331:in `_create_record'
+activerecord (6.0.4.8) lib/active_record/timestamp.rb:110:in `_create_record'
+activerecord (6.0.4.8) lib/active_record/persistence.rb:905:in `create_or_update'
+activerecord (6.0.4.8) lib/active_record/callbacks.rb:327:in `block in create_or_update'
+activesupport (6.0.4.8) lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+activerecord (6.0.4.8) lib/active_record/autosave_association.rb:366:in `around_save_collection_association'
+activesupport (6.0.4.8) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+activesupport (6.0.4.8) lib/active_support/callbacks.rb:139:in `run_callbacks'
+activesupport (6.0.4.8) lib/active_support/callbacks.rb:825:in `_run_save_callbacks'
+activerecord (6.0.4.8) lib/active_record/callbacks.rb:327:in `create_or_update'
+activerecord (6.0.4.8) lib/active_record/timestamp.rb:128:in `create_or_update'
+activerecord (6.0.4.8) lib/active_record/persistence.rb:470:in `save'
+activerecord (6.0.4.8) lib/active_record/validations.rb:47:in `save'
+activerecord (6.0.4.8) lib/active_record/transactions.rb:314:in `block in save'
+activerecord (6.0.4.8) lib/active_record/transactions.rb:375:in `block in with_transaction_returning_status'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract/database_statements.rb:280:in `block in transaction'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract/transaction.rb:280:in `block in within_new_transaction'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (6.0.4.8) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract/transaction.rb:278:in `within_new_transaction'
+activerecord (6.0.4.8) lib/active_record/connection_adapters/abstract/database_statements.rb:280:in `transaction'
+activerecord (6.0.4.8) lib/active_record/transactions.rb:212:in `transaction'
+activerecord (6.0.4.8) lib/active_record/transactions.rb:366:in `with_transaction_returning_status'
+activerecord (6.0.4.8) lib/active_record/transactions.rb:314:in `save'
+activerecord (6.0.4.8) lib/active_record/suppressor.rb:44:in `save'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:19:in `create'
+actionpack (6.0.4.8) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.8) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.8) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.8) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.8) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.8) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.8) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.8) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.8) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.8) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.8) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.8) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.8) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.8) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.8) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.8) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.8) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.8) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.8) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.8) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.8) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.8) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.8) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.4.8) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.8) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateItems (20220504083757)
+  [1m[35m (43.2ms)[0m  [1m[35mDROP TABLE `items`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (8.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20220504083757'[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20220504073118)
+  [1m[35m (47.4ms)[0m  [1m[35mDROP INDEX `index_users_on_reset_password_token` ON `users`[0m
+  [1m[35m (44.8ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  [1m[35m (6.1ms)[0m  [1m[35mDROP TABLE `users`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20220504073118'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20220504073118)
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (81.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `nickname` varchar(255) NOT NULL, `prefecture_id` int NOT NULL, `favorite_id` int NOT NULL, `introduction` text NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (46.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (44.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220504073118')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateItems (20220504083757)
+  [1m[35m (40.6ms)[0m  [1m[35mCREATE TABLE `items` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `item_name` varchar(255) NOT NULL, `description` text NOT NULL, `image_url` varchar(255) NOT NULL, `star` float(24) NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220504083757')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (21.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/users" for ::1 at 2022-05-05 17:52:58 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"BBbAV6amyEdRSiiWO2F46+TL4asJkfLfIXlGGh9jTASUknKHTBdgmY2XUHcGGe+pJc2EWs1UTgzf7P3AwXCh2A==", "user"=>{"nickname"=>"かんきつ太郎", "email"=>"kankitsutaro@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"5", "favorite_id"=>"2", "introduction"=>""}, "commit"=>"会員登録"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kankitsutaro@com' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `prefecture_id`, `favorite_id`, `introduction`, `created_at`, `updated_at`) VALUES ('kankitsutaro@com', '$2a$12$PO/3UfYr4A77FCgoMJGRe.ihG1nhtlKs3MZwB4Jxj8zO91z7FPma6', 'かんきつ太郎', 5, 2, '', '2022-05-05 08:52:59.301288', '2022-05-05 08:52:59.301288')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 335ms (ActiveRecord: 20.6ms | Allocations: 22550)
+
+
+Started GET "/" for ::1 at 2022-05-05 17:52:59 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1505)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 29.1ms | ActiveRecord: 3.2ms | Allocations: 12571)
+
+
+Started GET "/" for ::1 at 2022-05-05 17:53:01 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1075)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 1.9ms | Allocations: 10266)
+
+
+Started GET "/" for ::1 at 2022-05-05 17:53:03 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.5ms | Allocations: 23272)
+
+
+Started GET "/" for ::1 at 2022-05-05 17:53:19 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.4ms | Allocations: 10255)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-05 17:53:20 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0A/OrucCinabud2nw1V5T7ucQ/+UcefO+ZQvsV+9OZdAi3x+DbMiqEdkpUb+Le4NepomDlC0Wx0HAZRrga7USw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms | Allocations: 3554)
+
+
+Started GET "/" for ::1 at 2022-05-05 17:53:20 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 9363)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 17:53:21 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.0ms | Allocations: 2728)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 6391)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.0ms | Allocations: 20381)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-05 17:53:29 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"607m9YsxfszTg1S7nquOwTxOimDvfLBtOAtXLvTgAmskZgz0Ei3kXz0qRqkZHuiRDDvpo3TQVGJwpLK1CDsYaA==", "user"=>{"email"=>"kankitsutaro@com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kankitsutaro@com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 290ms (ActiveRecord: 16.6ms | Allocations: 4507)
+
+
+Started GET "/" for ::1 at 2022-05-05 17:53:29 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.4ms | Allocations: 14698)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-05 17:55:35 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dTfhMexXdQ3hbSX4cQvBWNVBKpqLGAQY80/+tjs+z2JcFQ8movpB4CRl4K4qcMe/QrEr27W1Gye0dU+hzKZOlg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms | Allocations: 2727)
+
+
+Started GET "/" for ::1 at 2022-05-05 17:55:35 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 9342)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 17:55:37 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4140)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 13516)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:55:58 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"UlPFEAPjbC1wUOnxyGQIN0yg9tlyK/k2e/f8LQCKufnXgCBbQ5ZiZrIvsI/JOMr0xVb3hhtjinGW1QBM09nqvA==", "user"=>{"nickname"=>"takemoto", "email"=>"takemoto@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"4", "favorite_id"=>"5", "introduction"=>""}, "commit"=>"会員登録"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto@com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 223)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 4742)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 290ms (Views: 18.9ms | ActiveRecord: 1.5ms | Allocations: 26805)
+
+
+Started POST "/users" for ::1 at 2022-05-05 17:56:11 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"TvfrU18xjjt4HjuFVP4zhkZicuTzzNtEApqBoqQtYV0zc+/U/ibQzyy5ul2Oa24YpJCytUgb9A9KSzip7NoeFA==", "user"=>{"nickname"=>"takemoto", "email"=>"takemoto@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"4", "favorite_id"=>"1", "introduction"=>""}, "commit"=>"会員登録"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto@com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 223)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4585)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 290ms (Views: 19.4ms | ActiveRecord: 1.3ms | Allocations: 26186)
+
+
+Started GET "/users" for ::1 at 2022-05-05 17:58:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-05-05 17:58:40 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 4335)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 6675)
+
+
+  
+ActionView::Template::Error (The asset "furima-logo-color.png" is not present in the asset pipeline.
+):
+    1: <header class='second-header'>
+    2:   <%= link_to image_tag("furima-logo-color.png", class:"second-logo"), "/" %>
+    3: </header>
+    4: 
+    5: <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+  
+app/views/devise/registrations/new.html.erb:2
+Started GET "/users/sign_up" for ::1 at 2022-05-05 17:59:04 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4990)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 15762)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 17:59:59 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.0ms | Allocations: 18410)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 18:00:26 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 4187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.0ms | Allocations: 18832)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:00:28 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 517)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 11247)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:00:31 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 538)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2164)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms | Allocations: 13104)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:03:53 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1259)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3643)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>ログイン</h2>
+
+<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン" ,class:"login-red-btn" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+
+):
+1:    <h2>ログイン</h2>
+2:    
+3:    <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+4:    
+5:        <div class="form-group">
+6:        <div class='form-text-wrap'>
+7:          <label class="form-text">メールアドレス</label>
+8:          <span class="indispensable">必須</span>
+9:        </div>
+10:        <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+11:      </div>
+12:    
+13:      <div class="form-group">
+14:        <div class='form-text-wrap'>
+15:          <label class="form-text">パスワード</label>
+16:          <span class="indispensable">必須</span>
+17:        </div>
+18:        <%= f.password_field :password, class:"input-default", id:"password", %>
+19:      </div>
+20:    
+21:      <% if devise_mapping.rememberable? %>
+22:        <div class="field">
+23:          <%= f.check_box :remember_me %>
+24:          <%= f.label :remember_me %>
+25:        </div>
+26:      <% end %>
+27:    
+28:      <div class="actions">
+29:        <%= f.submit "ログイン" ,class:"login-red-btn" %>
+30:      </div>
+31:    <% end %>
+32:    
+33:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:38: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:38: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:38: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:38: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:38: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:38: syntax error, unexpected end, expecting ')'
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:04:39 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1808)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 13482)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:05:19 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1264)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3646)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>ログイン</h2>
+
+<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン" ,class:"login-red-btn" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+
+
+
+
+
+
+):
+1:    <h2>ログイン</h2>
+2:    
+3:    <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+4:    
+5:        <div class="form-group">
+6:        <div class='form-text-wrap'>
+7:          <label class="form-text">メールアドレス</label>
+8:          <span class="indispensable">必須</span>
+9:        </div>
+10:        <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+11:      </div>
+12:    
+13:      <div class="form-group">
+14:        <div class='form-text-wrap'>
+15:          <label class="form-text">パスワード</label>
+16:          <span class="indispensable">必須</span>
+17:        </div>
+18:        <%= f.password_field :password, class:"input-default", id:"password", %>
+19:      </div>
+20:    
+21:      <% if devise_mapping.rememberable? %>
+22:        <div class="field">
+23:          <%= f.check_box :remember_me %>
+24:          <%= f.label :remember_me %>
+25:        </div>
+26:      <% end %>
+27:    
+28:      <div class="actions">
+29:        <%= f.submit "ログイン" ,class:"login-red-btn" %>
+30:      </div>
+31:    <% end %>
+32:    
+33:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:43: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:43: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:43: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:43: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:43: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:43: syntax error, unexpected end, expecting ')'
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:06:28 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1268)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3651)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>ログイン</h2>
+
+<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+  <div class="field">
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", %>
+  </div>
+
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン" ,class:"login-red-btn" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+
+
+
+
+
+
+
+
+):
+1:    <h2>ログイン</h2>
+2:    
+3:    <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+4:      <div class="field">
+5:      <div class="form-group">
+6:        <div class='form-text-wrap'>
+7:          <label class="form-text">メールアドレス</label>
+8:          <span class="indispensable">必須</span>
+9:        </div>
+10:        <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+11:      </div>
+12:    
+13:      <div class="form-group">
+14:        <div class='form-text-wrap'>
+15:          <label class="form-text">パスワード</label>
+16:          <span class="indispensable">必須</span>
+17:        </div>
+18:        <%= f.password_field :password, class:"input-default", id:"password", %>
+19:      </div>
+20:    
+21:      </div>
+22:    
+23:      <% if devise_mapping.rememberable? %>
+24:        <div class="field">
+25:          <%= f.check_box :remember_me %>
+26:          <%= f.label :remember_me %>
+27:        </div>
+28:      <% end %>
+29:    
+30:      <div class="actions">
+31:        <%= f.submit "ログイン" ,class:"login-red-btn" %>
+32:      </div>
+33:    <% end %>
+34:    
+35:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:18: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected end, expecting ')'
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:06:34 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1814)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 13483)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:07:46 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1324)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3714)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>ログイン</h2>
+
+<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+  <div class="field">
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+    </div>
+      </div>
+
+  <div class="field">
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン" ,class:"login-red-btn" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", %>
+  </div>
+
+
+
+
+
+
+):
+1:    <h2>ログイン</h2>
+2:    
+3:    <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+4:    
+5:      <div class="form-group">
+6:        <div class='form-text-wrap'>
+7:      <div class="field">
+8:        <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+9:      </div>
+10:        </div>
+11:          </div>
+12:    
+13:      <div class="field">
+14:        <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
+15:      </div>
+16:    
+17:      <% if devise_mapping.rememberable? %>
+18:        <div class="field">
+19:          <%= f.check_box :remember_me %>
+20:          <%= f.label :remember_me %>
+21:        </div>
+22:      <% end %>
+23:    
+24:      <div class="actions">
+25:        <%= f.submit "ログイン" ,class:"login-red-btn" %>
+26:      </div>
+27:    <% end %>
+28:    
+29:    <%= render "devise/shared/links" %>
+30:    
+31:    
+32:    
+33:    
+34:      <div class="form-group">
+35:        <div class='form-text-wrap'>
+36:          <label class="form-text">メールアドレス</label>
+37:          <span class="indispensable">必須</span>
+38:        </div>
+39:        <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+40:      </div>
+41:    
+42:      <div class="form-group">
+43:        <div class='form-text-wrap'>
+44:          <label class="form-text">パスワード</label>
+45:          <span class="indispensable">必須</span>
+46:        </div>
+47:        <%= f.password_field :password, class:"input-default", id:"password", %>
+48:      </div>
+  
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:56: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:56: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:56: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:56: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:56: syntax error, unexpected end, expecting ')'
+app/views/devise/sessions/new.html.erb:47: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:56: syntax error, unexpected end, expecting ')'
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:07:53 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1819)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 13496)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:08:28 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2116)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 13806)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:08:29 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 157)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1287)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms | Allocations: 11570)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:09:30 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2199)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 4594)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_second-footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/ishiiryo/rpc_app/app/views"
+  * "/Users/ishiiryo/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.8.1/app/views"
+  * "/Users/ishiiryo/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actiontext-6.0.4.8/app/views"
+  * "/Users/ishiiryo/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionmailbox-6.0.4.8/app/views"
+):
+    29: </div>
+    30: <% end %>
+    31: 
+    32: <%= render "shared/second-footer"%>
+  
+app/views/devise/sessions/new.html.erb:32
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:09:43 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 748)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 12434)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:10:07 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 12426)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:10:20 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 747)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 12418)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:10:33 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 493)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.0ms | Allocations: 16903)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:10:35 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 12505)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:12:42 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1149)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 12816)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:12:45 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 514)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 11193)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:21:12 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms | Allocations: 10191)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:21:54 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 629)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 10904)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:26:46 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 11550)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-05 18:26:47 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.4ms | Allocations: 171)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1138)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.0ms | Allocations: 26010)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-05 18:27:01 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"TLBFUAx3hu8LUkvq6aLtlJWSuVBS8U6CKLY+FQsVOWhUPeUE46r52mqqChSZ+mxeh4ffVK5iK9XRIjB5BtnkcQ==", "user"=>{"email"=>"kankitsutaro@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kankitsutaro@com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 276ms (ActiveRecord: 0.6ms | Allocations: 8043)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:27:02 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 249.7ms | Allocations: 94854)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 5.3ms | Allocations: 96137)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fdceefef9c0>:0x00007fdcef1c6668>):
+    2: 
+    3:       <%# ログインの有無で表示が変わるように分岐%>
+    4:      <% if user_signed_in? %>
+    5:       <li><%= link_to current_user.nickname, user_path(id: current_user.id), class: "user-nickname" %></li>
+    6:       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+    7:       <% else %>
+    8:       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+  
+app/views/items/index.html.erb:5
+Started GET "/" for ::1 at 2022-05-05 18:33:48 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 9505)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 74.4ms | ActiveRecord: 0.4ms | Allocations: 28256)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:33:51 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 16.5ms | ActiveRecord: 0.8ms | Allocations: 12569)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:36:42 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (23.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.7ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 36.6ms | ActiveRecord: 23.2ms | Allocations: 18850)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:36:47 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.5ms | Allocations: 12548)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:37:35 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.4ms | Allocations: 16834)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:38:37 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.0ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 566)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.3ms | Allocations: 13983)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:38:49 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.0ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2169)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 4582)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 5:Integer):
+    14:           </tr>
+    15:           <tr>
+    16:             <th class="table__col1">お住まい</th>
+    17:             <td class="table__col2"><%= @user.prefecture.id.name %></td>
+    18:           </tr>
+    19: 
+    20: 
+  
+app/views/users/show.html.erb:17
+Started GET "/users/1" for ::1 at 2022-05-05 18:38:55 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1919)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms | Allocations: 4456)
+
+
+  
+ActionView::Template::Error (undefined method `id_name' for #<Prefecture:0x00007fdcef30de18>):
+    14:           </tr>
+    15:           <tr>
+    16:             <th class="table__col1">お住まい</th>
+    17:             <td class="table__col2"><%= @user.prefecture.id_name %></td>
+    18:           </tr>
+    19: 
+    20: 
+  
+app/views/users/show.html.erb:17
+Started GET "/users/1" for ::1 at 2022-05-05 18:39:02 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.0ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 564)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.3ms | Allocations: 13920)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:39:55 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 562)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.4ms | Allocations: 14536)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:41:23 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.4ms | Allocations: 13994)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:41:39 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1440)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 1.5ms | Allocations: 13843)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:41:40 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 171)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 29.6ms | ActiveRecord: 5.9ms | Allocations: 12526)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:41:45 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 1.5ms | Allocations: 12858)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:41:46 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 46.6ms | ActiveRecord: 2.0ms | Allocations: 12518)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:41:51 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.9ms | Allocations: 12832)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:41:53 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.6ms | Allocations: 12509)
+
+
+Started GET "/" for ::1 at 2022-05-05 18:41:53 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 2.4ms | Allocations: 12847)
+
+
+Started GET "/users/1" for ::1 at 2022-05-05 18:42:04 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 49.0ms | ActiveRecord: 8.7ms | Allocations: 26615)
+
+
