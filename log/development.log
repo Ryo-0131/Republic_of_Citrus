@@ -1809,3 +1809,650 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 23776)
 
 
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:35:35 +0900
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1964)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 3.8ms | Allocations: 14481)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> 
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      会員情報入力
+    </h1>
+  </div>
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ニックネーム</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+    <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード(確認)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ユーザー名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :email, class:"input-default", id:"user_name", placeholder:"お名前", autofocus: true %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ユーザー名</label>
+      <span class="indispensable">必須</span>
+    </div>
+<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+  </div>
+
+
+
+  
+  <div class="form-group">
+    <h2 class='form-bottom-text'>
+      「会員登録」のボタンを押すことにより、
+      <span>利用規約</span>
+      <br>に同意したものとみなします
+    </h2>
+  </div>
+  <div class='register-btn'>
+    <%= f.submit "会員登録" ,class:"register-red-btn" %>
+  </div>
+  <p class='register-info'>本人情報の登録について</p>
+</div>
+<% end %>
+
+<%# 
+ここから %>
+
+  <div class="field">
+    <%= f.label : %><br />
+    <%= f.text_field :prefecture_id, autocomplete: "new-password" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :favorite_id %><br />
+    <%= f.text_field :favorite_id, autocomplete: "new-password" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :prefecture_id %><br />
+    <%= f.text_field :prefecture_id, autocomplete: "new-password" %>
+  </div>
+
+      <div class="field">
+    <%= f.label :introduction %><br />
+    <%= f.text_field :prefecture_id, autocomplete: "new-password" %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+2:    <%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> 
+3:    <div class='form-wrap'>
+4:      <div class='form-header'>
+5:        <h1 class='form-header-text'>
+6:          会員情報入力
+7:        </h1>
+8:      </div>
+9:    
+10:        <%= render "devise/shared/error_messages", resource: resource %>
+11:    
+12:        <div class="form-group">
+13:        <div class='form-text-wrap'>
+14:          <label class="form-text">ニックネーム</label>
+15:          <span class="indispensable">必須</span>
+16:        </div>
+17:        <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %>
+18:      </div>
+19:    
+20:        <div class="form-group">
+21:        <div class='form-text-wrap'>
+22:          <label class="form-text">メールアドレス</label>
+23:          <span class="indispensable">必須</span>
+24:        </div>
+25:        <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+26:      </div>
+27:    
+28:      <div class="form-group">
+29:        <div class='form-text-wrap'>
+30:          <label class="form-text">パスワード</label>
+31:          <span class="indispensable">必須</span>
+32:        </div>
+33:        <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+34:        <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+35:      </div>
+36:    
+37:      <div class="form-group">
+38:        <div class='form-text-wrap'>
+39:          <label class="form-text">パスワード(確認)</label>
+40:          <span class="indispensable">必須</span>
+41:        </div>
+42:        <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+43:      </div>
+44:    
+45:      <div class="form-group">
+46:        <div class='form-text-wrap'>
+47:          <label class="form-text">ユーザー名</label>
+48:          <span class="indispensable">必須</span>
+49:        </div>
+50:        <%= f.text_field :email, class:"input-default", id:"user_name", placeholder:"お名前", autofocus: true %>
+51:      </div>
+52:    
+53:        <div class="form-group">
+54:        <div class='form-text-wrap'>
+55:          <label class="form-text">ユーザー名</label>
+56:          <span class="indispensable">必須</span>
+57:        </div>
+58:    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+59:      </div>
+60:    
+61:    
+62:    
+63:      
+64:      <div class="form-group">
+65:        <h2 class='form-bottom-text'>
+66:          「会員登録」のボタンを押すことにより、
+67:          <span>利用規約</span>
+68:          <br>に同意したものとみなします
+69:        </h2>
+70:      </div>
+71:      <div class='register-btn'>
+72:        <%= f.submit "会員登録" ,class:"register-red-btn" %>
+73:      </div>
+74:      <p class='register-info'>本人情報の登録について</p>
+75:    </div>
+76:    <% end %>
+77:    
+78:    <%# 
+79:    ここから %>
+80:    
+81:      <div class="field">
+82:        <%= f.label : %><br />
+83:        <%= f.text_field :prefecture_id, autocomplete: "new-password" %>
+84:      </div>
+85:    
+86:        <div class="field">
+87:        <%= f.label :favorite_id %><br />
+88:        <%= f.text_field :favorite_id, autocomplete: "new-password" %>
+89:      </div>
+90:    
+91:        <div class="field">
+92:        <%= f.label :prefecture_id %><br />
+93:        <%= f.text_field :prefecture_id, autocomplete: "new-password" %>
+94:      </div>
+95:    
+96:          <div class="field">
+97:        <%= f.label :introduction %><br />
+98:        <%= f.text_field :prefecture_id, autocomplete: "new-password" %>
+99:      </div>
+100:    
+101:    
+102:      <div class="actions">
+103:        <%= f.submit "Sign up" %>
+104:      </div>
+105:    <% end %>
+106:    
+107:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:82: syntax error, unexpected ':'
+app/views/devise/registrations/new.html.erb:105: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:110: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:82: syntax error, unexpected ':'
+app/views/devise/registrations/new.html.erb:105: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:110: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:82: syntax error, unexpected ':'
+app/views/devise/registrations/new.html.erb:105: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:110: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:82: syntax error, unexpected ':'
+app/views/devise/registrations/new.html.erb:105: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:110: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:82: syntax error, unexpected ':'
+app/views/devise/registrations/new.html.erb:105: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:110: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:82: syntax error, unexpected ':'
+app/views/devise/registrations/new.html.erb:105: syntax error, unexpected end, expecting ')'
+app/views/devise/registrations/new.html.erb:110: syntax error, unexpected end, expecting ')'
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:35:51 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1321)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3627)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> 
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      会員情報入力
+    </h1>
+  </div>
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ニックネーム</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+    <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード(確認)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ユーザー名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :email, class:"input-default", id:"user_name", placeholder:"お名前", autofocus: true %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ユーザー名</label>
+      <span class="indispensable">必須</span>
+    </div>
+<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+  </div>
+
+
+
+  
+):
+1:    <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+2:    <%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> 
+3:    <div class='form-wrap'>
+4:      <div class='form-header'>
+5:        <h1 class='form-header-text'>
+6:          会員情報入力
+7:        </h1>
+8:      </div>
+9:    
+10:        <%= render "devise/shared/error_messages", resource: resource %>
+11:    
+12:        <div class="form-group">
+13:        <div class='form-text-wrap'>
+14:          <label class="form-text">ニックネーム</label>
+15:          <span class="indispensable">必須</span>
+16:        </div>
+17:        <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %>
+18:      </div>
+19:    
+20:        <div class="form-group">
+21:        <div class='form-text-wrap'>
+22:          <label class="form-text">メールアドレス</label>
+23:          <span class="indispensable">必須</span>
+24:        </div>
+25:        <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+26:      </div>
+27:    
+28:      <div class="form-group">
+29:        <div class='form-text-wrap'>
+30:          <label class="form-text">パスワード</label>
+31:          <span class="indispensable">必須</span>
+32:        </div>
+33:        <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+34:        <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+35:      </div>
+36:    
+37:      <div class="form-group">
+38:        <div class='form-text-wrap'>
+39:          <label class="form-text">パスワード(確認)</label>
+40:          <span class="indispensable">必須</span>
+41:        </div>
+42:        <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+43:      </div>
+44:    
+45:      <div class="form-group">
+46:        <div class='form-text-wrap'>
+47:          <label class="form-text">ユーザー名</label>
+48:          <span class="indispensable">必須</span>
+49:        </div>
+50:        <%= f.text_field :email, class:"input-default", id:"user_name", placeholder:"お名前", autofocus: true %>
+51:      </div>
+52:    
+53:        <div class="form-group">
+54:        <div class='form-text-wrap'>
+55:          <label class="form-text">ユーザー名</label>
+56:          <span class="indispensable">必須</span>
+57:        </div>
+58:    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+59:      </div>
+60:    
+61:    
+62:    
+63:      
+  
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:35:54 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1305)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2400)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> 
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      会員情報入力
+    </h1>
+  </div>
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ニックネーム</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+    <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード(確認)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ユーザー名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :email, class:"input-default", id:"user_name", placeholder:"お名前", autofocus: true %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ユーザー名</label>
+      <span class="indispensable">必須</span>
+    </div>
+<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+  </div>
+
+
+
+  
+):
+1:    <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+2:    <%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> 
+3:    <div class='form-wrap'>
+4:      <div class='form-header'>
+5:        <h1 class='form-header-text'>
+6:          会員情報入力
+7:        </h1>
+8:      </div>
+9:    
+10:        <%= render "devise/shared/error_messages", resource: resource %>
+11:    
+12:        <div class="form-group">
+13:        <div class='form-text-wrap'>
+14:          <label class="form-text">ニックネーム</label>
+15:          <span class="indispensable">必須</span>
+16:        </div>
+17:        <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %>
+18:      </div>
+19:    
+20:        <div class="form-group">
+21:        <div class='form-text-wrap'>
+22:          <label class="form-text">メールアドレス</label>
+23:          <span class="indispensable">必須</span>
+24:        </div>
+25:        <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+26:      </div>
+27:    
+28:      <div class="form-group">
+29:        <div class='form-text-wrap'>
+30:          <label class="form-text">パスワード</label>
+31:          <span class="indispensable">必須</span>
+32:        </div>
+33:        <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+34:        <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+35:      </div>
+36:    
+37:      <div class="form-group">
+38:        <div class='form-text-wrap'>
+39:          <label class="form-text">パスワード(確認)</label>
+40:          <span class="indispensable">必須</span>
+41:        </div>
+42:        <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+43:      </div>
+44:    
+45:      <div class="form-group">
+46:        <div class='form-text-wrap'>
+47:          <label class="form-text">ユーザー名</label>
+48:          <span class="indispensable">必須</span>
+49:        </div>
+50:        <%= f.text_field :email, class:"input-default", id:"user_name", placeholder:"お名前", autofocus: true %>
+51:      </div>
+52:    
+53:        <div class="form-group">
+54:        <div class='form-text-wrap'>
+55:          <label class="form-text">ユーザー名</label>
+56:          <span class="indispensable">必須</span>
+57:        </div>
+58:    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+59:      </div>
+60:    
+61:    
+62:    
+63:      
+  
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+app/views/devise/registrations/new.html.erb:65: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:36:13 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 205)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 53.7ms | Allocations: 8305)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms | Allocations: 10611)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f897d127290>::Prefecture):
+    55:       <label class="form-text">ユーザー名</label>
+    56:       <span class="indispensable">必須</span>
+    57:     </div>
+    58: <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+    59:   </div>
+    60: 
+    61: 
+  
+app/views/devise/registrations/new.html.erb:58
+app/views/devise/registrations/new.html.erb:1
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:38:10 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2002)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1876ms (Views: 1874.4ms | ActiveRecord: 0.0ms | Allocations: 1673818)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:38:47 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1973)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms | Allocations: 11751)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:40:04 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1971)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.0ms | Allocations: 17849)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:40:44 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1969)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 11748)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:41:40 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 13000)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:42:07 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1969)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 11824)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:42:22 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 404)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2904)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms | Allocations: 17900)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:43:03 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1971)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 11810)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:43:40 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1961)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 11792)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:43:59 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1962)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 11792)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-05 15:44:24 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 195)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1963)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 11790)
+
+
