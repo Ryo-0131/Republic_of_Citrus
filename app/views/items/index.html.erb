@@ -1,5 +1,14 @@
  <span class="h2">かんきつ共和国🍊</span>
 
+      <%# ログインの有無で表示が変わるように分岐%>
+     <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, user_path(id: current_user.id), class: "user-nickname" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+      <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+
 
  <div class="col-xs-12 text-center">  <%# 要編集 %>
   <div class="thumbnail"> <%# 要編集 %>
@@ -15,3 +24,5 @@
     <a href ="review.html">レビューを見る</a> <%# 要編集 %>
   </div>
 </div>
+
+
