@@ -28,3 +28,25 @@
   width: 70%;
   padding: 16px 8px;
 }
+
+.back-btn {
+  background: #FFA500;
+  border: 1px solid #FFA500;
+  width: 70%;
+  padding: 16px 8px;
+  text-decoration: none;
+}
+
+.back-btn-update
+{
+  display: inline-block;
+  background: #FFA500;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+}
+
