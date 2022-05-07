@@ -1,0 +1,49 @@
+      <%= render "shared/second-header"%>
+
+<div class='xxx' id='xxx'>
+  <div class='xxx'>
+    <div class='xxx'>
+      <h2>ユーザー情報の編集</h2>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'back-btn'%>
+      <%= link_to "ユーザーページに戻る", :back, class: 'back-btn'%>
+      <%=link_to 'トップページへもどる', root_path, class:"back-btn" %>
+    </div>
+    <div class='account-page__inner--right user-form'>
+      <%= form_with model: current_user, local: true do |f|%>
+        <div class='field'>
+          <div class='field-label'>
+       <table class="table">
+        <tbody>
+          <tr>
+           <th class="table__col1">お名前🍊</th>
+           <td class="table__col2"><%= f.text_field :nickname, class:"input-default", id:"nickname", maxlength:"40", autofocus: true %></td>
+          </tr>
+          <tr>
+           <th class="table__col1">お住まい🍊</th>
+           <td class="table__col2"><%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %></td>
+          </tr>
+          <tr>
+           <th class="table__col1">お気に入りの柑橘類🍊</th>
+           <td class="table__col2"><%= f.collection_select(:favorite_id, Favorite.all, :id, :name, {}, {class:"select-box", id:"favorite"}) %></td>
+          </tr>
+          <tr>
+           <th class="table__col1">自己紹介🍊</th>
+           <td class="table__col2"> <%= f.text_area :introduction, class:"input-default", id:"introduction", autofocus: true %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">プロフィール画像</th>
+            <td class="table__col2"><%= f.file_field :image, id:"item-image" %><%= image_tag current_user.image.variant(resize: '500x500')%></td>
+            </tr>
+            </tbody>
+       </table>
+      <div class='actions'>
+       <%= f.submit "更新する", class: 'back-btn-update'%>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/second-header"%>
+
+
