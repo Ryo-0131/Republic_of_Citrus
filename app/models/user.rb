@@ -5,6 +5,7 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
   belongs_to :favorite
+  has_one_attached :image
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

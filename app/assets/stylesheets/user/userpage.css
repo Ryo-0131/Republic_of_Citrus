@@ -28,3 +28,11 @@
   width: 70%;
   padding: 16px 8px;
 }
+
+.back-btn {
+  background: #FFA500;
+  border: 1px solid #FFA500;
+  width: 70%;
+  padding: 16px 8px;
+  text-decoration: none;
+}

@@ -68,6 +68,14 @@
         <%= f.text_area :introduction, class:"input-default", id:"introduction", placeholder:"ご自由に記入ください", autofocus: true %>
   </div>
 
+      <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ユーザープロフィール</label>
+      <span class="indispensable">任意</span>
+    </div>
+       <%= f.file_field :image, id:"item-image" %>
+  </div>
+
   <div class="form-group">
     <h2 class='form-bottom-text'>
       「会員登録」のボタンを押すことにより、

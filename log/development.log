@@ -4291,3 +4291,934 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 61ms (Views: 49.0ms | ActiveRecord: 8.7ms | Allocations: 26615)
 
 
+Started GET "/users/1" for ::1 at 2022-05-07 10:07:38 +0900
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.3ms | Allocations: 192)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 765)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3728ms (Views: 3675.9ms | ActiveRecord: 7.2ms | Allocations: 1739095)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:07:44 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1597)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 33.3ms | ActiveRecord: 3.9ms | Allocations: 15228)
+
+
+Started GET "/users/1" for ::1 at 2022-05-07 10:09:57 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 0.7ms | Allocations: 12568)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-07 10:12:23 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xufeK+l8hWHPgWWhGl6mO4zJWFOkbaJ53KeOKMWc2EWa0lWbdlCk5lBfNV+UMiAI7Fc1VDf0f865r2M1x2cQ4g=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.4ms | Allocations: 5685)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:12:23 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 532)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.0ms | Allocations: 13275)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-07 10:12:25 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.6ms | Allocations: 171)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.3ms | Allocations: 203)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 26.9ms | Allocations: 6082)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.0ms | Allocations: 19157)
+
+
+Started POST "/users" for ::1 at 2022-05-07 10:13:09 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"G9bAPM3NgqAtmX59aP3L/fJXs3xn8YC9CNwlBD29audzWtvpbWx0l6ojW8JrfAPF9WZODs7sEsupo0pSd8EivA==", "user"=>{"nickname"=>"竹本", "email"=>"takemoto@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"4", "favorite_id"=>"2", "introduction"=>"柑橘類が大好きです！", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff4658ddf40 @tempfile=#<Tempfile:/var/folders/r9/qldzwlnx0sjffyfgm62fqj0h0000gn/T/RackMultipart20220507-53018-1y79dll.jpg>, @original_filename="23514177_s.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"23514177_s.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"会員登録"}
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'takemoto@com' LIMIT 1[0m
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `prefecture_id`, `favorite_id`, `introduction`, `created_at`, `updated_at`) VALUES ('takemoto@com', '$2a$12$FnQDKg.JxbilxihXJQgZUesrKaVw2Z3JUFdU//N07htsVS2L1cSp2', '竹本', 4, 2, '柑橘類が大好きです！', '2022-05-07 01:13:09.606438', '2022-05-07 01:13:09.606438')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 333ms (ActiveRecord: 7.8ms | Allocations: 10303)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:13:09 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (30.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 1115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 43.9ms | ActiveRecord: 30.7ms | Allocations: 12861)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:13:11 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 363)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 29.4ms | ActiveRecord: 6.0ms | Allocations: 13985)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:14:19 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3617)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms | Allocations: 6079)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<User:0x00007ff45e4e8608>):
+    26:           </tr>
+    27:           <tr>
+    28:             <th class="table__col1">プロフィール画像</th>
+    29:             <td class="table__col2"><%= @user.image %></td>
+    30:           </tr>
+    31:         </tbody>
+    32:       </table>
+  
+app/views/users/show.html.erb:29
+Started GET "/users/2" for ::1 at 2022-05-07 10:15:41 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.7ms | Allocations: 171)
+  Rendered users/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 3570)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms | Allocations: 5998)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<User:0x00007ff465e4dfc0>):
+    26:           </tr>
+    27:           <tr>
+    28:             <th class="table__col1">プロフィール画像</th>
+    29:             <td class="table__col2"><<%= image_tag @user.image.variant(resize: '500x500'), class: "item-box-img" if @user.image.attached? %></td>
+    30:           </tr>
+    31:         </tbody>
+    32:       </table>
+  
+app/views/users/show.html.erb:29
+Started GET "/users/2" for ::1 at 2022-05-07 10:16:45 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered users/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3118)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 7.7ms | Allocations: 13727)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<User:0x00007ff45d5051c8>):
+    26:           </tr>
+    27:           <tr>
+    28:             <th class="table__col1">プロフィール画像</th>
+    29:             <td class="table__col2"><<%= image_tag @user.image.variant(resize: '500x500'), class: "item-box-img" if @user.image.attached? %></td>
+    30:           </tr>
+    31:         </tbody>
+    32:       </table>
+  
+app/views/users/show.html.erb:29
+Started GET "/users/2" for ::1 at 2022-05-07 10:17:25 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered users/show.html.erb within layouts/application (Duration: 44.8ms | Allocations: 19479)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 12.2ms | Allocations: 30327)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: Table 'rpc_app_development.active_storage_attachments' doesn't exist):
+    26:           </tr>
+    27:           <tr>
+    28:             <th class="table__col1">プロフィール画像</th>
+    29:             <td class="table__col2"><<%= image_tag @user.image.variant(resize: '500x500'), class: "item-box-img" if @user.image.attached? %></td>
+    30:           </tr>
+    31:         </tbody>
+    32:       </table>
+  
+app/views/users/show.html.erb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActiveStorageTables (20220507012827)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (54.3ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `byte_size` bigint NOT NULL, `checksum` varchar(255) NOT NULL, `created_at` datetime NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key`  (`key`))[0m
+  [1m[35m (66.4ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime NOT NULL,  INDEX `index_active_storage_attachments_on_blob_id`  (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness`  (`record_type`, `record_id`, `name`, `blob_id`), CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[35m (22.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220507012827')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (25.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users/2" for ::1 at 2022-05-07 10:31:28 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 192)
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 18.2ms | Allocations: 4994)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3383ms (Views: 3198.1ms | ActiveRecord: 129.4ms | Allocations: 1732103)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:31:58 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1673)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 29.3ms | ActiveRecord: 0.8ms | Allocations: 15056)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:32:56 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 742.4ms | Allocations: 172874)
+Completed 500 Internal Server Error in 751ms (ActiveRecord: 0.8ms | Allocations: 175763)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f80ee14c168>:0x00007f80ee1560a0>
+Did you mean?  @user):
+    35: </div>
+    36: 
+    37: 
+    38:     <%= image_tag user.image, class: 'message-image' %>
+  
+app/views/users/show.html.erb:38
+Started GET "/users/2" for ::1 at 2022-05-07 10:33:07 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.6ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3712)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.8ms | Allocations: 6155)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    35: </div>
+    36: 
+    37: 
+    38:     <%= image_tag @user.image, class: 'message-image' %>
+  
+app/views/users/show.html.erb:38
+Started GET "/users/2" for ::1 at 2022-05-07 10:33:09 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3231)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 5.2ms | Allocations: 4821)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    35: </div>
+    36: 
+    37: 
+    38:     <%= image_tag @user.image, class: 'message-image' %>
+  
+app/views/users/show.html.erb:38
+Started GET "/users/2" for ::1 at 2022-05-07 10:33:25 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.0ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1672)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 27.3ms | ActiveRecord: 0.9ms | Allocations: 15065)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:34:23 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 66)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1208)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 1.0ms | Allocations: 14184)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:34:33 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.0ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1663)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 40.6ms | ActiveRecord: 1.1ms | Allocations: 15034)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:34:34 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 66)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1205)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.8ms | Allocations: 13549)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:35:36 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1667)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.8ms | Allocations: 15060)
+
+
+Started GET "/users/2" for ::1 at 2022-05-07 10:36:03 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3704)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms | Allocations: 6137)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    35: </div>
+    36: 
+    37: 
+    38:     <%= image_tag @user.image, class: 'message-image' %>
+  
+app/views/users/show.html.erb:38
+Started GET "/users/2" for ::1 at 2022-05-07 10:41:40 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 27.9ms | ActiveRecord: 1.6ms | Allocations: 17555)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:41:44 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2934)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 39.0ms | ActiveRecord: 1.2ms | Allocations: 29258)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-07 10:41:46 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t1WZgs83b4SmyuUmMCMURynzOR02DDuvn7vMezeEcwk8c4sgFInpmsyoaiMYQPR4md9GZCeQSyeXkv9z3EjuWA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms | Allocations: 5761)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:41:46 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 11926)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-07 10:41:48 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 5757)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms | Allocations: 18828)
+
+
+Started POST "/users" for ::1 at 2022-05-07 10:42:22 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"II8VuCjNrArXZKk/6J/1zVrfJUcY90Ed/lKZpn4uAbreiqMda2n4P9uTSXFbT9lmO0tUA/63YTc6xF/pQnojtw==", "user"=>{"nickname"=>"nakata", "email"=>"nakata@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"6", "favorite_id"=>"2", "introduction"=>"nakataです", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f80eb617dd0 @tempfile=#<Tempfile:/var/folders/r9/qldzwlnx0sjffyfgm62fqj0h0000gn/T/RackMultipart20220507-58359-xwm1bf.jpg>, @original_filename="22387794_s.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"22387794_s.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"会員登録"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'nakata@com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `prefecture_id`, `favorite_id`, `introduction`, `created_at`, `updated_at`) VALUES ('nakata@com', '$2a$12$oqexF1iuCKtOtRvdtkipbeIYxGM7O3S0elhu3SwrqyTbHPeT1hJO6', 'nakata', 6, 2, 'nakataです', '2022-05-07 01:42:22.641860', '2022-05-07 01:42:22.641860')[0m
+  [1m[36mActiveStorage::Blob Load (2.9ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` INNER JOIN `active_storage_attachments` ON `active_storage_blobs`.`id` = `active_storage_attachments`.`blob_id` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `byte_size`, `checksum`, `created_at`) VALUES ('69yx4mhwbxwtbd179drqp9svw2it', '22387794_s.jpg', 'image/jpeg', '{\"identified\":true}', 169957, 'C8NY6Jpxiw+Ha1WbQKudvw==', '2022-05-07 01:42:22')[0m
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('image', 'User', 3, 1, '2022-05-07 01:42:22')[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE `users` SET `users`.`updated_at` = '2022-05-07 01:42:22.772362' WHERE `users`.`id` = 3[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+[36m  Disk Storage (2.3ms) [0m[32mUploaded file to key: 69yx4mhwbxwtbd179drqp9svw2it (checksum: C8NY6Jpxiw+Ha1WbQKudvw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5a389dda-9c1d-4bcd-8571-b1be76c5ac0b) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f80e7c5f9f8 @uri=#<URI::GID gid://rpc-app/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/
+Completed 302 Found in 477ms (ActiveRecord: 13.7ms | Allocations: 73748)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:42:22 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1207)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5a389dda-9c1d-4bcd-8571-b1be76c5ac0b] Performing ActiveStorage::AnalyzeJob (Job ID: 5a389dda-9c1d-4bcd-8571-b1be76c5ac0b) from Async(active_storage_analysis) enqueued at 2022-05-07T01:42:22Z with arguments: #<GlobalID:0x00007f80ed8effb0 @uri=#<URI::GID gid://rpc-app/ActiveStorage::Blob/1>>
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.5ms | Allocations: 14194)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5a389dda-9c1d-4bcd-8571-b1be76c5ac0b] [36m  Disk Storage (3.2ms) [0m[34mDownloaded file from key: 69yx4mhwbxwtbd179drqp9svw2it[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5a389dda-9c1d-4bcd-8571-b1be76c5ac0b]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5a389dda-9c1d-4bcd-8571-b1be76c5ac0b]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `active_storage_blobs`.`metadata` = '{\"identified\":true,\"width\":640,\"height\":478,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5a389dda-9c1d-4bcd-8571-b1be76c5ac0b]   [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5a389dda-9c1d-4bcd-8571-b1be76c5ac0b] Performed ActiveStorage::AnalyzeJob (Job ID: 5a389dda-9c1d-4bcd-8571-b1be76c5ac0b) from Async(active_storage_analysis) in 784.2ms
+Started GET "/users/3" for ::1 at 2022-05-07 10:42:26 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.4ms | Allocations: 66)
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 24.0ms | Allocations: 3494)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 79.7ms | ActiveRecord: 4.1ms | Allocations: 15856)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2/22387794_s.jpg" for ::1 at 2022-05-07 10:42:26 +0900
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2", "filename"=>"22387794_s"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/69yx4mhwbxwtbd179drqp9svw2it/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (no)[0m
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: 69yx4mhwbxwtbd179drqp9svw2it[0m
+[36m  Disk Storage (2.2ms) [0m[32mUploaded file to key: variants/69yx4mhwbxwtbd179drqp9svw2it/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3[0m
+[36m  Disk Storage (3.8ms) [0m[34mGenerated URL for file at key: variants/69yx4mhwbxwtbd179drqp9svw2it/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg
+Completed 302 Found in 107ms (ActiveRecord: 0.4ms | Allocations: 8384)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:42:26 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878", "filename"=>"22387794_s"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 3261)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:42:35 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.4ms | Allocations: 12859)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:42:37 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.6ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2360)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 1.8ms | Allocations: 14713)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:42:39 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1106)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 29.8ms | ActiveRecord: 4.6ms | Allocations: 12852)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:42:41 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2359)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 45.4ms | ActiveRecord: 8.7ms | Allocations: 14718)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:43:02 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.5ms | Allocations: 12845)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:45:19 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1440)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.4ms | Allocations: 14204)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:45:21 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.7ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2894)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 36.0ms | ActiveRecord: 5.6ms | Allocations: 15916)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:45:21 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 855)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:45:23 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 7.8ms | Allocations: 12849)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:46:01 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.4ms | Allocations: 18519)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:46:03 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.3ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 1.8ms | Allocations: 14813)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:46:03 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 849)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:46:26 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 1.5ms | Allocations: 19992)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:46:27 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 851)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:46:37 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 69.4ms | ActiveRecord: 1.4ms | Allocations: 19592)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:46:38 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 861)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:46:56 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.3ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 49.4ms | ActiveRecord: 1.6ms | Allocations: 20417)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:46:56 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjQ3OjI2LjM3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--96e54ae68a9a5e9013bb8d646b1265ac3a9bd878", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 851)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:47:28 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 1.1ms | Allocations: 19986)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2/22387794_s.jpg" for ::1 at 2022-05-07 10:47:28 +0900
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2", "filename"=>"22387794_s"}
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/69yx4mhwbxwtbd179drqp9svw2it/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (yes)[0m
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: variants/69yx4mhwbxwtbd179drqp9svw2it/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg
+Completed 302 Found in 88ms (ActiveRecord: 1.3ms | Allocations: 10084)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:47:28 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa", "filename"=>"22387794_s"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 895)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:47:35 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (4.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 40.2ms | ActiveRecord: 5.6ms | Allocations: 19540)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:47:35 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 1240)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:48:09 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2891)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 54.9ms | ActiveRecord: 4.4ms | Allocations: 16333)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:48:09 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 21ms (ActiveRecord: 0.0ms | Allocations: 847)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:48:11 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1440)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.7ms | Allocations: 13863)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:48:36 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 66)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2414)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 51.1ms | ActiveRecord: 2.0ms | Allocations: 14779)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:48:45 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.5ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 1.3ms | Allocations: 16266)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:48:45 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 847)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:48:48 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1441)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.4ms | Allocations: 13854)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:48:49 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 66)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2414)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 1.5ms | Allocations: 14761)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:48:51 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.6ms | Allocations: 12852)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:51:14 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1447)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.5ms | Allocations: 14223)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:51:16 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.8ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 13.6ms | Allocations: 2883)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 39.9ms | ActiveRecord: 2.7ms | Allocations: 15905)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa/22387794_s.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2222387794_s.jpg%22%3B+filename%2A%3DUTF-8%27%2722387794_s.jpg" for ::1 at 2022-05-07 10:51:16 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"22387794_s.jpg\"; filename*=UTF-8''22387794_s.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZOamw1ZURSdGFIZGllSGQwWW1ReE56bGtjbkZ3T1hOMmR6SnBkQzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKSGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qSXpPRGMzT1RSZmN5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU16ZzNOemswWDNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTA1LTA3VDAxOjUyOjI4Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--55271d00ca2ab7a8bb452da8ce6aabc32f2f62aa", "filename"=>"22387794_s"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 845)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:51:18 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1114)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.4ms | Allocations: 12862)
+
+
+Started GET "/users/3" for ::1 at 2022-05-07 10:51:29 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 65)
+  [1m[36mActiveStorage::Attachment Load (5.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (Duration: 15.9ms | Allocations: 6371)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 48.9ms | ActiveRecord: 7.9ms | Allocations: 28881)
+
+
+Started GET "/" for ::1 at 2022-05-07 10:51:33 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1106)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 1.0ms | Allocations: 12854)
+
+
