@@ -4,4 +4,10 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
+  def show
+    @item = Item.find(params[:id])
+    # @review = Review.new
+    # @reviews = @item.reviews.includes(:user)
+ end
+
 end
