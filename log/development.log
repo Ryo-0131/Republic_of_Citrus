@@ -14599,3 +14599,1557 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.4ms | Allocations: 12842)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (53.9ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id_id` bigint NOT NULL, `item_id_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id_id`  (`user_id_id`),  INDEX `index_reviews_on_item_id_id`  (`item_id_id`), CONSTRAINT `fk_rails_dd9608186a`
+FOREIGN KEY (`user_id_id`)
+  REFERENCES `user_ids` (`id`)
+, CONSTRAINT `fk_rails_ff4e8d650e`
+FOREIGN KEY (`item_id_id`)
+  REFERENCES `item_ids` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (80.8ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id_id` bigint NOT NULL, `item_id_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id_id`  (`user_id_id`),  INDEX `index_reviews_on_item_id_id`  (`item_id_id`), CONSTRAINT `fk_rails_dd9608186a`
+FOREIGN KEY (`user_id_id`)
+  REFERENCES `user_ids` (`id`)
+, CONSTRAINT `fk_rails_ff4e8d650e`
+FOREIGN KEY (`item_id_id`)
+  REFERENCES `item_ids` (`id`)
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (56.6ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id_id` bigint NOT NULL, `item_id_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id_id`  (`user_id_id`),  INDEX `index_reviews_on_item_id_id`  (`item_id_id`), CONSTRAINT `fk_rails_dd9608186a`
+FOREIGN KEY (`user_id_id`)
+  REFERENCES `user_ids` (`id`)
+, CONSTRAINT `fk_rails_ff4e8d650e`
+FOREIGN KEY (`item_id_id`)
+  REFERENCES `item_ids` (`id`)
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (25.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (49.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `rpc_app_development`[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `rpc_app_test`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `rpc_app_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `rpc_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (48.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (49.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20220504073118)
+  [1m[35m (48.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `nickname` varchar(255) NOT NULL, `prefecture_id` int NOT NULL, `favorite_id` int NOT NULL, `introduction` text NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (46.5ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (47.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220504073118')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateItems (20220504083757)
+  [1m[35m (56.1ms)[0m  [1m[35mCREATE TABLE `items` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `item_name` varchar(255) NOT NULL, `description` text NOT NULL, `image_url` varchar(255) NOT NULL, `star` float(24) NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220504083757')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20220507012827)
+  [1m[35m (54.4ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `byte_size` bigint NOT NULL, `checksum` varchar(255) NOT NULL, `created_at` datetime NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key`  (`key`))[0m
+  [1m[35m (46.6ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime NOT NULL,  INDEX `index_active_storage_attachments_on_blob_id`  (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness`  (`record_type`, `record_id`, `name`, `blob_id`), CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220507012827')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (45.5ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id_id` bigint NOT NULL, `item_id_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id_id`  (`user_id_id`),  INDEX `index_reviews_on_item_id_id`  (`item_id_id`), CONSTRAINT `fk_rails_dd9608186a`
+FOREIGN KEY (`user_id_id`)
+  REFERENCES `user_ids` (`id`)
+, CONSTRAINT `fk_rails_ff4e8d650e`
+FOREIGN KEY (`item_id_id`)
+  REFERENCES `item_ids` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (42.4ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id_id` bigint NOT NULL, `item_id_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id_id`  (`user_id_id`),  INDEX `index_reviews_on_item_id_id`  (`item_id_id`), CONSTRAINT `fk_rails_dd9608186a`
+FOREIGN KEY (`user_id_id`)
+  REFERENCES `user_ids` (`id`)
+, CONSTRAINT `fk_rails_ff4e8d650e`
+FOREIGN KEY (`item_id_id`)
+  REFERENCES `item_ids` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE `rpc_app_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `rpc_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (40.9ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id_id` bigint NOT NULL, `item_id_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id_id`  (`user_id_id`),  INDEX `index_reviews_on_item_id_id`  (`item_id_id`), CONSTRAINT `fk_rails_dd9608186a`
+FOREIGN KEY (`user_id_id`)
+  REFERENCES `user_ids` (`id`)
+, CONSTRAINT `fk_rails_ff4e8d650e`
+FOREIGN KEY (`item_id_id`)
+  REFERENCES `item_ids` (`id`)
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE `rpc_app_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE `rpc_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (22.2ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (57.5ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id_id` bigint NOT NULL, `item_id_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id_id`  (`user_id_id`),  INDEX `index_reviews_on_item_id_id`  (`item_id_id`), CONSTRAINT `fk_rails_dd9608186a`
+FOREIGN KEY (`user_id_id`)
+  REFERENCES `user_ids` (`id`)
+, CONSTRAINT `fk_rails_ff4e8d650e`
+FOREIGN KEY (`item_id_id`)
+  REFERENCES `item_ids` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (25.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE `rpc_app_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE `rpc_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (47.3ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id_id` bigint NOT NULL, `item_id_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id_id`  (`user_id_id`),  INDEX `index_reviews_on_item_id_id`  (`item_id_id`), CONSTRAINT `fk_rails_dd9608186a`
+FOREIGN KEY (`user_id_id`)
+  REFERENCES `user_ids` (`id`)
+, CONSTRAINT `fk_rails_ff4e8d650e`
+FOREIGN KEY (`item_id_id`)
+  REFERENCES `item_ids` (`id`)
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (24.5ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (54.5ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id` bigint NOT NULL, `item_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id`  (`user_id`),  INDEX `index_reviews_on_item_id`  (`item_id`), CONSTRAINT `fk_rails_74a66bd6c5`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_1b37fb5a2a`
+FOREIGN KEY (`item_id`)
+  REFERENCES `items` (`id`)
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220509121300')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-05-09 12:38:31.305854', '2022-05-09 12:38:31.305854')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (27.4ms)[0m  [1m[35mDROP TABLE `reviews`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.1ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20220509121300'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` int NOT NULL, `rating1` int NOT NULL, `rating2` int NOT NULL, `rating3` int NOT NULL, `rating4` int NOT NULL, `user_id` bigint NOT NULL, `item_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id`  (`user_id`),  INDEX `index_reviews_on_item_id`  (`item_id`), CONSTRAINT `fk_rails_74a66bd6c5`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_1b37fb5a2a`
+FOREIGN KEY (`item_id`)
+  REFERENCES `items` (`id`)
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220509121300')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2022-05-09 21:58:23 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 3094)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2948ms (Views: 2921.4ms | ActiveRecord: 6.8ms | Allocations: 1739873)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-09 21:58:29 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.1ms | Allocations: 182)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1500)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 34.3ms | ActiveRecord: 0.0ms | Allocations: 23318)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-09 21:58:33 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Jhf+X3CISHOJIpAywsFLZR+jwd1DK2fAP2CXdPcOoVB2bCtiULKd0kXXbJBdxkeT7IwLJ1AFBKGnV+7eUE5D3w==", "user"=>{"email"=>"nakata@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (49.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'nakata@com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 58ms (ActiveRecord: 49.8ms | Allocations: 13499)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Jhf+X3CISHOJIpAywsFLZR+jwd1DK2fAP2CXdPcOoVB2bCtiULKd0kXXbJBdxkeT7IwLJ1AFBKGnV+7eUE5D3w==", "user"=>{"email"=>"nakata@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.3ms | Allocations: 65)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 847)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 397ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 14112)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-09 21:58:37 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0Fx92eI2jrlrBZHqCDoFRAHsGTW30lbigXOkcpzEgsjkTqZvJKxab4zTFfPCBvrJw6g0L0dCReCE+Zrab+WONA==", "user"=>{"email"=>"nakata@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'nakata@com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.5ms | Allocations: 2395)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"0Fx92eI2jrlrBZHqCDoFRAHsGTW30lbigXOkcpzEgsjkTqZvJKxab4zTFfPCBvrJw6g0L0dCReCE+Zrab+WONA==", "user"=>{"email"=>"nakata@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 399ms (Views: 49.3ms | ActiveRecord: 0.0ms | Allocations: 36306)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-09 21:58:44 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"2NUjHx0aGcr/qLMAa2FZPTnmejNykqvZVDLvt1VEe97sx/ip24DNHBh+NxmhXaaw+6JXKYICuNtRuNEfpmV3Ig==", "user"=>{"email"=>"nakata@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'nakata@com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.9ms | Allocations: 2374)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"2NUjHx0aGcr/qLMAa2FZPTnmejNykqvZVDLvt1VEe97sx/ip24DNHBh+NxmhXaaw+6JXKYICuNtRuNEfpmV3Ig==", "user"=>{"email"=>"nakata@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 405ms (Views: 55.3ms | ActiveRecord: 0.0ms | Allocations: 36302)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-09 21:58:54 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 622)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 13444)
+
+
+Started GET "/" for ::1 at 2022-05-09 21:58:57 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms | Allocations: 12760)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-09 21:58:58 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 202)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 5442)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 18952)
+
+
+Started POST "/users" for ::1 at 2022-05-09 21:59:23 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"mpUbZlXn8JzFmwkVNwkwN3Hza2mfmNXMsNagmGXJJozaXQNEk8XsL/Klqn+hMBor2gLqxdE/QuwR3U+gLc6f+g==", "user"=>{"nickname"=>"nakata", "email"=>"nakata@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "prefecture_id"=>"7", "favorite_id"=>"2", "introduction"=>"ju-si-", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f949f8e6148 @tempfile=#<Tempfile:/var/folders/r9/qldzwlnx0sjffyfgm62fqj0h0000gn/T/RackMultipart20220509-73237-1r76x3r.jpg>, @original_filename="20190702_130309.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"20190702_130309.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"会員登録"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'nakata@com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `prefecture_id`, `favorite_id`, `introduction`, `created_at`, `updated_at`) VALUES ('nakata@com', '$2a$12$pwI7Ow9IlEFUOL8ChP6RlOrQ61GbddhFKWTIm2t.vVH5uU1Px7w1.', 'nakata', 7, 2, 'ju-si-', '2022-05-09 12:59:23.742586', '2022-05-09 12:59:23.742586')[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` INNER JOIN `active_storage_attachments` ON `active_storage_blobs`.`id` = `active_storage_attachments`.`blob_id` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `byte_size`, `checksum`, `created_at`) VALUES ('8h7fea1txn5viplkghmxvrnxay6i', '20190702_130309.jpg', 'image/jpeg', '{\"identified\":true}', 3802372, 'bOREnLVsLzQgM11r+5KmZw==', '2022-05-09 12:59:23')[0m
+  [1m[36mActiveStorage::Attachment Create (23.2ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('image', 'User', 1, 1, '2022-05-09 12:59:23')[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`updated_at` = '2022-05-09 12:59:23.932377' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+[36m  Disk Storage (28.8ms) [0m[32mUploaded file to key: 8h7fea1txn5viplkghmxvrnxay6i (checksum: bOREnLVsLzQgM11r+5KmZw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f3b02fd9-0174-4a83-b427-2c2c3eaec0cf) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f9497f61ac0 @uri=#<URI::GID gid://rpc-app/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/
+Completed 302 Found in 633ms (ActiveRecord: 65.0ms | Allocations: 56988)
+
+
+Started GET "/" for ::1 at 2022-05-09 21:59:24 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1202)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 27.0ms | ActiveRecord: 8.0ms | Allocations: 13910)
+
+
+  [1m[36mActiveStorage::Blob Load (26.6ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f3b02fd9-0174-4a83-b427-2c2c3eaec0cf] Performing ActiveStorage::AnalyzeJob (Job ID: f3b02fd9-0174-4a83-b427-2c2c3eaec0cf) from Async(active_storage_analysis) enqueued at 2022-05-09T12:59:23Z with arguments: #<GlobalID:0x00007f94a094ee68 @uri=#<URI::GID gid://rpc-app/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f3b02fd9-0174-4a83-b427-2c2c3eaec0cf] [36m  Disk Storage (6.2ms) [0m[34mDownloaded file from key: 8h7fea1txn5viplkghmxvrnxay6i[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f3b02fd9-0174-4a83-b427-2c2c3eaec0cf]   [1m[35m (12.7ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f3b02fd9-0174-4a83-b427-2c2c3eaec0cf]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `active_storage_blobs`.`metadata` = '{\"identified\":true,\"width\":3024,\"height\":4032,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f3b02fd9-0174-4a83-b427-2c2c3eaec0cf]   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f3b02fd9-0174-4a83-b427-2c2c3eaec0cf] Performed ActiveStorage::AnalyzeJob (Job ID: f3b02fd9-0174-4a83-b427-2c2c3eaec0cf) from Async(active_storage_analysis) in 1501.59ms
+Started GET "/users/1" for ::1 at 2022-05-09 21:59:28 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (24.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:26:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.9ms | Allocations: 66)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (Duration: 19.7ms | Allocations: 4362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 62.3ms | ActiveRecord: 25.7ms | Allocations: 18490)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2/20190702_130309.jpg" for ::1 at 2022-05-09 21:59:28 +0900
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2", "filename"=>"20190702_130309"}
+  [1m[36mActiveStorage::Blob Load (15.0ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/8h7fea1txn5viplkghmxvrnxay6i/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (no)[0m
+[36m  Disk Storage (3.3ms) [0m[34mDownloaded file from key: 8h7fea1txn5viplkghmxvrnxay6i[0m
+[36m  Disk Storage (0.7ms) [0m[32mUploaded file to key: variants/8h7fea1txn5viplkghmxvrnxay6i/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3[0m
+[36m  Disk Storage (3.1ms) [0m[34mGenerated URL for file at key: variants/8h7fea1txn5viplkghmxvrnxay6i/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjA0OjI5LjU3NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--714e30ada10eb0245482879e36150b3b0b68ebfa/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjA0OjI5LjU3NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--714e30ada10eb0245482879e36150b3b0b68ebfa/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg
+Completed 302 Found in 1368ms (ActiveRecord: 15.0ms | Allocations: 37859)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjA0OjI5LjU3NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--714e30ada10eb0245482879e36150b3b0b68ebfa/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg" for ::1 at 2022-05-09 21:59:29 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20190702_130309.jpg\"; filename*=UTF-8''20190702_130309.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjA0OjI5LjU3NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--714e30ada10eb0245482879e36150b3b0b68ebfa", "filename"=>"20190702_130309"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 920)
+
+
+Started GET "/" for ::1 at 2022-05-09 21:59:31 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.4ms | Allocations: 13727)
+
+
+Started GET "/review.html" for ::1 at 2022-05-09 21:59:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/review.html"):
+  
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-05-09 21:59:33 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.5ms | Allocations: 13721)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:00:06 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1446)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.4ms | Allocations: 15057)
+
+
+Started GET "/reviews/show" for ::1 at 2022-05-09 22:00:08 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/reviews/show"):
+  
+actionpack (6.0.4.8) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.8) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.8) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.8) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.8) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-05-09 22:02:26 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2764)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 4580)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:02:29 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2414)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 3386)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:02:40 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 2750)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 19.5ms | Allocations: 4561)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:02:52 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2749)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.9ms | Allocations: 4561)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    26:   </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:03:11 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4329)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms | Allocations: 6140)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x00007f94a011f530>):
+    2: 
+    3:       <%# ログインの有無で表示が変わるように分岐%>
+    4:      <% if user_signed_in? %>
+    5:       <li><%= link_to "#{current_user.name}さん", user_path(id: current_user.id), class: "user-nickname" %></li>
+    6:       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+    7:       <% else %>
+    8:       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+  
+app/views/items/index.html.erb:5
+Started GET "/" for ::1 at 2022-05-09 22:03:20 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1440)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.4ms | Allocations: 15055)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:04:29 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2750)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 4561)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:04:56 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1485)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.4ms | Allocations: 15100)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-09 22:04:59 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms | Allocations: 2388)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:04:59 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms | Allocations: 13774)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:05:16 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2748)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms | Allocations: 4561)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:10:34 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2394)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 4207)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"reviews"}, missing required keys: [:item_id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:11:08 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 59.3ms | Allocations: 10496)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 28.1ms | Allocations: 13561)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"reviews"}, missing required keys: [:item_id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:11:11 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2062)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 3035)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"reviews"}, missing required keys: [:item_id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:12:57 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (25.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 53.3ms | Allocations: 10013)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 30.5ms | Allocations: 13078)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"reviews"}, missing required keys: [:item_id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:12:59 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2062)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 3035)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"reviews"}, missing required keys: [:item_id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:13:33 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2062)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 3035)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"reviews"}, missing required keys: [:item_id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:13:35 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (21.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 25.7ms | Allocations: 2739)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 21.2ms | Allocations: 4552)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:13:37 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2412)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 3386)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:13:48 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (20.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 496.9ms | Allocations: 186701)
+Completed 500 Internal Server Error in 502ms (ActiveRecord: 24.0ms | Allocations: 188514)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item' for #<#<Class:0x00007f949f88cc10>:0x00007f949f896e90>
+Did you mean?  @items):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:13:54 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 5284)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms | Allocations: 7097)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<ActiveRecord::Relation []>
+Did you mean?  ids):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:14:01 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `items`.`id` FROM `items`[0m
+  ↳ app/views/items/index.html.erb:29
+  Rendered items/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3069)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms | Allocations: 4882)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"reviews", :item_id=>""}, missing required keys: [:item_id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:15:13 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `items`.`id` FROM `items`[0m
+  ↳ app/views/items/index.html.erb:29
+  Rendered items/index.html.erb within layouts/application (Duration: 71.3ms | Allocations: 11099)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 49.0ms | Allocations: 14164)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"reviews", :item_id=>""}, missing required keys: [:item_id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:16:14 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (21.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `items`.`id` FROM `items`[0m
+  ↳ app/views/items/index.html.erb:29
+  Rendered items/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 11499)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 21.9ms | Allocations: 13312)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reviews", :item_id=>[]}, missing required keys: [:id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:17:06 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[35m (24.5ms)[0m  [1m[34mSELECT `items`.`id` FROM `items`[0m
+  ↳ app/views/items/index.html.erb:29
+  Rendered items/index.html.erb within layouts/application (Duration: 67.7ms | Allocations: 11093)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 47.9ms | Allocations: 14158)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reviews", :item_id=>[]}, missing required keys: [:id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:17:08 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `items`.`id` FROM `items`[0m
+  ↳ app/views/items/index.html.erb:29
+  Rendered items/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2700)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.1ms | Allocations: 3673)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reviews", :item_id=>[]}, missing required keys: [:id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:22:11 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `items`.`id` FROM `items`[0m
+  ↳ app/views/items/index.html.erb:29
+  Rendered items/index.html.erb within layouts/application (Duration: 74.2ms | Allocations: 11705)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 53.8ms | Allocations: 14770)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reviews", :item_id=>[]}, missing required keys: [:id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:22:12 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `items`.`id` FROM `items`[0m
+  ↳ app/views/items/index.html.erb:29
+  Rendered items/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4771)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms | Allocations: 6313)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reviews", :item_id=>[]}, missing required keys: [:id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:22:14 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `items`.`id` FROM `items`[0m
+  ↳ app/views/items/index.html.erb:29
+  Rendered items/index.html.erb within layouts/application (Duration: 27.2ms | Allocations: 2700)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.1ms | Allocations: 3675)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reviews", :item_id=>[]}, missing required keys: [:id]):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:27:06 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (23.8ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT `items`.* FROM `items` LIMIT 11[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 560.0ms | Allocations: 202410)
+Completed 500 Internal Server Error in 569ms (ActiveRecord: 58.1ms | Allocations: 206386)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `xxx' for #<#<Class:0x00007f94a019c8f0>:0x00007f94a01a6fa8>):
+    26:   </div>
+    27: </div>
+  
+app/views/items/index.html.erb:29
+Started GET "/" for ::1 at 2022-05-09 22:27:18 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1482)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.4ms | Allocations: 15106)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-09 22:27:20 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 13.8ms | Allocations: 2547)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:27:20 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.5ms | Allocations: 13782)
+
+
+Started GET "/users/1" for ::1 at 2022-05-09 22:27:21 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:26:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.8ms | Allocations: 177)
+  [1m[36mActiveStorage::Attachment Load (26.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mUser Load (21.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (Duration: 92.6ms | Allocations: 18195)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 115ms (Views: 54.0ms | ActiveRecord: 58.0ms | Allocations: 32220)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2/20190702_130309.jpg" for ::1 at 2022-05-09 22:27:21 +0900
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2", "filename"=>"20190702_130309"}
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/8h7fea1txn5viplkghmxvrnxay6i/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (yes)[0m
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: variants/8h7fea1txn5viplkghmxvrnxay6i/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjMyOjIxLjg5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--62df4b5120b2bba6e5462d0f6bd7a78b3c1e4b08/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjMyOjIxLjg5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--62df4b5120b2bba6e5462d0f6bd7a78b3c1e4b08/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms | Allocations: 3013)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjMyOjIxLjg5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--62df4b5120b2bba6e5462d0f6bd7a78b3c1e4b08/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg" for ::1 at 2022-05-09 22:27:21 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20190702_130309.jpg\"; filename*=UTF-8''20190702_130309.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjMyOjIxLjg5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--62df4b5120b2bba6e5462d0f6bd7a78b3c1e4b08", "filename"=>"20190702_130309"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 929)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:27:59 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1258)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3066)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check  <span class="h2">かんきつ共和国🍊</span>
+
+      <%# ログインの有無で表示が変わるように分岐%>
+     <% if user_signed_in? %>
+      <li><%= link_to "#{current_user.nickname}"さん, user_path(id: current_user.id), class: "user-nickname" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+      <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+
+
+
+ <div class="col-xs-12 text-center">  <%# 要編集 %>
+  <div class="thumbnail"> <%# 要編集 %>
+    <h1>第1位</h1>
+    <p>評価</p>
+    <h2>ジューシーオレンジ</h2>
+    <img src="https://www.kajuen.co.jp/introduction/item09/img01.jpg">
+    <div class="caption" style="font-size: 17px;"> <%# 要編集 %>
+      <p>果汁たっぷりの特徴が「ジューシーオレンジ」と呼ばれるゆえんです。
+        「風味が良く、さっぱりとした食味で、「日本版グレープフルーツ」と言えば、わかりやすいかもしれませんね。グレープフルーツのような苦味もなく、「和のグレープフルーツ」としてお楽しみいただけます♪
+         6〜7月の木成り完熟ものも美味しく、それまでずっと木に実っていた河内晩柑は、糖度はさほど変わりませんが適度に水分が抜け、さっぱりした食感になります。甘すぎずベタベタしないので、後味もさわやかです。</p> <%# 要編集 %>
+    </div>
+     <%= link_to "レビューを見る", new_user_session_path, class: "user-nickname" %>
+  </div>
+</div>
+):
+1:     <span class="h2">かんきつ共和国🍊</span>
+2:    
+3:          <%# ログインの有無で表示が変わるように分岐%>
+4:         <% if user_signed_in? %>
+5:          <li><%= link_to "#{current_user.nickname}"さん, user_path(id: current_user.id), class: "user-nickname" %></li>
+6:          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+7:          <% else %>
+8:          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+9:          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+10:          <% end %>
+11:    
+12:    
+13:    
+14:     <div class="col-xs-12 text-center">  <%# 要編集 %>
+15:      <div class="thumbnail"> <%# 要編集 %>
+16:        <h1>第1位</h1>
+17:        <p>評価</p>
+18:        <h2>ジューシーオレンジ</h2>
+19:        <img src="https://www.kajuen.co.jp/introduction/item09/img01.jpg">
+20:        <div class="caption" style="font-size: 17px;"> <%# 要編集 %>
+21:          <p>果汁たっぷりの特徴が「ジューシーオレンジ」と呼ばれるゆえんです。
+22:            「風味が良く、さっぱりとした食味で、「日本版グレープフルーツ」と言えば、わかりやすいかもしれませんね。グレープフルーツのような苦味もなく、「和のグレープフルーツ」としてお楽しみいただけます♪
+23:             6〜7月の木成り完熟ものも美味しく、それまでずっと木に実っていた河内晩柑は、糖度はさほど変わりませんが適度に水分が抜け、さっぱりした食感になります。甘すぎずベタベタしないので、後味もさわやかです。</p> <%# 要編集 %>
+24:        </div>
+25:         <%= link_to "レビューを見る", new_user_session_path, class: "user-nickname" %>
+26:      </div>
+27:    </div>
+  
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/" for ::1 at 2022-05-09 22:28:01 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3681)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 6224)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check  <span class="h2">かんきつ共和国🍊</span>
+
+      <%# ログインの有無で表示が変わるように分岐%>
+     <% if user_signed_in? %>
+      <li><%= link_to "#{current_user.nickname}"さん, user_path(id: current_user.id), class: "user-nickname" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+      <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+
+
+
+ <div class="col-xs-12 text-center">  <%# 要編集 %>
+  <div class="thumbnail"> <%# 要編集 %>
+    <h1>第1位</h1>
+    <p>評価</p>
+    <h2>ジューシーオレンジ</h2>
+    <img src="https://www.kajuen.co.jp/introduction/item09/img01.jpg">
+    <div class="caption" style="font-size: 17px;"> <%# 要編集 %>
+      <p>果汁たっぷりの特徴が「ジューシーオレンジ」と呼ばれるゆえんです。
+        「風味が良く、さっぱりとした食味で、「日本版グレープフルーツ」と言えば、わかりやすいかもしれませんね。グレープフルーツのような苦味もなく、「和のグレープフルーツ」としてお楽しみいただけます♪
+         6〜7月の木成り完熟ものも美味しく、それまでずっと木に実っていた河内晩柑は、糖度はさほど変わりませんが適度に水分が抜け、さっぱりした食感になります。甘すぎずベタベタしないので、後味もさわやかです。</p> <%# 要編集 %>
+    </div>
+     <%= link_to "レビューを見る", new_user_session_path, class: "user-nickname" %>
+  </div>
+</div>
+):
+1:     <span class="h2">かんきつ共和国🍊</span>
+2:    
+3:          <%# ログインの有無で表示が変わるように分岐%>
+4:         <% if user_signed_in? %>
+5:          <li><%= link_to "#{current_user.nickname}"さん, user_path(id: current_user.id), class: "user-nickname" %></li>
+6:          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+7:          <% else %>
+8:          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+9:          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+10:          <% end %>
+11:    
+12:    
+13:    
+14:     <div class="col-xs-12 text-center">  <%# 要編集 %>
+15:      <div class="thumbnail"> <%# 要編集 %>
+16:        <h1>第1位</h1>
+17:        <p>評価</p>
+18:        <h2>ジューシーオレンジ</h2>
+19:        <img src="https://www.kajuen.co.jp/introduction/item09/img01.jpg">
+20:        <div class="caption" style="font-size: 17px;"> <%# 要編集 %>
+21:          <p>果汁たっぷりの特徴が「ジューシーオレンジ」と呼ばれるゆえんです。
+22:            「風味が良く、さっぱりとした食味で、「日本版グレープフルーツ」と言えば、わかりやすいかもしれませんね。グレープフルーツのような苦味もなく、「和のグレープフルーツ」としてお楽しみいただけます♪
+23:             6〜7月の木成り完熟ものも美味しく、それまでずっと木に実っていた河内晩柑は、糖度はさほど変わりませんが適度に水分が抜け、さっぱりした食感になります。甘すぎずベタベタしないので、後味もさわやかです。</p> <%# 要編集 %>
+24:        </div>
+25:         <%= link_to "レビューを見る", new_user_session_path, class: "user-nickname" %>
+26:      </div>
+27:    </div>
+  
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/items/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/items/index.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/" for ::1 at 2022-05-09 22:28:30 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 4921)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.9ms | Allocations: 6728)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x00007f9497eb0ec8>):
+    2: 
+    3:       <%# ログインの有無で表示が変わるように分岐%>
+    4:      <% if user_signed_in? %>
+    5:       <li><%= link_to "#{current_user.name}さん", user_path(id: current_user.id), class: "user-nickname" %></li>
+    6:       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+    7:       <% else %>
+    8:       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+  
+app/views/items/index.html.erb:5
+Started GET "/" for ::1 at 2022-05-09 22:29:19 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1485)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.4ms | Allocations: 15096)
+
+
+Started GET "/users/1" for ::1 at 2022-05-09 22:29:21 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (29.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:26:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.8ms | Allocations: 171)
+  [1m[36mActiveStorage::Attachment Load (8.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (26.9ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (Duration: 49.7ms | Allocations: 3935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 42.7ms | ActiveRecord: 64.9ms | Allocations: 17820)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjMyOjIxLjg5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--62df4b5120b2bba6e5462d0f6bd7a78b3c1e4b08/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg" for ::1 at 2022-05-09 22:29:21 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20190702_130309.jpg\"; filename*=UTF-8''20190702_130309.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDEzOjMyOjIxLjg5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--62df4b5120b2bba6e5462d0f6bd7a78b3c1e4b08", "filename"=>"20190702_130309"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 849)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:32:29 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (16.8ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:33
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/index.html.erb within layouts/application (Duration: 143.5ms | Allocations: 27189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 177ms (Views: 69.1ms | ActiveRecord: 99.2ms | Allocations: 42730)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-09 22:32:31 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms | Allocations: 2544)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:32:31 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (22.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:33
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 44.2ms | ActiveRecord: 22.6ms | Allocations: 30119)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:32:57 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (23.1ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:33
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/index.html.erb within layouts/application (Duration: 30.4ms | Allocations: 18298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 21.9ms | ActiveRecord: 24.7ms | Allocations: 31911)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:32:59 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:33
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 1.2ms | Allocations: 14604)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:33:18 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:12
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2494)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.7ms | Allocations: 16116)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:34:26 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:12
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/index.html.erb within layouts/application (Duration: 60.3ms | Allocations: 11114)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 134ms (Views: 93.9ms | ActiveRecord: 34.3ms | Allocations: 25779)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:34:30 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:12
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2024)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.8ms | Allocations: 23210)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:36:33 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  [1m[36mItem Load (24.7ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:12
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/_item.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered items/index.html.erb within layouts/application (Duration: 62.5ms | Allocations: 11146)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 46.4ms | ActiveRecord: 38.3ms | Allocations: 26675)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:36:43 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/_item.html.erb (Duration: 0.7ms | Allocations: 293)
+  Rendered items/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4322)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.5ms | Allocations: 24100)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:36:47 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered collection of items/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered items/_item.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.4ms | Allocations: 13922)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:37:08 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.6ms | Allocations: 246)
+  Rendered items/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1804)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.4ms | Allocations: 15423)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:39:09 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.6ms | Allocations: 251)
+  Rendered items/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 11544)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 67.3ms | ActiveRecord: 8.1ms | Allocations: 29992)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:40:56 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 1.4ms | Allocations: 1675)
+  Rendered items/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3233)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 5054)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    15:   </div>
+    16: </div>
+  
+app/views/items/_item.html.erb:18
+app/views/items/index.html.erb:12
+Started GET "/" for ::1 at 2022-05-09 22:41:13 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 1.2ms | Allocations: 1324)
+  Rendered items/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2881)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 4702)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil}, missing required keys: [:id]):
+    15:   </div>
+    16: </div>
+  
+app/views/items/_item.html.erb:18
+app/views/items/index.html.erb:12
+Started GET "/" for ::1 at 2022-05-09 22:41:19 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 1.1ms | Allocations: 1327)
+  Rendered items/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2884)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms | Allocations: 4705)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items"}, missing required keys: [:id]):
+    15:   </div>
+    16: </div>
+  
+app/views/items/_item.html.erb:18
+app/views/items/index.html.erb:12
+Started GET "/" for ::1 at 2022-05-09 22:41:21 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.5ms | Allocations: 1131)
+  Rendered items/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2313)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 3295)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items"}, missing required keys: [:id]):
+    15:   </div>
+    16: </div>
+  
+app/views/items/_item.html.erb:18
+app/views/items/index.html.erb:12
+Started GET "/" for ::1 at 2022-05-09 22:41:26 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.5ms | Allocations: 1131)
+  Rendered items/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2307)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 3288)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items"}, missing required keys: [:id]):
+    15:   </div>
+    16: </div>
+  
+app/views/items/_item.html.erb:18
+app/views/items/index.html.erb:12
+Started GET "/" for ::1 at 2022-05-09 22:41:31 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered items/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 8595)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 26.6ms | ActiveRecord: 17.2ms | Allocations: 23591)
+
+
+Started GET "/" for ::1 at 2022-05-09 22:41:33 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered items/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms | Allocations: 13829)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ジューシーオレンジ', 'ジューシーオレンジは、約80年前に熊本県飽詫郡河内町の西村徳三郎氏の宅地で発生した文旦の血を引く偶発実生で、昭和10年に同町の鑢（金へんに慮）一馬氏が発見した品種です。', 'https://www.kajuen.co.jp/introduction/item09/img01.jpg', 0.0, '2022-05-09 15:21:09.583769', '2022-05-09 15:21:09.583769')[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (25.5ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ハッサク', '八朔は1860年頃、広島県因島田熊町のお寺「恵日山浄土寺」の境内で発見された品種です。「八朔」の名は、当時の住職であった小江恵徳が「八朔には食べられる」と言ったことから名付けられたというのが定説となっています。', 'https://www.kajuen.co.jp/introduction/item11/img01.jpg', 0.0, '2022-05-09 15:21:09.593512', '2022-05-09 15:21:09.593512')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2022-05-10 00:21:40 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered items/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.5ms | Allocations: 13823)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-10 00:21:43 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 20ms (ActiveRecord: 16.4ms | Allocations: 2544)
+
+
+Started GET "/" for ::1 at 2022-05-10 00:21:43 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered items/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.3ms | Allocations: 13832)
+
+
+Started GET "/users/1" for ::1 at 2022-05-10 00:21:44 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (20.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:26:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1.5ms | Allocations: 173)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:33
+  Rendered users/show.html.erb within layouts/application (Duration: 93.2ms | Allocations: 27806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 140ms (Views: 64.7ms | ActiveRecord: 68.8ms | Allocations: 56705)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2/20190702_130309.jpg" for ::1 at 2022-05-10 00:21:44 +0900
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3810c9151893be43d4687144e39470c7d7ae95dc", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--10120ca68c7a8c0b92eede8ce9ca74beaf7e04e2", "filename"=>"20190702_130309"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/8h7fea1txn5viplkghmxvrnxay6i/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (yes)[0m
+[36m  Disk Storage (1.7ms) [0m[34mGenerated URL for file at key: variants/8h7fea1txn5viplkghmxvrnxay6i/fdeb5908e234011392c277cf3c62beb03395f4e8a8d01a12513149d2761464f3 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDE1OjI2OjQ0Ljk0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3be3ecdb26f15e0d4f8ee67122d41c0af8ab481d/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDE1OjI2OjQ0Ljk0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3be3ecdb26f15e0d4f8ee67122d41c0af8ab481d/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg
+Completed 302 Found in 12ms (ActiveRecord: 0.6ms | Allocations: 3050)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDE1OjI2OjQ0Ljk0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3be3ecdb26f15e0d4f8ee67122d41c0af8ab481d/20190702_130309.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220190702_130309.jpg%22%3B+filename%2A%3DUTF-8%27%2720190702_130309.jpg" for ::1 at 2022-05-10 00:21:44 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20190702_130309.jpg\"; filename*=UTF-8''20190702_130309.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPR2czWm1WaE1YUjRialYyYVhCc2EyZG9iWGgyY201NFlYazJhUzltWkdWaU5Ua3dPR1V5TXpRd01URXpPVEpqTWpjM1kyWXpZell5WW1WaU1ETXpPVFZtTkdVNFlUaGtNREZoTVRJMU1UTXhORGxrTWpjMk1UUTJOR1l6QmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKUmFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaU1qQXhPVEEzTURKZk1UTXdNekE1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NakF4T1RBM01ESmZNVE13TXpBNUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIyLTA1LTA5VDE1OjI2OjQ0Ljk0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3be3ecdb26f15e0d4f8ee67122d41c0af8ab481d", "filename"=>"20190702_130309"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 919)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-10 00:21:47 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 2363)
+
+
+Started GET "/" for ::1 at 2022-05-10 00:21:48 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/index.html.erb:4
+  Rendered items/_item.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered items/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1233)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 13845)
+
+
