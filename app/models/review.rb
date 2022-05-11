@@ -9,8 +9,5 @@ class Review < ApplicationRecord
   validates :rating2, presence: true
   validates :rating3, presence: true
   validates :rating4, presence: true
-  validates :all_rating, presence: true
 
 end
-
-

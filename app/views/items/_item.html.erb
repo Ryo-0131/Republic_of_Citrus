@@ -1,16 +1,7 @@
 
+<h2> <%= item.item_name %> </h2>
+<p> <img src=<%= item.image_url %>></p>
+ <%= item.description %>
+  <%# <%= item.star %>
 
-<div class="col-xs-12 text-center">  <%# 要編集 %>
-  <div class="thumbnail"> <%# 要編集 %>
-    <h1>第1位</h1>
-    <p>評価</p>
-    <h2>ジューシーオレンジ</h2>
-    <img src="https://www.kajuen.co.jp/introduction/item09/img01.jpg">
-    <div class="caption" style="font-size: 17px;"> <%# 要編集 %>
-      <p>果汁たっぷりの特徴が「ジューシーオレンジ」と呼ばれるゆえんです。
-        「風味が良く、さっぱりとした食味で、「日本版グレープフルーツ」と言えば、わかりやすいかもしれませんね。グレープフルーツのような苦味もなく、「和のグレープフルーツ」としてお楽しみいただけます♪
-         6〜7月の木成り完熟ものも美味しく、それまでずっと木に実っていた河内晩柑は、糖度はさほど変わりませんが適度に水分が抜け、さっぱりした食感になります。甘すぎずベタベタしないので、後味もさわやかです。</p> <%# 要編集 %>
-    </div>
-     <%= link_to "レビューを見る", new_user_session_path, class: "user-nickname" %>
-  </div>
-</div>
+<p><%= link_to "レビューを見る", item_path(item.id), class: "user-nickname" %></p>

@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 
   def show
   end
-  
+
   def create
     @review = Review.create(review_params)
   if @review.save
@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
   else
     @item = @review.item
     @reviews = @item.reviews
-    render root_path
+    render "items/show"
   end
   end
   
