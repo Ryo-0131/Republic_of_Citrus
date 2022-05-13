@@ -13,6 +13,25 @@ class ReviewsController < ApplicationController
     render "items/show"
   end
   end
+
+  def edit
+    # @review = Review.create(review_params)
+    @item = Item.find(params[:id])
+    @review = Review.find(params[:id]) 
+  end
+
+
+  def update
+    @item = Item.find(params[:id])
+    @review = Review.find(params[:id]) 
+    # @review.comment = params[:comment]
+    
+   if @review.update(review_params)
+       redirect_to root_path
+    else
+       render :edit
+    end
+  end
   
   private
     def review_params
@@ -20,3 +39,5 @@ class ReviewsController < ApplicationController
     end
 
 end
+
+# 

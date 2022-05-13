@@ -1,0 +1,18 @@
+
+<h2>一緒にレビューしましょう！</h2>
+ <% if user_signed_in? %>
+  <%= form_with model: @review, url: item_reviews_path(@item.id), local: true do |f|%> 
+   <div class="field">
+    <%= f.label :comment, " レビュー🍊" %><br/>
+    <%= f.text_area :comment, id:"comment_content" %><br/>
+    総合評価：不味い〜美味しい🍊<%= f.number_field :all_rating, id:"comment_content" %><br/>
+    甘味評価：甘い〜とても甘い🍊<%= f.number_field :rating1, id:"comment_content" %><br/>
+    酸味評価：酸っぱい〜とても酸っぱい🍊<%= f.number_field :rating2, id:"comment_content" %><br/>
+    水分評価：水分が少ない〜多い🍊<%= f.number_field :rating3, id:"comment_content" %><br/>
+    皮の硬さ評価：皮が固い〜柔らかい🍊<%= f.number_field :rating4, id:"comment_content" %><br/>
+   </div>
+    <div class="actions"><br/>
+     <%= f.submit "送信する", class: 'back-btn-update' %>
+    </div>
+ <% end %>
+<% end %>
