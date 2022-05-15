@@ -3,7 +3,7 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">新規プロトタイプ投稿</h2>
+      <h2 class="page-heading">かんきつレビュー</h2>
         <%# 部分テンプレートでフォームを表示する %>
          <%= render partial: "form", locals: { item: @item } %>
     </div>
@@ -14,26 +14,23 @@
  <% @reviews.each do |review| %>
   <p>
    <%= link_to review.user.nickname, user_path(id: review.user.id), class: :comment_user %>
-   <%= link_to"編集", "/reviews/#{@review.id}/edit" %>
-   <%= review.comment %>
+    <%# ログイン中かつ自分のレビューだけ編集できる %>
+     <% if user_signed_in? && current_user.id == review.user_id %> 
+      <%# item_idおよびreview_idどちらも紐づいている必要がある %>
+       <%= link_to '編集する', edit_item_review_path(@item.id, review.id), class:"xxxx" %>
+       <%# <%= link_to "削除する", prototype_path(@prototype.id), method: :delete, class: :prototype__btn %> 
+     <% end %> 
+    <%= review.comment %>
   </p>
  <% end %>
 
+<%# 後で編集 %>
 <h1>評価一覧</h1>
  <% @reviews.each do |review| %>
   <p>
    <%= review.all_rating %>
   </p>
  <% end %>
-
-
- <%# <% if user_signed_in? && @user.id == current_user.id %> %>
-  <div class="xxxx">
-   <%# <%= link_to "編集する", edit_item_review_path(@review.id), class: :prototype__btn %> %>
-   <%# <%= link_to "削除する", prototype_path(@prototype.id), method: :delete, class: :prototype__btn %> 
-  </div>
-<%# <% end %> %>
-
 
 <br/>
  <%=link_to 'トップページへもどる', root_path, class:"back-btn" %>

@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
 
   def show
   end
@@ -16,15 +17,16 @@ class ReviewsController < ApplicationController
 
   def edit
     # @review = Review.create(review_params)
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:item_id])
     @review = Review.find(params[:id]) 
+     unless @review.user.id == current_user.id
+      redirect_to root_path
+     end
   end
 
-
   def update
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:item_id])
     @review = Review.find(params[:id]) 
-    # @review.comment = params[:comment]
     
    if @review.update(review_params)
        redirect_to root_path
@@ -37,7 +39,6 @@ class ReviewsController < ApplicationController
     def review_params
       params.require(:review).permit(:comment, :all_rating, :rating1, :rating2, :rating3, :rating4).merge(user_id: current_user.id, item_id: params[:item_id])
     end
-
 end
 
 # 
