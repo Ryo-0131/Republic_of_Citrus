@@ -17,7 +17,7 @@
 
 評価は自由に感想を記載できる「レビュー（コメント）」のほか、総合評価や皮の固さなどの計３つのユーザー目線の項目を５段階評価でレーティング。 
 トップページの柑橘類は、総合評価の平均値順で変わる（３０品種以上あるのでページネーションによって１ページ10個をリミットとする）。 
-また、参考になったと思ったレビューには、いいね！をおすことができる。
+また、好きな柑橘類には、いいね！をおすことができる。
 
 総合星評価（不味い〜美味しい）　１〜５
 星評価（甘い〜とても甘い）　１〜５
@@ -108,8 +108,8 @@ belongs_to :item
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------  | ------------------------------ |
-| user_id            | references | null: false, foreign_key: true |
-| item_id            | references | null: false, foreign_key: true |
+| user_id            | references | null: false, foreign_key: true |　#integerに変更
+| item_id            | references | null: false, foreign_key: true |　#integerに変更
 
 ### Association
 
