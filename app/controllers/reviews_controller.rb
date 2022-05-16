@@ -27,18 +27,24 @@ class ReviewsController < ApplicationController
   def update
     @item = Item.find(params[:item_id])
     @review = Review.find(params[:id]) 
-    
-   if @review.update(review_params)
+    if @review.update(review_params)
        redirect_to root_path
     else
        render :edit
     end
   end
   
+  def destroy
+    @review = Review.find(params[:id]) 
+    @review.destroy
+    redirect_to root_path
+     unless @review.user.id == current_user.id
+      redirect_to root_path
+     end
+  end
+
   private
     def review_params
       params.require(:review).permit(:comment, :all_rating, :rating1, :rating2, :rating3, :rating4).merge(user_id: current_user.id, item_id: params[:item_id])
     end
 end
-
-# 

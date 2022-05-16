@@ -18,7 +18,7 @@
      <% if user_signed_in? && current_user.id == review.user_id %> 
       <%# item_idおよびreview_idどちらも紐づいている必要がある %>
        <%= link_to '編集する', edit_item_review_path(@item.id, review.id), class:"xxxx" %>
-       <%# <%= link_to "削除する", prototype_path(@prototype.id), method: :delete, class: :prototype__btn %> 
+       <%= link_to "削除する", item_review_path(@item.id, review.id), method: :delete, class: :prototype__btn %>
      <% end %> 
     <%= review.comment %>
   </p>
