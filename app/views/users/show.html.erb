@@ -25,6 +25,10 @@
             <td class="table__col2"><%= @user.introduction %></td>
           </tr>
           <tr>
+            <th class="table__col1">いいねした柑橘類一覧🍊</th>
+            <td class="table__col2"><%=link_to"一覧を見る",likes_user_path(@user) %></td>
+          </tr>
+          <tr>
             <th class="table__col1">プロフィール画像</th>
             <td class="table__col2"><%= image_tag @user.image.variant(resize: '500x500'), class: "item-box-img" if @user.image.attached? %></td>
           </tr>
@@ -32,7 +36,7 @@
       </table>
      <% if user_signed_in? && current_user.id == @user.id %>
       <%= link_to 'ユーザー情報を編集する', edit_user_path(current_user), class:"back-btn" %>
-     <% end %>
+     <% end %>  
       <%=link_to 'トップページへもどる', root_path, class:"back-btn" %>
     </div>
   </div>

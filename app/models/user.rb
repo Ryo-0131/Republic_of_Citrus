@@ -19,4 +19,8 @@ validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, messa
 validates :prefecture_id, numericality: { other_than: 1 , message: "can't be blank"}
 validates :favorite_id, numericality: { other_than: 1 , message: "can't be blank"}
 
+def liked_by?(item_id)
+  likes.where(item_id: item_id).exists?
+end
+
 end

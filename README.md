@@ -108,8 +108,8 @@ belongs_to :item
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------  | ------------------------------ |
-| user_id            | references | null: false, foreign_key: true |　#integerに変更
-| item_id            | references | null: false, foreign_key: true |　#integerに変更
+| user_id            | references | null: false, foreign_key: true |  #integerに変更
+| item_id            | references | null: false, foreign_key: true |  #integerに変更
 
 ### Association
 

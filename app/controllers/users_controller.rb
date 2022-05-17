@@ -19,6 +19,13 @@ class UsersController < ApplicationController
        render :edit
     end
   end
+
+  # いいねした投稿を探し、@like_itemsに格納
+  def likes
+    @user = User.find(params[:id])
+    likes = Like.where(user_id: @user.id).pluck(:item_id)
+    @like_items = Item.find(likes)
+  end
  
    private
 
