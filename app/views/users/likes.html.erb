@@ -1,0 +1,11 @@
+<%= render "shared/second-header"%>
+<p>いいね！したかんきつ類一覧</p>
+<% @like_items.each do |item|%>
+<table class="table">
+        <tbody>
+          <tr>
+            <td class="table__col2"><%=link_to item.item_name,item_path(item.id) %></td>
+          </tr>
+        </tbody>
+      </table>
+<% end %>
