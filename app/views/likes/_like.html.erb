@@ -3,16 +3,14 @@
    <td>
    <%# "link_to (省略) do ~~~endと記述すると「~~~」の部分をリンク化することが出来る" %>
    <%= link_to destroy_like_path(item), method: :DELETE, remote: true do %>
-   <i class="fa fa-heart unlike-btn"></i>
+   <i class="fa fa-heart unlike-btn">お気に入り！</i>
      <% end %>
-      <%= item.likes.count %>
       </td>
  <% else %>
    <td>
    <%= link_to create_like_path(item), method: :POST, remote: true do %>
-      <i class="fa fa-heart like-btn"></i>
+      <i class="fa fa-heart like-btn">お気に入り！</i>
          <% end %> 
-    <%= item.likes.count %>
     </td>
  <% end %>
 <% end %>
