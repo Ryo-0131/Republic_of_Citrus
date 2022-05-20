@@ -51,11 +51,11 @@ ActiveRecord::Schema.define(version: 2022_05_16_123542) do
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
-    t.integer "all_rating", null: false
-    t.integer "rating1", null: false
-    t.integer "rating2", null: false
-    t.integer "rating3", null: false
-    t.integer "rating4", null: false
+    t.float "all_rating", default: 0.0, null: false
+    t.float "rating1", default: 0.0, null: false
+    t.float "rating2", default: 0.0, null: false
+    t.float "rating3", default: 0.0, null: false
+    t.float "rating4", default: 0.0, null: false
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
