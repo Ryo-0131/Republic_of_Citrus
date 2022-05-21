@@ -1,0 +1,81 @@
+総合評価：不味い〜美味しい🍊 
+<div><%= @reviews.average(:all_rating) %></div>
+<div class="average-review-rating" data-score=<%= @reviews.average(:all_rating) %>></div>
+<script>
+  $('.average-review-rating').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
+<br>
+<%# <%= @item.reviews.count %> 
+
+
+甘味評価：甘い〜とても甘い🍊 
+<div><%= @reviews.average(:rating1) %></div>
+<div class="average-review-rating1" data-score=<%= @reviews.average(:rating1) %>></div>
+<script>
+  $('.average-review-rating1').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
+<br>
+
+酸味評価：酸っぱい〜とても酸っぱい🍊
+<div><%= @reviews.average(:rating2) %></div>
+<div class="average-review-rating2" data-score=<%= @reviews.average(:rating2) %>></div>
+<script>
+  $('.average-review-rating2').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
+<br>
+
+水分評価：水分が少ない〜多い🍊 
+<div><%= @reviews.average(:rating3) %></div>
+<div class="average-review-rating3" data-score=<%= @reviews.average(:rating3) %>></div>
+<script>
+  $('.average-review-rating3').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
+<br>
+
+皮の硬さ評価：皮が固い〜柔らかい🍊 
+<div><%= @reviews.average(:rating4) %></div>
+<div class="average-review-rating4" data-score=<%= @reviews.average(:rating4) %>></div>
+<script>
+  $('.average-review-rating4').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
+<br>

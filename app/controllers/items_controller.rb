@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    # Item.order(all_rating: :desc)
   end
 
   def show
