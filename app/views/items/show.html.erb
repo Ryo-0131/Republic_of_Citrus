@@ -9,45 +9,27 @@
     </div>
   </div>
 </div>
+ <br>
 
-<h1>レビュー一覧</h1>
+<h1>💬レビュー一覧💬</h1>
  <% @reviews.each do |review| %>
   <p>
    <%= link_to review.user.nickname, user_path(id: review.user.id), class: :comment_user %>
     <%# ログイン中かつ自分のレビューだけ編集できる %>
      <% if user_signed_in? && current_user.id == review.user_id %> 
       <%# item_idおよびreview_idどちらも紐づいている必要がある %>
-       <%= link_to '編集する', edit_item_review_path(@item.id, review.id), class:"xxxx" %>
-       <%= link_to "削除する", item_review_path(@item.id, review.id), method: :delete, class: :prototype__btn %>
+       <%= link_to '編集する', edit_item_review_path(@item.id, review.id), class: :review_btn %>
+       <%= link_to "削除する", item_review_path(@item.id, review.id), method: :delete, class: :review_btn %>
      <% end %> 
     <%= review.comment %>
   </p>
  <% end %>
+ <br>
 
-<%# 後で編集 %>
-<h1>評価一覧</h1>
- <% @reviews.each do |review| %>
-
-<div class="relative-post-evaluation">
-  <span>総合評価：</span>
-  <span id="star-rate-<%= review.id %>"></span>
-  <script>
-    $('#star-rate-<%= review.id %>').raty({
-      size: 36,
-      starOff: "<%= asset_path('star-off.png') %>",
-      starOn: "<%= asset_path('star-on.png') %>",
-      starHalf: "<%= asset_path('star-half.png') %>",
-      half: true,  
-      readOnly: true,
-      score: <%= review.all_rating %>, 
-    });
-  </script>
-  <%= review.all_rating %>
-</div>
-
-<% end %>
-
+<h1>⭐️みんなの評価の平均値⭐️</h1>
+<%= render partial: "items/show_rate", locals: { item: @item } %>
 <br/>
+
  <%=link_to 'トップページへもどる', root_path, class:"back-btn" %>
 
 
