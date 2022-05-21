@@ -2,12 +2,17 @@
 
 <h2> <%= item.item_name %> </h2>
 <p> <img src=<%= item.image_url %>></p>
- <%= item.description %>
-  <%# <%= item.star %>
+<%= item.description %>
+<%# <%= item.star %>
+<%# 平均点を算出し、round関数で切り上げ %>
+<p> <%=@all_rating %>：<%= item.reviews.average(:all_rating).to_f.round(1) %></p>
+<p><%=@rating1 %>：<%= item.reviews.average(:rating1).to_f.round(1) %></p>
+<p><%=@rating2 %>：<%= item.reviews.average(:rating2).to_f.round(1) %></p>
+<p><%=@rating3 %>：<%= item.reviews.average(:rating3).to_f.round(1) %></p>
+<p><%=@rating4 %>：<%= item.reviews.average(:rating4).to_f.round(1) %></p>
 
-   <div id="likes_buttons_<%= item.id %>">
-   <%= render partial: 'likes/like', locals: {item: item} %>
- </div>
-
+<div id="likes_buttons_<%= item.id %>">
+ <%= render partial: 'likes/like', locals: {item: item} %>
+</div>
 
 <p><%= link_to "レビューを見る", item_path(item.id), class: "user-nickname" %></p>

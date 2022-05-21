@@ -1,5 +1,6 @@
-総合評価：不味い〜美味しい🍊 
-<div><%= @reviews.average(:all_rating) %></div>
+<%=@all_rating %>：不味い〜美味しい🍊 
+<%# 平均点を算出し、round関数で切り上げ %>
+<div><%= @reviews.average(:all_rating).to_f.round(1)  %></div>
 <div class="average-review-rating" data-score=<%= @reviews.average(:all_rating) %>></div>
 <script>
   $('.average-review-rating').raty({
@@ -15,9 +16,8 @@
 <br>
 <%# <%= @item.reviews.count %> 
 
-
-甘味評価：甘い〜とても甘い🍊 
-<div><%= @reviews.average(:rating1) %></div>
+<%=@rating1 %>：甘い〜とても甘い🍊 
+<div><%= @reviews.average(:rating1).to_f.round(1) %></div>
 <div class="average-review-rating1" data-score=<%= @reviews.average(:rating1) %>></div>
 <script>
   $('.average-review-rating1').raty({
@@ -32,8 +32,8 @@
 </script>
 <br>
 
-酸味評価：酸っぱい〜とても酸っぱい🍊
-<div><%= @reviews.average(:rating2) %></div>
+<%=@rating2 %>：酸っぱい〜とても酸っぱい🍊
+<div><%= @reviews.average(:rating2).to_f.round(1) %></div>
 <div class="average-review-rating2" data-score=<%= @reviews.average(:rating2) %>></div>
 <script>
   $('.average-review-rating2').raty({
@@ -48,8 +48,8 @@
 </script>
 <br>
 
-水分評価：水分が少ない〜多い🍊 
-<div><%= @reviews.average(:rating3) %></div>
+<%=@rating3 %>：水分が少ない〜多い🍊 
+<div><%= @reviews.average(:rating3).to_f.round(1) %></div>
 <div class="average-review-rating3" data-score=<%= @reviews.average(:rating3) %>></div>
 <script>
   $('.average-review-rating3').raty({
@@ -64,8 +64,8 @@
 </script>
 <br>
 
-皮の硬さ評価：皮が固い〜柔らかい🍊 
-<div><%= @reviews.average(:rating4) %></div>
+<%=@rating4 %>：食べにくい〜食べやすい🍊 
+<div><%= @reviews.average(:rating4).to_f.round(1) %></div>
 <div class="average-review-rating4" data-score=<%= @reviews.average(:rating4) %>></div>
 <script>
   $('.average-review-rating4').raty({
