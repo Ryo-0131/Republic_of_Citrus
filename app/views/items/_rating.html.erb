@@ -1,0 +1,36 @@
+<%# チャート機能chart.js %>
+
+ <canvas id="myChart"></canvas>
+<script>
+// var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("myChart");
+// var item = gon.item
+// var review = gon.review
+var myChart = new Chart(ctx, {
+
+  type: 'radar',
+  data: {
+    labels: ["甘味評価", "酸味評価", "水分評価", "食べやすさ評価"],
+    datasets: 
+    [
+
+        {
+        label:  "a" ,
+        backgroundColor: 'rgba(102,255,129,0.2)',
+        borderColor: 'rgba(122,255,129,0.2)',
+        data: [gon.data1, 2, 2, 4]
+        },
+    ]
+
+  },
+  options: {
+      scale: {
+          ticks: {
+              suggestedMin: 0,
+              suggestedMax: 5
+          }
+      }
+  }
+});
+   
+</script> 

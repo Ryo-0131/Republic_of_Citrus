@@ -5,14 +5,40 @@
 <%= item.description %>
 <%# <%= item.star %>
 <%# 平均点を算出し、round関数で切り上げ %>
-<p> <%=@all_rating %>：<%= item.reviews.average(:all_rating).to_f.round(1) %></p>
-<p><%=@rating1 %>：<%= item.reviews.average(:rating1).to_f.round(1) %></p>
-<p><%=@rating2 %>：<%= item.reviews.average(:rating2).to_f.round(1) %></p>
-<p><%=@rating3 %>：<%= item.reviews.average(:rating3).to_f.round(1) %></p>
-<p><%=@rating4 %>：<%= item.reviews.average(:rating4).to_f.round(1) %></p>
-
 <div id="likes_buttons_<%= item.id %>">
  <%= render partial: 'likes/like', locals: {item: item} %>
 </div>
 
+<%# 星評価機能raty.js %>
+<p> <%=@all_rating %>：<%= item.reviews.average(:all_rating).to_f.round(1) %></p>
+<div class="average-review-rating" data-score=<%= item.reviews.average(:all_rating) %>></div>
+<script>
+ $('.average-review-rating').empty();
+  $('.average-review-rating').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
+<br>
+
+<%# チャート機能chartkick.js %>
+<%= pie_chart [
+  # [@all_rating, item.reviews.average(:all_rating).to_f.round(1)],
+  [@rating1, item.reviews.average(:rating1).to_f.round(1)],
+  [@rating2, item.reviews.average(:rating2).to_f.round(1)],
+  [@rating3, item.reviews.average(:rating3).to_f.round(1)],
+  [@rating4, item.reviews.average(:rating4).to_f.round(1)],
+  ] , label: "#{item.item_name}の評価" , width: "300px", height: "300px" , min: 0, max: 5, 
+  colors: ["#FF0000", "#FFA500", "#AFDFE4", "#F0FFF0"] 
+  %>
+
+<%# <%= pie_chart Review.group(:rating1).count %> 
+
 <p><%= link_to "レビューを見る", item_path(item.id), class: "user-nickname" %></p>
+
+
