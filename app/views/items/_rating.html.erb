@@ -15,10 +15,10 @@ var myChart = new Chart(ctx, {
     [
 
         {
-        label:  "a" ,
-        backgroundColor: 'rgba(102,255,129,0.2)',
-        borderColor: 'rgba(122,255,129,0.2)',
-        data: [gon.data1, 2, 2, 4]
+        label:  gon.item.item_name ,
+        backgroundColor: 'rgba(255,140,0,0.2)',
+        borderColor: 'rgba(255,69,0,0.2)',
+        data: [gon.rate1, gon.rate2, gon.rate3, gon.rate4]
         },
     ]
 
@@ -30,7 +30,11 @@ var myChart = new Chart(ctx, {
               suggestedMax: 5
           }
       }
+      
   }
+
 });
    
 </script> 
+
+

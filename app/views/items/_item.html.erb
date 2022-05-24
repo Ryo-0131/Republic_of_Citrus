@@ -29,10 +29,10 @@
 <%# チャート機能chartkick.js %>
 <%= pie_chart [
   # [@all_rating, item.reviews.average(:all_rating).to_f.round(1)],
-  [@rating1, item.reviews.average(:rating1).to_f.round(1)],
-  [@rating2, item.reviews.average(:rating2).to_f.round(1)],
-  [@rating3, item.reviews.average(:rating3).to_f.round(1)],
-  [@rating4, item.reviews.average(:rating4).to_f.round(1)],
+  ["甘い！", item.reviews.average(:rating1).to_f.round(1)],
+  ["酸っぱい！", item.reviews.average(:rating2).to_f.round(1)],
+  ["水分多い！", item.reviews.average(:rating3).to_f.round(1)],
+  ["食べやすい！", item.reviews.average(:rating4).to_f.round(1)],
   ] , label: "#{item.item_name}の評価" , width: "300px", height: "300px" , min: 0, max: 5, 
   colors: ["#FF0000", "#FFA500", "#AFDFE4", "#F0FFF0"] 
   %>

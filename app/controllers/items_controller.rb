@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
     @rating2 = "酸味評価"
     @rating3 = "水分評価"
     @rating4 = "食べやすさ評価"  
+    gon.allavg = @reviews.average(:all_rating).to_f.round(1)
   end
 
   def show
@@ -18,7 +19,13 @@ class ItemsController < ApplicationController
     @reviews = @item.reviews.includes(:user)
     gon.item = @item
     gon.review = @review    
-    gon.data1 = @item.reviews.average(:rating1).to_f.round(1)
+    gon.all = @item.reviews.average(:all_rating).to_f.round(1)
+    gon.rate1 = @item.reviews.average(:rating1).to_f.round(1)
+    gon.rate2 = @item.reviews.average(:rating2).to_f.round(1)
+    gon.rate3 = @item.reviews.average(:rating3).to_f.round(1)
+    gon.rate4 = @item.reviews.average(:rating4).to_f.round(1)
+
+   gon.allave = @reviews.average(:all_rating)
  end
 
 end
