@@ -10,7 +10,11 @@ class ItemsController < ApplicationController
     @rating2 = "酸味評価"
     @rating3 = "水分評価"
     @rating4 = "食べやすさ評価"  
+    @itemname =  Item.select(:item_name)
+    gon.itemname = @itemname
     gon.allavg = @reviews.average(:all_rating).to_f.round(1)
+    # gon.rating1 = Item.where.pluck(:rating1)
+
   end
 
   def show

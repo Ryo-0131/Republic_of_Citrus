@@ -1,94 +1,49 @@
-<body>
-<canvas id="chart"></canvas>
-</body>
-
-<script>
-var ctx = document.getElementById("chart");
-var myChart = new Chart(ctx, {
-type: "scatter",
-data: {
-labels: ["Red", "Blue", "Yellow", "Green"],
-datasets: [{
-label: "# of Votes",
-data: [gon.allavg, 3, 3, 4],
-borderWidth: 1
-}]},
-
- options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-      title: {
-        display: true,
-        text: 'Chart.js Scatter Multi Axis Chart'
-      }
-    },
-    scales: {
-      y: {
-        type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-        position: 'left',
-        ticks: {
-          color: Utils.CHART_COLORS.red
-        }
-      },
-      y2: {
-        type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-        position: 'right',
-        reverse: true,
-        ticks: {
-          color: Utils.CHART_COLORS.blue
-        },
-        grid: {
-          drawOnChartArea: false // only want the grid lines for one axis to show up
-        }
-      }
-    }
-  },
-
-});
-</script>
+ <canvas id="甘さランキング"></canvas>
 
 
 <script>
-var ctx = document.getElementById("chart");
-var myChart = new Chart(ctx, {
-    type: 'scatter',
-  data: [1, 3, 3, 4],
-  
-options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-      title: {
-        display: true,
-        text: 'Chart.js Scatter Multi Axis Chart'
-      }
-    },
-    scales: {
-      y: {
-        type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-        position: 'left',
-        ticks: {
-          color: Utils.CHART_COLORS.red
-        }
-      },
-      y2: {
-        type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-        position: 'right',
-        reverse: true,
-        ticks: {
-          color: Utils.CHART_COLORS.blue
-        },
-        grid: {
-          drawOnChartArea: false // only want the grid lines for one axis to show up
-        }
-      }
-    }
-  },
 
-});
+    var ctx = document.getElementById("甘さランキング").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: "horizontalBar", // 水平棒グラフ
+        data: {
+            labels:  gon.itemname,
+            datasets: [
+                {
+                    label: "系列Ａ",
+                    data: [1, 2,  5, 1, 2],
+                    backgroundColor: ["red", "yellow", "green", "blue", "purple"]
+                }
+            ]
+        },
+        options: {
+            responsive: false,
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "甘さランキング"
+            },
+            legend: {
+                display: false,
+            },                
+            scales: {
+                xAxes: [ // Ｘ軸のオプション
+                    {
+                        ticks: {
+                            min: 0
+                        }
+                    }
+                ],
+                yAxes: [                   //
+                    {                      //
+                        ticks: {           //
+                            reverse: true  // 行の反転をさせたいのですが無視されています
+                        }                  //
+                    }                      //
+                ]                          //
+            }
+
+        }
+    });
+
 </script>
