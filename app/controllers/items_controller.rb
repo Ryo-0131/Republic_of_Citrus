@@ -10,10 +10,37 @@ class ItemsController < ApplicationController
     @rating2 = "酸味評価"
     @rating3 = "水分評価"
     @rating4 = "食べやすさ評価"  
-    @itemname =  Item.select(:item_name)
+    @itemname =  Item.pluck(:item_name)
     gon.itemname = @itemname
     gon.allavg = @reviews.average(:all_rating).to_f.round(1)
+    gon.rating1avg = @reviews.average(:rating1).to_f.round(1)
     # gon.rating1 = Item.where.pluck(:rating1)
+ 
+    reviews = Review.all
+    @items.each do |item|
+    @ratesum= item.reviews.sum(:all_rating)  # カラムのデータの合計値 
+    @ratecount= item.reviews.count(:all_rating) # カラムのデータ個数
+    @rateavg = @ratesum.to_f/@ratecount
+    end
+    
+    @items.each do |item|
+     gon.kan = item.reviews.average(:all_rating).to_f.round(1)
+     end
+
+
+
+    # @items.each do |item|
+    #    @itema = item.reviews.average(:all_rating).to_f.round(1)
+    # end
+
+    r_reviews = Review.pluck(:all_rating)
+    # @labels = reviews.map(&:first)
+    @datas = r_reviews.map(&:second)
+    #@labels = ["◯っ◯◯","π","パイナップル", "ニシンパイ", "パイルドライバー"]
+    #@datas = [9999, 3141, 2, 8, 1000]
+
+    reviews = Review.all
+    @all = reviews.map { |review| review.all_rating }
 
   end
 
