@@ -1,19 +1,28 @@
+ <% @items.each do |item|  %>
+ <%= item.reviews.average(:all_rating).to_f.round(1)%>
+ <% end %>
+
+
+           <%# <%= @each %> %>
+
+
+ 
  <canvas id="甘さランキング"></canvas>
 
-
 <script>
-
     var ctx = document.getElementById("甘さランキング").getContext('2d');
     var myChart = new Chart(ctx, {
         type: "horizontalBar", // 水平棒グラフ
         data: {
-            labels:  gon.itemname,
+            labels: <%== @itemname %>, // gon.itemname でも同じ
             datasets: [
+             
                 {
                     label: "系列Ａ",
-                    data: [1, 2,  5, 1, 2],
+                    data:  [gon.kan],
                     backgroundColor: ["red", "yellow", "green", "blue", "purple"]
                 }
+        
             ]
         },
         options: {
@@ -47,3 +56,5 @@
     });
 
 </script>
+
+

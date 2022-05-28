@@ -1,0 +1,48 @@
+ <canvas id="ランキング"></canvas>
+
+<script>
+    var ctx = document.getElementById("ランキング").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: "horizontalBar", // 水平棒グラフ
+        data: {
+            labels: gon.itemname, // <%== @itemname %> でも同じ
+            datasets: [
+                {
+                    label: "系列Ａ",
+                    data: [1],
+                    backgroundColor: ["red", "yellow", "green", "blue", "purple"]
+                }
+            ]
+        },
+        options: {
+            responsive: false,
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "甘さランキング"
+            },
+            legend: {
+                display: false,
+            },                
+            scales: {
+                xAxes: [ // Ｘ軸のオプション
+                    {
+                        ticks: {
+                            min: 0
+                        }
+                    }
+                ],
+                yAxes: [                   //
+                    {                      //
+                        ticks: {           //
+                            reverse: true  // 行の反転をさせたいのですが無視されています
+                        }                  //
+                    }                      //
+                ]                          //
+            }
+
+        }
+    });
+
+</script>
+
