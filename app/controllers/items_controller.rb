@@ -62,6 +62,9 @@ class ItemsController < ApplicationController
  def ranking
   @items = Item.all
   reviews = Review.all
+  @itemname =  Item.pluck(:item_name)
+  @datas = Review.pluck(:all_rating)
+
 end
 
 

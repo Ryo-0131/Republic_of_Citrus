@@ -1,36 +1,43 @@
 
-<% @items.map do |item| %> 
-名前　<%=  item.item_name %>  
-<p>
-合計<%=  @ratesum= item.reviews.sum(:all_rating) %>  
-<p>
- 数<%=  @ratecount= item.reviews.count(:all_rating) %> 
- <p>
- 平均<%=  @rateavg = @ratesum.to_f/@ratecount %> 
+
+  <% @items.each do |item| %>
+   <%@ratesum= item.reviews.sum(:all_rating)  # カラムのデータの合計値  %>
+   <%@ratecount= item.reviews.count(:all_rating) # カラムのデータ個数 %>
+   <%@rateavg = @ratesum.to_f/@ratecount %>
+ <% end %>
+
+   <%= @rateavg %>
+
+----
+
+<% @items.each do |t| %>
+
+ <div class ="index-show">
+ </div>
+ <div class="a1"><%= t.item_name %></div> 
+ <div class="a2"><%= t.reviews.sum(:all_rating)  %></div>
+  <div class="a3"><%= t.reviews.count(:all_rating)  %></div>
+   <div class="a4"><%= t.reviews.average(:all_rating)  %></div>
+  <canvas class="myCharts"></canvas>
 <% end %>
 
+  <script>
 
-
-
- <canvas id="aaランキング"></canvas>
-
-<script>
-    var ctx = document.getElementById("aaランキング").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: "horizontalBar", // 水平棒グラフ
-        data: {
-            labels: ["aaaaaa","bbbb"], // gon.itemname でも同じ
-            datasets: [
-             
+    ctx = document.getElementsByClassName("myCharts");
+    var aa = document.getElementsByClassName("a2");
+    var bb = document.getElementsByClassName("a3");
+    myChart = new Chart(ctx, {
+       type: "horizontalBar",
+      data: {
+            labels: <%== @itemname %>, // gon.itemname でも同じ
+            datasets: [             
                 {
-                    label: "系列Ａ",
-                    data:  [ <%= @rateavg %>  ],
+                        data:  [bb],
                     backgroundColor: ["red", "yellow", "green", "blue", "purple"]
                 }
-        
-            ]
+                    ]
         },
-        options: {
+options: {
             responsive: false,
             title: {
                 display: true,
@@ -61,5 +68,10 @@
     });
 
 </script>
+ </div>
+-途中省略-
+
+
+
 
 
