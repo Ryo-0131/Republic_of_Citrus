@@ -1,0 +1,77 @@
+
+
+  <% @items.each do |item| %>
+   <%@ratesum= item.reviews.sum(:all_rating)  # カラムのデータの合計値  %>
+   <%@ratecount= item.reviews.count(:all_rating) # カラムのデータ個数 %>
+   <%@rateavg = @ratesum.to_f/@ratecount %>
+ <% end %>
+
+   <%= @rateavg %>
+
+----
+
+<% @items.each do |t| %>
+
+ <div class ="index-show">
+ </div>
+ <div class="a1"><%= t.item_name %></div> 
+ <div class="a2"><%= t.reviews.sum(:all_rating)  %></div>
+  <div class="a3"><%= t.reviews.count(:all_rating)  %></div>
+   <div class="a4"><%= t.reviews.average(:all_rating)  %></div>
+  <canvas class="myCharts"></canvas>
+<% end %>
+
+  <script>
+
+    ctx = document.getElementsByClassName("myCharts");
+    var aa = document.getElementsByClassName("a2");
+    var bb = document.getElementsByClassName("a3");
+    myChart = new Chart(ctx, {
+       type: "horizontalBar",
+      data: {
+            labels: <%== @itemname %>, // gon.itemname でも同じ
+            datasets: [             
+                {
+                        data:  [bb],
+                    backgroundColor: ["red", "yellow", "green", "blue", "purple"]
+                }
+                    ]
+        },
+options: {
+            responsive: false,
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "総合ランキング"
+            },
+            legend: {
+                display: false,
+            },                
+            scales: {
+                xAxes: [ // Ｘ軸のオプション
+                    {
+                        ticks: {
+                            min: 0
+                        }
+                    }
+                ],
+                yAxes: [                   //
+                    {                      //
+                        ticks: {           //
+                            reverse: true  // 行の反転をさせたいのですが無視されています
+                        }                  //
+                    }                      //
+                ]                          //
+            }
+
+        }
+    });
+
+</script>
+ </div>
+-途中省略-
+
+
+
+
+

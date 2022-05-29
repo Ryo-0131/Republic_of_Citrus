@@ -1,6 +1,8 @@
 <span class="h2">かんきつ共和国🍊</span>
 <%# ログインの有無で表示が変わるように分岐%>
 
+
+
 <% if user_signed_in? %>
  <li><%= link_to "#{current_user.nickname}さん", user_path(id: current_user.id), class: "user-nickname" %></li>
  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
@@ -22,4 +24,11 @@
 
 
 
+
  <%= render partial: "items/rating1" %>
+
+<% @items.each do |item| %>
+  <%= render partial: 'sample', item: item %>
+<% end %>
+
+

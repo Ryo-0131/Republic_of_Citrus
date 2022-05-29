@@ -16,12 +16,12 @@ class ItemsController < ApplicationController
     gon.rating1avg = @reviews.average(:rating1).to_f.round(1)
     # gon.rating1 = Item.where.pluck(:rating1)
  
-    reviews = Review.all
-    @items.each do |item|
-    @ratesum= item.reviews.sum(:all_rating)  # カラムのデータの合計値 
-    @ratecount= item.reviews.count(:all_rating) # カラムのデータ個数
-    @rateavg = @ratesum.to_f/@ratecount
-    end
+    # reviews = Review.all
+    # @items.each do |item|
+    # @ratesum= item.reviews.sum(:all_rating)  # カラムのデータの合計値 
+    # @ratecount= item.reviews.count(:all_rating) # カラムのデータ個数
+    # @rateavg = @ratesum.to_f/@ratecount
+    # end
     
     @items.each do |item|
      gon.kan = item.reviews.average(:all_rating).to_f.round(1)
@@ -58,5 +58,14 @@ class ItemsController < ApplicationController
 
    gon.allave = @reviews.average(:all_rating)
  end
+
+ def ranking
+  @items = Item.all
+  reviews = Review.all
+  @itemname =  Item.pluck(:item_name)
+  @datas = Review.pluck(:all_rating)
+
+end
+
 
 end
