@@ -1,0 +1,65 @@
+
+<% @items.map do |item| %> 
+名前　<%=  item.item_name %>  
+<p>
+合計<%=  @ratesum= item.reviews.sum(:all_rating) %>  
+<p>
+ 数<%=  @ratecount= item.reviews.count(:all_rating) %> 
+ <p>
+ 平均<%=  @rateavg = @ratesum.to_f/@ratecount %> 
+<% end %>
+
+
+
+
+ <canvas id="aaランキング"></canvas>
+
+<script>
+    var ctx = document.getElementById("aaランキング").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: "horizontalBar", // 水平棒グラフ
+        data: {
+            labels: ["aaaaaa","bbbb"], // gon.itemname でも同じ
+            datasets: [
+             
+                {
+                    label: "系列Ａ",
+                    data:  [ <%= @rateavg %>  ],
+                    backgroundColor: ["red", "yellow", "green", "blue", "purple"]
+                }
+        
+            ]
+        },
+        options: {
+            responsive: false,
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "総合ランキング"
+            },
+            legend: {
+                display: false,
+            },                
+            scales: {
+                xAxes: [ // Ｘ軸のオプション
+                    {
+                        ticks: {
+                            min: 0
+                        }
+                    }
+                ],
+                yAxes: [                   //
+                    {                      //
+                        ticks: {           //
+                            reverse: true  // 行の反転をさせたいのですが無視されています
+                        }                  //
+                    }                      //
+                ]                          //
+            }
+
+        }
+    });
+
+</script>
+
+

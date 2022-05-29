@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   end
   resources :items do
    resources :reviews
+   collection do
+    get 'ranking'
+   end
   end
   post 'like/:id' => 'likes#create', as: 'create_like'
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
