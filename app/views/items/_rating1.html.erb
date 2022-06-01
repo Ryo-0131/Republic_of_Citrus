@@ -1,9 +1,11 @@
+# 一旦なしで
+
  <% @items.each do |item|  %>
  <%= item.reviews.average(:all_rating).to_f.round(1)%>
  <% end %>
 
 
-           <%# <%= @each %> %>
+
 
 
  

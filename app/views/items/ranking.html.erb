@@ -1,40 +1,27 @@
+# 一旦なしで
 
-
-  <% @items.each do |item| %>
-   <%@ratesum= item.reviews.sum(:all_rating)  # カラムのデータの合計値  %>
-   <%@ratecount= item.reviews.count(:all_rating) # カラムのデータ個数 %>
-   <%@rateavg = @ratesum.to_f/@ratecount %>
- <% end %>
-
-   <%= @rateavg %>
-
-----
+<%= @all  %>
 
 <% @items.each do |t| %>
+ </div> 
+ <div class="avg"><%= t.reviews.average(:all_rating)  %></div>
+ <% end %>
 
- <div class ="index-show">
- </div>
- <div class="a1"><%= t.item_name %></div> 
- <div class="a2"><%= t.reviews.sum(:all_rating)  %></div>
-  <div class="a3"><%= t.reviews.count(:all_rating)  %></div>
-   <div class="a4"><%= t.reviews.average(:all_rating)  %></div>
-  <canvas class="myCharts"></canvas>
-<% end %>
-
+ <canvas class="myCharts"></canvas>
   <script>
-
     ctx = document.getElementsByClassName("myCharts");
-    var aa = document.getElementsByClassName("a2");
-    var bb = document.getElementsByClassName("a3");
+    var avg = document.getElementsByClassName("avg");
     myChart = new Chart(ctx, {
        type: "horizontalBar",
       data: {
-            labels: <%== @itemname %>, // gon.itemname でも同じ
-            datasets: [             
+            labels: <%== @itemname %>, 
+            datasets: [      
+ 
                 {
-                        data:  [bb],
+                        data: gon.rateavg, // これができない。
                     backgroundColor: ["red", "yellow", "green", "blue", "purple"]
                 }
+
                     ]
         },
 options: {
@@ -69,7 +56,6 @@ options: {
 
 </script>
  </div>
--途中省略-
 
 
 
