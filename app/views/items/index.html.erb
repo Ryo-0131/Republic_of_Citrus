@@ -1,30 +1,130 @@
-<span class="h2">かんきつ共和国🍊</span>
+<span class="h2"></span>
 <%# ログインの有無で表示が変わるように分岐%>
 
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Fixed top navbar example · Bootstrap v5.0</title>
 
-<% if user_signed_in? %>
- <li><%= link_to "#{current_user.nickname}さん", user_path(id: current_user.id), class: "user-nickname" %></li>
- <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
-<% else %>
- <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
- <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-<% end %>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-warning" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">かんきつ共和国🍊</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+ <% if user_signed_in? %>
+        <li class="nav-item">
+         <a class="nav-link" href= <%= user_path(id: current_user.id) %>><%=current_user.nickname%>さんのマイページ</a>
+        </li>
+       <%# 正常にマイページに飛ぶ %>
+
+        <li class="nav-item">
+         <a class="nav-link" href= <%= destroy_user_session_path %>>ログアウト①</a>
+        </li>
+        <%# Couldn't find User with 'id'=sign_outになる %>
+
+       <li class="nav-item">
+         <a class="nav-link" method="destroy" href= <%= destroy_user_session_path%>  >ログアウト②</a>
+        </li>
+        <%# Couldn't find User with 'id'=sign_outになる %>
+
+        <li class="nav-item">
+         <a class="nav-link"><%= link_to 'ログアウト③', destroy_user_session_path, :method => :delete %></a>
+        </li>
+        <%# 正常にログアウトできるが、なぜか下に寄る。また、ハイパーリンクになってしまう %>
+
+        <li class="nav-item">
+         <a class="nav-link" href=<%= destroy_user_session_path%>><li><%= link_to 'ログアウト④', destroy_user_session_path, :method => :delete %></li></a>
+        </li>
+        <%# 正常にログアウトできるが、なぜか上に寄る。また、ハイパーリンクになってしまう %>
+
+ <% else %>
+
+        <li class="nav-item">
+         <a class="nav-link" href= <%= new_user_session_path %>>ログイン</a>
+        </li>
+       <%# 正常にログインできる %>
+
+        <li class="nav-item">
+         <a class="nav-link" href= <%= new_user_registration_path %>>新規登録</a>
+        </li>
+      <%# 正常に新規登録できる %>
+
+ <% end %>
+</ul>
+
+
+      
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    <p>
+    <h1>かんきつ共和国🍊</h1>
+    <p class="lead">ここは柑橘類を愛するものの場所。</p>
+    </div>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
+
+
+
 <%= render partial: 'item', collection: @items %>
 
 
-<%= @ratesum %>
-<p>
-<%= @ratecount %>
-<p>
-<%= @rateavg %>
-<p>
-<%= @all %>
-<p>
 
 
-<% @items.each do |item| %>
-  <%= render partial: 'sample', item: item %>
-<% end %>
+
+
+
 
 
