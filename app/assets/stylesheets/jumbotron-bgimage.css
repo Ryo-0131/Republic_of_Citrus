@@ -3,7 +3,21 @@ body {
 } 
 
 .jumbotron {
-  background-image: url("../images/back.jpg");
+  background-image: url("back.jpg");
+  background-repeat: no-repeat;
+  /* background: url(../images/back.jpg) */
   background-size: cover;
   background-position: center 60%;
+
+  border: solid orange 1px;
+}
+
+.textcolor{
+  color:orange;
+  background-color: antiquewhite;
+  opacity: 0.9;
+  padding: 10px;
+  /* text-align: center; */
+  border-radius: 20px;
+  width: 50%;
 }
