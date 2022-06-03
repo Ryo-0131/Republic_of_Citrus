@@ -1,0 +1,9 @@
+body {
+  padding-top:54px;
+} 
+
+.jumbotron {
+  background-image: url("../images/back.jpg");
+  background-size: cover;
+  background-position: center 60%;
+}
