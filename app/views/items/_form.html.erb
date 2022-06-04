@@ -23,7 +23,23 @@
    </div>
     <div class="actions"><br/>
 
-  <button type="submit" class="btn btn-warning btn-lg text-success">送信する</button>
+
+<%= button_tag :type => "submit", :class =>"btn btn--red btn--radius btn--cubic" do %>
+  <i class="fas fa-angle-right fa-position-right"></i>検索
+<% end %>
+
+<%= button_tag '<i class="fas fa-angle-right fa-position-right"></i>検索'.html_safe, :type => "submit", 
+    :class =>"btn btn--red btn--radius btn--cubic" %>
+
+
+<%= f.submit class: "btn btn--red btn--radius btn--cubic" %>送信する！<i class="fas fa-angle-right fa-position-right"></i></a>
+
+ 
+
+      <a type="submit" class="btn btn--red btn--radius btn--cubic">送信する！<i class="fas fa-angle-right fa-position-right"></i></a>
+
+
+            <button type="submit" class="btn btn--red btn--radius btn--cubic">送信する！<i class="fas fa-angle-right fa-position-right"></i></button>
 
     </div>
  <% end %>
