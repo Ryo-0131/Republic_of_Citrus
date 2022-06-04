@@ -66,19 +66,32 @@
 
     <div class="row align-items-md-stretch">
      
+
+
+  
       <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
+      <div class="mainbox rounded-3">
+        <div class="h-100 p-5  border rounded-3">
+ 
           <h2><%= item.item_name %></h2>
           <p> <img src=<%= item.image_url %>></p>
+                           <div class="border rounded-3">
           <p><%= item.description %></p>   
+                </div>
                      <div id="likes_buttons_<%= item.id %>">
  <%= render partial: 'likes/like', locals: {item: item} %>
       </div>
+           </div>
       </div>
-       
+      
+  
+
+
+
       </div>
        <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
+       <div class="ratebox rounded-3">
+        <div class="h-100 p-5 border rounded-3">
          <h2><%= "#{item.item_name}""の評価" %></h2>
           <%= pie_chart [
   # [@all_rating, item.reviews.average(:all_rating).to_f.round(1)],
@@ -100,6 +113,9 @@
     </div>
    </div>
   </div>
+        </div>
+
+
 </main>
    
   </body>
