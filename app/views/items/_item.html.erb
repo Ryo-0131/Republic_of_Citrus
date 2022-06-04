@@ -66,23 +66,34 @@
 
     <div class="row align-items-md-stretch">
      
+
+
+  
       <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
+      <div class="mainbox rounded-3">
+        <div class="h-100 p-5  border rounded-3">
+ 
           <h2><%= item.item_name %></h2>
           <p> <img src=<%= item.image_url %>></p>
+                           <div class="border rounded-3">
           <p><%= item.description %></p>   
+                </div>
                      <div id="likes_buttons_<%= item.id %>">
  <%= render partial: 'likes/like', locals: {item: item} %>
       </div>
-                            </div>
-
-        
+           </div>
       </div>
+      
+  
 
-        <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
-                  <h2><%= "#{item.item_name}""の評価" %></h2>
-         <%= pie_chart [
+
+
+      </div>
+       <div class="col-md-6">
+       <div class="ratebox rounded-3">
+        <div class="h-100 p-5 border rounded-3">
+         <h2><%= "#{item.item_name}""の評価" %></h2>
+          <%= pie_chart [
   # [@all_rating, item.reviews.average(:all_rating).to_f.round(1)],
   ["甘い！", item.reviews.average(:rating1).to_f.round(1)],
   ["酸っぱい！", item.reviews.average(:rating2).to_f.round(1)],
@@ -93,34 +104,24 @@
   %>
   <p>
   <%# 星評価機能raty.js %>
-          <div class="average-review-rating" data-score=<%= item.reviews.average(:all_rating) %>></div>
-          
+          <div class="average-review-rating" data-score=<%= item.reviews.average(:all_rating) %>></div>         
           <p> <%=@all_rating %>：<%= item.reviews.average(:all_rating).to_f.round(1) %></p>
-          <button class="btn btn-outline-secondary" type="button"><%= link_to "レビューを見る", item_path(item.id), class: "review-button"%></button>
-          
+         <a class="btn btn-radius-solid btn--shadow" href= <%= item_path(item.id) %>>レビューを見る<i class="fas fa-angle-right fa-position-right"></i></a>
         </div>
         </div>
-        
-      </div>
-
-
+       </div>
     </div>
- 
+   </div>
   </div>
-     </div>
+        </div>
+
+
 </main>
-
-
-    
+   
   </body>
 </html>
 
-
-
-
-
 <%# チャートのスクリプトは以下 %>
-
 <script>
  $('.average-review-rating').empty();
   $('.average-review-rating').raty({
@@ -134,8 +135,7 @@
   });
 </script>
 <br>
-
-      </div>
-    </div>
+ </div>
+  </div>
 
 

@@ -1,12 +1,11 @@
 <%= render "shared/second-header"%>
 
+         
 <div class='xxx' id='xxx'>
   <div class='xxx'>
     <div class='xxx'>
       <h2>ユーザー情報の編集</h2>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'back-btn'%>
-      <%= link_to "ユーザーページに戻る", :back, class: 'back-btn'%>
-      <%=link_to 'トップページへもどる', root_path, class:"back-btn" %>
+          
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: current_user, local: true do |f|%>
@@ -37,11 +36,22 @@
             </tbody>
        </table>
       <div class='actions'>
-       <%= f.submit "更新する", class: 'back-btn-update'%>
+
+ <div class="row justify-content-around">
+      <button type="submit" class="btn btn-warning btn-lg text-success">更新する</button>
       </div>
+          </div>
       <% end %>
-    </div>
-  </div>
+      <br>
+ 
+
+  <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "top-button"%></button>
+        <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "ユーザーページに戻る",  :back, class: "top-button"%></button>
+     <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "トップページへもどる", root_path, class: "top-button"%></button>
+
+
+</div>
+</div>
 </div>
 
 <%= render "shared/second-header"%>
