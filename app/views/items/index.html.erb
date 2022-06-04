@@ -12,12 +12,15 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Fixed top navbar example · Bootstrap v5.0</title>
 
+
+    <%# <link rel="stylesheet" href="jumbotron-bgimage.css">  %>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    
-
-    <!-- Bootstrap core CSS -->
+<!-- Bootstrap core CSS -->
+<%# <link rel="stylesheet" href="../assets/stylesheets/jumbotron-bgimage.css">  %>
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <%# <link rel="stylesheet" href="css/bootstrap.min.css"> %>
 
     <style>
       .bd-placeholder-img {
@@ -35,20 +38,40 @@
       }
     </style>
 
-    
+
+  
     <!-- Custom styles for this template -->
+    
     <link href="navbar-top-fixed.css" rel="stylesheet">
+  
   </head>
   <body>
+
+  <main>
+ <%# <div class="jumbotron jumbotron-fluid" style="background-image:url(back.jpg); background-size:cover;"> %>
+ <div class="jumbotron jumbotron-fluid" >
+    <div class="container">
+     <div class="textcolor">
+      <h1 class="display-4">かんきつ共和国🍊</h1>
+      <p class="lead">ここは柑橘類を愛するものの場所。</p>
+      <%# <a class="btn btn-outline-primary btn-lg" href="#" role="button">マイページへ</a> %>
+         </div>
+    </div>
+     </div>
+  <%# </div> %>
     
+
+</div>
+
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-warning" >
   <div class="container-fluid">
     <a class="navbar-brand" href="#">かんきつ共和国🍊</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
+    
 
+<div class="collapse navbar-collapse" id="navbarCollapse">
 <ul class="navbar-nav me-auto mb-2 mb-md-0">
  <% if user_signed_in? %>
         <li class="nav-item">
@@ -56,25 +79,10 @@
         </li>
        <%# 正常にマイページに飛ぶ %>
 
-        <li class="nav-item">
-         <a class="nav-link" href= <%= destroy_user_session_path %>>ログアウト①</a>
+          <li class="nav-item">
+         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link' %>
         </li>
-        <%# Couldn't find User with 'id'=sign_outになる %>
-
-       <li class="nav-item">
-         <a class="nav-link" method="destroy" href= <%= destroy_user_session_path%>  >ログアウト②</a>
-        </li>
-        <%# Couldn't find User with 'id'=sign_outになる %>
-
-        <li class="nav-item">
-         <a class="nav-link"><%= link_to 'ログアウト③', destroy_user_session_path, :method => :delete %></a>
-        </li>
-        <%# 正常にログアウトできるが、なぜか下に寄る。また、ハイパーリンクになってしまう %>
-
-        <li class="nav-item">
-         <a class="nav-link" href=<%= destroy_user_session_path%>><li><%= link_to 'ログアウト④', destroy_user_session_path, :method => :delete %></li></a>
-        </li>
-        <%# 正常にログアウトできるが、なぜか上に寄る。また、ハイパーリンクになってしまう %>
+ 
 
  <% else %>
 
@@ -90,9 +98,7 @@
 
  <% end %>
 </ul>
-
-
-      
+    
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -101,18 +107,13 @@
   </div>
 </nav>
 
-<main class="container">
-  <div class="bg-light p-5 rounded">
-    <p>
-    <h1>かんきつ共和国🍊</h1>
-    <p class="lead">ここは柑橘類を愛するものの場所。</p>
-    </div>
-</main>
 
 
+
+</div>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-      
+      </main>
   </body>
 </html>
 
@@ -123,6 +124,8 @@
 
 
 
+
+<%= render partial: 'sample', collection: @items %>
 
 
 

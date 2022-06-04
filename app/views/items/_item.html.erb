@@ -16,6 +16,7 @@
     <!-- Bootstrap core CSS -->
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -30,25 +31,38 @@
           font-size: 3.5rem;
         }
       }
+
+      
     </style>
 
     
   </head>
   <body>
     
+    
 <main>
-  <div class="container py-4">
+
+ <div class="itempage">
+   <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
            </a>
     </header>
 
-    <div class="p-1 mb-1 bg-light rounded-3">
-      <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold"><%= item.item_name %></h1>
 
+
+    <div class="p-1 mb-1 bg-warning rounded-3">
+
+          <div class="itemtitle">
+               <div class="jumbotron-fluid" >
+      <div class="container-fluid py-3">
+
+        <h1 class="display-5 fw-bold "><%= item.item_name %></h1>
+      </div>   
       </div>
-    </div>                   
+    </div>     
+          </div>
+       
 
     <div class="row align-items-md-stretch">
      
@@ -57,10 +71,11 @@
           <h2><%= item.item_name %></h2>
           <p> <img src=<%= item.image_url %>></p>
           <p><%= item.description %></p>   
-                            </div>
-           <div id="likes_buttons_<%= item.id %>">
+                     <div id="likes_buttons_<%= item.id %>">
  <%= render partial: 'likes/like', locals: {item: item} %>
       </div>
+                            </div>
+
         
       </div>
 
@@ -92,6 +107,7 @@
     </div>
  
   </div>
+     </div>
 </main>
 
 
