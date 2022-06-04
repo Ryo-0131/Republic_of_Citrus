@@ -31,6 +31,8 @@
           font-size: 3.5rem;
         }
       }
+
+      
     </style>
 
     
@@ -39,19 +41,28 @@
     
     
 <main>
+
  <div class="itempage">
-  <div class="container py-4">
+   <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
            </a>
     </header>
 
-    <div class="p-1 mb-1 bg-light rounded-3">
-      <div class="container-fluid py-3 bg-warning">
-        <h1 class="display-5 fw-bold "><%= item.item_name %></h1>
 
+
+    <div class="p-1 mb-1 bg-warning rounded-3">
+
+          <div class="itemtitle">
+               <div class="jumbotron-fluid" >
+      <div class="container-fluid py-3">
+
+        <h1 class="display-5 fw-bold "><%= item.item_name %></h1>
+      </div>   
       </div>
-    </div>                   
+    </div>     
+          </div>
+       
 
     <div class="row align-items-md-stretch">
      
