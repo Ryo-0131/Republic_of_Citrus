@@ -8,8 +8,9 @@ body {
   /* background: url(../images/back.jpg) */
   background-size: cover;
   background-position: center 60%;
-
   border: solid orange 1px;
+  background-color: #e9ecef;
+  border-radius: .3rem;
 }
 
 .textcolor{
@@ -21,3 +22,7 @@ body {
   border-radius: 20px;
   width: 50%;
 }
+
+.jumbotron {
+  margin-bottom: 0px!important;
+  }

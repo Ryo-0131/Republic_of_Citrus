@@ -30,7 +30,7 @@
 <%= render partial: "items/show_rate", locals: { item: @item } %>
 <br/>
 
- <%=link_to 'トップページへもどる', root_path, class:"back-btn" %>
+   <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "トップページへもどる", root_path, class: "top-button"%></button>
 
 <%# チャート機能chart.js %>
 <%= render partial: "items/show_rating" %>
