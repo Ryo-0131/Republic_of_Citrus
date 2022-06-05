@@ -28,6 +28,12 @@ class ItemsController < ApplicationController
     gon.rate3 = @item.reviews.average(:rating3).to_f.round(1)
     gon.rate4 = @item.reviews.average(:rating4).to_f.round(1)
 
+    @all_rating = "総合評価"
+    @rating1 = "甘味評価"
+    @rating2 = "酸味評価"
+    @rating3 = "水分評価"
+    @rating4 = "食べやすさ評価" 
+
    gon.allave = @reviews.average(:all_rating)
  end
 

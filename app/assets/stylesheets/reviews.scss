@@ -5,6 +5,7 @@
 .reviewbox{
   background-color: rgb(251, 240, 229);
   width: 50%;
+
 }
 
 .textbox {
@@ -15,10 +16,17 @@
   -webkit-border-radius:6px;
   -moz-border-radius:6px;
   border-radius:6px;
+  
 }
 
-textarea {
+.reviewform{
+  display: flex;
+  justify-content:center;
+}
 
+.reviewlist {
+  display: flex;
+  justify-content:center;
 }
 
 .m-form-text {
@@ -35,4 +43,79 @@ textarea {
 .m-form-text:focus {
   outline: 0;
   box-shadow:0 0 10px 0 #ffa200 inset;
+}
+
+hr.style1{
+  height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.box24 {
+  position: relative;
+  padding: 0.5em 0.7em;
+  margin: 2em 0;
+  background: #e6f4ff;
+  color: #5c98d4;
+  font-weight: bold;
+  width: 50%;
+}
+.box24:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e6f4ff;
+  width: 0;
+  height: 0;
+}
+.box24 p {
+  margin: 0; 
+  padding: 0;
+}
+
+
+.box26 {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+  width: 60%;
+}
+.box26 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #95ccff;
+  font-weight: bold;
+}
+.box26 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.chartbox{
+  float: left;
+  // display: flex;
+  // justify-content: flex-start;
+  width: 70%;
+  clear: both;
+}
+
+.starrate{
+  // display: flex;
+  // justify-content: flex-end;
+  font-size: 12px;
+}
+
+.avgbox{
+  display: flex;
+  justify-content:center;
 }

@@ -1,6 +1,6 @@
-<%=@all_rating %>：不味い〜美味しい🍊 
+<div class="starrate">
 <%# 平均点を算出し、round関数で切り上げ %>
-<div><%= @reviews.average(:all_rating).to_f.round(1)  %></div>
+<%=@all_rating %>：<%= @reviews.average(:all_rating).to_f.round(1) %>
 <div class="average-review-rating" data-score=<%= @reviews.average(:all_rating) %>></div>
 <script>
   $('.average-review-rating').raty({
@@ -16,8 +16,7 @@
 <br>
 <%# <%= @item.reviews.count %> 
 
-<%=@rating1 %>：甘い〜とても甘い🍊 
-<div><%= @reviews.average(:rating1).to_f.round(1) %></div>
+<%=@rating1 %>：<%= @reviews.average(:rating1).to_f.round(1) %>
 <div class="average-review-rating1" data-score=<%= @reviews.average(:rating1) %>></div>
 <script>
   $('.average-review-rating1').raty({
@@ -32,8 +31,7 @@
 </script>
 <br>
 
-<%=@rating2 %>：酸っぱい〜とても酸っぱい🍊
-<div><%= @reviews.average(:rating2).to_f.round(1) %></div>
+<%=@rating2 %>：<%= @reviews.average(:rating2).to_f.round(1) %>
 <div class="average-review-rating2" data-score=<%= @reviews.average(:rating2) %>></div>
 <script>
   $('.average-review-rating2').raty({
@@ -48,7 +46,7 @@
 </script>
 <br>
 
-<%=@rating3 %>：水分が少ない〜多い🍊 
+<%=@rating3 %>：<%= @reviews.average(:rating3).to_f.round(1) %>
 <div><%= @reviews.average(:rating3).to_f.round(1) %></div>
 <div class="average-review-rating3" data-score=<%= @reviews.average(:rating3) %>></div>
 <script>
@@ -64,7 +62,7 @@
 </script>
 <br>
 
-<%=@rating4 %>：食べにくい〜食べやすい🍊 
+<%=@rating4 %>：<%= @reviews.average(:rating4).to_f.round(1) %>
 <div><%= @reviews.average(:rating4).to_f.round(1) %></div>
 <div class="average-review-rating4" data-score=<%= @reviews.average(:rating4) %>></div>
 <script>
@@ -79,3 +77,5 @@
   });
 </script>
 <br>
+
+</div>
