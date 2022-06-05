@@ -42,7 +42,9 @@
     
 <main>
 
- <div class="itempage">
+	
+  <div class="bg_pattern Cross"></div>
+ <%# <div class="itempage"> %>
    <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
@@ -52,28 +54,22 @@
 
 
     <div class="p-1 mb-1 bg-warning rounded-3">
-
-          <div class="itemtitle">
-               <div class="jumbotron-fluid" >
-      <div class="container-fluid py-3">
-
-        <h1 class="display-5 fw-bold "><%= item.item_name %></h1>
+     <div class="itemtitle">
+      <div class="jumbotron-fluid" >
+       <div class="container-fluid py-1">
+        <h1 class="display-7 fw-bold "><%= item.item_name %></h1>
       </div>   
-      </div>
+     </div>
     </div>     
-          </div>
+   </div>
        
 
     <div class="row align-items-md-stretch">
-     
-
-
-  
-      <div class="col-md-6">
+     <div class="col-md-6">
       <div class="mainbox rounded-3">
-        <div class="h-100 p-5  border rounded-3">
+        <div class="h-100 p-5 border rounded-3">
  
-          <h2><%= item.item_name %></h2>
+          <%# <h2><%= item.item_name %>
           <p> <img src=<%= item.image_url %>></p>
                            <div class="border rounded-3">
           <p><%= item.description %></p>   

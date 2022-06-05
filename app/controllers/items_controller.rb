@@ -3,8 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
-  
-    # Item.order(all_rating: :desc)
+      # Item.order(all_rating: :desc)
     @reviews = Review.all
     @all_rating = "総合評価"
     @rating1 = "甘味評価"
@@ -13,8 +12,7 @@ class ItemsController < ApplicationController
     @rating4 = "食べやすさ評価"  
     @itemname =  Item.pluck(:item_name)
     gon.itemname = @itemname
- 
-  end
+   end
 
   def show
     @item = Item.find(params[:id])
@@ -28,7 +26,13 @@ class ItemsController < ApplicationController
     gon.rate3 = @item.reviews.average(:rating3).to_f.round(1)
     gon.rate4 = @item.reviews.average(:rating4).to_f.round(1)
 
-   gon.allave = @reviews.average(:all_rating)
+    @all_rating = "総合評価"
+    @rating1 = "甘味評価"
+    @rating2 = "酸味評価"
+    @rating3 = "水分評価"
+    @rating4 = "食べやすさ評価" 
+
+    gon.allave = @reviews.average(:all_rating)
  end
 
  def ranking

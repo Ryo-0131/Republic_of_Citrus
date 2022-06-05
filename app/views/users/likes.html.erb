@@ -1,11 +1,32 @@
 <%= render partial: 'items/header' %>
-<p>お気に入り！した柑橘類🍊一覧</p>
-<% @like_items.each do |item|%>
-<table class="table">
-        <tbody>
-          <tr>
-            <td class="table__col2"><%=link_to item.item_name,item_path(item.id) %></td>
-          </tr>
-        </tbody>
-      </table>
-<% end %>
+
+<div class="bg_pattern Cross"></div>
+ 
+ <div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+
+
+ <div class="likelist">
+
+<div class="box30">
+    <div class="box-title"> お気に入り！した柑橘類一覧</div>
+
+ <% @like_items.each do |item|%>
+
+        <ul>
+
+          <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %><i class="fas fa-angle-right fa-position-right"></i></a>
+
+        </ul> 
+
+
+        <% end %>
+
+      </div>
+     </div>
+  </div>
+</div>
+
+</div>
+
