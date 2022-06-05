@@ -17,10 +17,12 @@
      <div class="box24">
       <%= review.comment %>
      </div>
+     <i class="fas fa-user"></i>
      <%= link_to "#{review.user.nickname}さん", user_path(id: review.user.id), class: :comment_user %>
      <%# ログイン中かつ自分のレビューだけ編集できる %>
      <% if user_signed_in? && current_user.id == review.user_id %> 
      <%# item_idおよびreview_idどちらも紐づいている必要がある %>
+     <i class="fas fa-edit"></i>
        <%= link_to '編集する', edit_item_review_path(@item.id, review.id), class: :review_btn %>
        <%= link_to "削除する", item_review_path(@item.id, review.id), method: :delete, class: :review_btn %>
      <% end %> 
@@ -45,6 +47,8 @@
 
 </div>
 
+
+
+
+
 <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "トップページへもどる", root_path, class: "top-button"%></button>
-
-

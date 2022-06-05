@@ -1,10 +1,17 @@
+  <div class="bg_pattern Cross"></div>
+
         <div class="reviewform">    
+
+        <div class="reviewinfo">
+        <div class="reviewinfobox">
           <h2><%= item.item_name %></h2>
           <p> <img src=<%= item.image_url %>></p>
-
-            
+          <%=@all_rating %>：<%= @reviews.average(:all_rating).to_f.round(1) %>
+          <div class="average-review-rating" data-score=<%= @reviews.average(:all_rating) %>></div>
+           </div>
+            </div>
           
-      <div class="reviewbox rounded-3 border">
+<div class="reviewbox rounded-3 border">
       <h2>🍊レビューフォーム🍊</h2>
         <div class="col-md-6">
  </div>
@@ -14,11 +21,8 @@
   <div class="field">
 
      <%= f.label :comment, " レビュー" %><br/>
-
-      <div class="areabox">
-
     <%= f.text_area :comment,  rows: 4, cols: 60, class: "m-form-text", placeholder: "ご自由に記載ください", id:"comment_content" %><br/>
-   </div>
+
 
 <div class="table-size2">
     <table class="table table-warning table-hover table-bordered">

@@ -47,7 +47,6 @@
 <br>
 
 <%=@rating3 %>：<%= @reviews.average(:rating3).to_f.round(1) %>
-<div><%= @reviews.average(:rating3).to_f.round(1) %></div>
 <div class="average-review-rating3" data-score=<%= @reviews.average(:rating3) %>></div>
 <script>
   $('.average-review-rating3').raty({
@@ -63,7 +62,6 @@
 <br>
 
 <%=@rating4 %>：<%= @reviews.average(:rating4).to_f.round(1) %>
-<div><%= @reviews.average(:rating4).to_f.round(1) %></div>
 <div class="average-review-rating4" data-score=<%= @reviews.average(:rating4) %>></div>
 <script>
   $('.average-review-rating4').raty({

@@ -14,7 +14,7 @@
 .itempage {
   // background:radial-gradient(#F89174, #FFC778);
     background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 20px, 40px, rgba(66, 213, 42, 0.5) 40px 60px), repeating-linear-gradient(180deg, rgba(243, 201, 140, 0.6) 20px 40px, rgba(255, 255, 255, 1) 40px 60px);
-
+   
     // background: rgb(255,255,255);
     // background: linear-gradient(312deg, rgba(255,255,255,1) 0%, rgba(202,242,198,1) 28%, rgba(182,231,144,1) 64%, rgba(255,255,255,1) 100%);
 }
@@ -38,14 +38,18 @@
 }
 
 .mainbox{
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(244,245,49,1) 33%, rgba(204,210,42,1) 64%, rgba(255,255,255,1) 100%);
+  // background: rgb(255,255,255);
+  // background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(244,245,49,1) 33%, rgba(204,210,42,1) 64%, rgba(255,255,255,1) 100%);
+  background-color: rgb(251, 240, 229);
+  opacity: 0.8;
 }
 
 .ratebox
 {
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(244,245,49,1) 33%, rgba(204,210,42,1) 64%, rgba(255,255,255,1) 100%);
+  // background: rgb(255,255,255);
+  // background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(244,245,49,1) 33%, rgba(204,210,42,1) 64%, rgba(255,255,255,1) 100%);
+  background-color: rgb(251, 240, 229);
+  opacity: 0.8;
 }
 
 
