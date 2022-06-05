@@ -1,5 +1,5 @@
 <%= render partial: 'items/header' %>
-  <div class="bg_pattern Cross"></div>
+<div class="bg_pattern Cross"></div>
 
 <div class="main">
   <div class="inner">
@@ -35,7 +35,7 @@
             <th class="table__col1">お気に入り！した柑橘類一覧🍊</th>
             <td class="table__col2"> <a class="btn btn--orange btn--radius" href= <%= likes_user_path(@user) %>>一覧を見る</a></td>
             
-               
+                      
 
           </tr>
           <tr>
@@ -47,7 +47,6 @@
 </div>
     
      <% if user_signed_in? && current_user.id == @user.id %>
-
      <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "ユーザー情報を編集する", edit_user_path(current_user), class: "top-button"%></button>
      <% end %>  
        <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "トップページへもどる", root_path, class: "top-button"%></button>

@@ -11,3 +11,49 @@
   font-size: 15px;
   color: #e54747;
  }
+
+ .likelist{
+  display: flex;
+  justify-content: center;
+
+ }
+
+ .box30 {
+  margin: 2em 0;
+  background: #fffecf;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  width: 30%;
+}
+
+.box30 .box-title {
+  font-size: 1.2em;
+  background: #e55f5f;
+  padding: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.box30 p {
+  padding: 15px 20px;
+  margin: 0;
+}
+
+
+a.btn-radius-solid2 {
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+  background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+  box-shadow: inset 1px 1px 1px #fff;
+}
+
+a.btn-radius-solid2:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fdfbfb), to(#ebedee));
+  background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+}
