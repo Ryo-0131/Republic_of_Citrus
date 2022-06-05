@@ -1,13 +1,30 @@
+          <h2><%= item.item_name %></h2>
+          <p> <img src=<%= item.image_url %>></p>
+          
+      <div class="reviewbox rounded-3 border">
+      <h2>🍊レビューフォーム🍊</h2>
+        <div class="col-md-6">
+ 
+</div>
 
-<h2>一緒にレビューしましょう！</h2>
+
  <% if user_signed_in? %>
   <%= form_with model: @review, url: item_reviews_path(@item.id), local: true do |f|%> 
+
    <div class="field">
-    <%= f.label :comment, " レビュー🍊" %><br/>
-    <%= f.text_area :comment, id:"comment_content" %><br/>
+
+     <%= f.label :comment, " レビュー" %><br/>
+
+      <div class="areabox">
+
+    <%= f.text_area :comment,  rows: 4, cols: 60, class: "m-form-text", placeholder: "ご自由に記載ください", id:"comment_content" %><br/>
+   </div>
+
     <div class="field" id="star">
      <%= f.label :all_rating, " 総合評価：不味い〜美味しい   🍊 " %>
    </div>
+
+
    <div class="field" id="star1">
     <%= f.label :rating1, " 甘味評価：甘い〜とても甘い       🍊 " %>
    </div>
@@ -50,4 +67,10 @@
 <%= render partial: "items/form_rate", locals: { item: @item } %>
 
 <% end %>
+
+
+</div>
+
+      </div>   
+      </div>
 

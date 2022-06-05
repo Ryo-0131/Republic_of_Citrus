@@ -1,16 +1,18 @@
 <%= render partial: 'items/header' %>
 
+
 <div class="main">
+
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">かんきつレビュー</h2>
+   
+ 
         <%# 部分テンプレートでフォームを表示する %>
          <%= render partial: "items/form", locals: { item: @item } %>
     </div>
   </div>
-</div>
  <br>
-
+ 
 
 <h1>💬レビュー一覧💬</h1>
  <% @reviews.each do |review| %>
@@ -27,6 +29,8 @@
  <% end %>
  <br>
 
+
+
 <h1>⭐️みんなの評価の平均値⭐️</h1>
 <%= render partial: "items/show_rate", locals: { item: @item } %>
 <br/>
@@ -37,7 +41,7 @@
 <%= render partial: "items/show_rating" %>
 
 
-   <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "トップページへもどる", root_path, class: "top-button"%></button>
 
+   <button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "トップページへもどる", root_path, class: "top-button"%></button>
 
 

@@ -1,5 +1,8 @@
+
+
 <%= render partial: 'items/header' %>
-<p>お気に入り！した柑橘類🍊一覧</p>
+  <div class="bg_pattern Cross">
+<h2>お気に入り！した柑橘類🍊一覧</h2>
 <% @like_items.each do |item|%>
 <table class="table">
         <tbody>
@@ -9,3 +12,4 @@
         </tbody>
       </table>
 <% end %>
+</div>
