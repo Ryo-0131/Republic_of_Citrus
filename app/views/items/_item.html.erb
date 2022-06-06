@@ -80,7 +80,7 @@
            </div>
       </div>
       
-  
+
 
 
 
@@ -89,7 +89,7 @@
        <div class="ratebox rounded-3">
         <div class="h-100 p-5 border rounded-3">
          <h2><%= "#{item.item_name}""の評価" %></h2>
-          <%= pie_chart [
+          <%= column_chart [
   # [@all_rating, item.reviews.average(:all_rating).to_f.round(1)],
   ["甘い！", item.reviews.average(:rating1).to_f.round(1)],
   ["酸っぱい！", item.reviews.average(:rating2).to_f.round(1)],

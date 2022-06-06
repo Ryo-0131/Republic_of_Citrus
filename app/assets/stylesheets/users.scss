@@ -12,57 +12,55 @@
 
 .btn--orange,
 a.btn--orange {
-  color: #fff;
-  background-color: #eb6100;
+  color: #fff!important; 
+  background-color: #eb6100!important; 
 }
 .btn--orange:hover,
 a.btn--orange:hover {
-  color: #fff;
-  background: #f56500;
+  color: #fff!important; 
+  background: #f56500!important; 
 }
 
 a.btn--radius {
-   border-radius: 100vh;
+   border-radius: 100vh!important; 
 }
 
 a.btn-radius-solid {
-  background: #f1e767;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
-  background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%);
-  background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
+  background: #f1e767!important; 
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645))!important; 
+  background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%)!important; 
+  background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%)!important; 
 }
 
 a.btn-radius-solid:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
-  background: -webkit-linear-gradient(bottom, #f1e767 0%, #feb645 100%);
-  background: linear-gradient(to top, #f1e767 0%, #feb645 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645))!important; 
+  background: -webkit-linear-gradient(bottom, #f1e767 0%, #feb645 100%)!important; 
+  background: linear-gradient(to top, #f1e767 0%, #feb645 100%)!important; 
 }
 
 .btn--red,
 a.btn--red {
-  color: #fff;
-  background-color: #eb6100;
+  color: #fff !important; 
+  background-color: #eb6100!important; 
 }
 
 .btn--red:hover,
 a.btn--red:hover {
-  color: #fff;
-  background: #ff9c07;
+  color: #fff!important; 
+  background: #ff9c07!important; 
 }
 
 a.btn--red.btn--cubic {
-  border-bottom: 5px solid #9f000c;
+  border-bottom: 5px solid #9f000c!important; 
 }
 
 a.btn--red.btn--cubic:hover {
-  margin-top: 3px;
-  border-bottom: 2px solid #9f000c;
+  margin-top: 3px!important; 
+  border-bottom: 2px solid #9f000c!important; 
 }
 
 .fa-position-right {
-  position: absolute;
-  top: calc(50% - .5em);
-  right: 1rem;
+  position: absolute!important; 
+  top: calc(50% - .5em)!important; 
+  right: 1rem!important; 
 } 
-
-
