@@ -54,25 +54,26 @@
 
     <div class="actions"><br/>
 
-<%= f.submit "表示0", class: 'back-btn-update' %>
+<%# <%= f.submit "表示0", class: 'back-btn-update' 
 <%# 送信はできる。font awesomeは使用せず自作CSS。 %>
 
 <%= button_tag :type => "submit", :class =>"btn btn--red btn--radius btn--cubic" do %>
-  <i class="fas fa-angle-right fa-position-right"></i>表示1
+  <i class="fas fa-angle-right fa-position-right"></i>送信する
 <% end %>
 <%# 送信はできるが、font awesomeの表示が反映されない。 %>
 
-<%= button_tag '<i class="fas fa-angle-right fa-position-right"></i>表示2'.html_safe, :type => "submit", 
-    :class =>"btn btn--red btn--radius btn--cubic" %>
+<%# <%= button_tag '<i class="fas fa-angle-right fa-position-right"></i>表示2'.html_safe, :type => "submit", 
+    :class =>"btn btn--red btn--radius btn--cubic" %> 
     <%# 送信はできるが、font awesomeの表示が反映されない。 %>
 
-<% f.submit class: "btn btn--red btn--radius btn--cubic" %>表示3<i class="fas fa-angle-right fa-position-right"></i>
+<%# <% f.submit class: "btn btn--red btn--radius btn--cubic" %>
+<%# <i class="fas fa-angle-right fa-position-right"></i> %>
     <%# クリックできない。 %>
 
-<a type="submit" class="btn btn--red btn--radius btn--cubic">表示4<i class="fas fa-angle-right fa-position-right"></i></a>
+<%# <a type="submit" class="btn btn--red btn--radius btn--cubic">表示4<i class="fas fa-angle-right fa-position-right"></i></a> %>
     <%# 正常に表示されているが、送信処理がされない。 %>
 
-<button type="submit" class="btn btn--red btn--radius btn--cubic">表示5<i class="fas fa-angle-right fa-position-right"></i></button>
+<%# <button type="submit" class="btn btn--red btn--radius btn--cubic">表示5<i class="fas fa-angle-right fa-position-right"></i></button> %>
     <%# 送信はできるが、font awesomeの表示が反映されない。 %>
 
 
