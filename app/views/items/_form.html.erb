@@ -78,19 +78,29 @@
 <%# <button type="submit" class="btn btn--red btn--radius btn--cubic">表示5<i class="fas fa-angle-right fa-position-right"></i></button> %>
     <%# 送信はできるが、font awesomeの表示が反映されない。 %>
 
-
 <% end %>
 
 <%= render partial: "items/form_rate", locals: { item: @item } %>
 
+<% else %>
+<br> ログインするとレビューの書き込みが可能になります<p>
+<p>
+<i class="fas fa-sign-in-alt"></i> ログインフォームはこちらから!
+<div class="form-login">
+<a class="btn btn--red btn--radius btn--cubic" href= <%= new_user_session_path  %>>ログイン</a>
+</div>
+<br><i class="fas fa-sign-in-alt"></i> 登録がまだの方はこちらから!
+<div class="form-login">
+<a class="btn btn--red btn--radius btn--cubic" href= <%= new_user_registration_path  %>>新規登録</a>
+</div>
+
 <% end %>
 
 
-    </div>
+  </div>
    </div>
-   </div>
-
     </div>
+     </div>
 
 <hr class="style1">
 
