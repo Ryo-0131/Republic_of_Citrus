@@ -102,7 +102,7 @@
   <%# 星評価機能raty.js %>
           <div class="average-review-rating" data-score=<%= item.reviews.average(:all_rating) %>></div>         
           <p> <%=@all_rating %>：<%= item.reviews.average(:all_rating).to_f.round(1) %></p>
-         <a class="btn btn-radius-solid btn--shadow" href= <%= item_path(item.id) %>>レビューを見る<i class="fas fa-angle-right fa-position-right"></i></a>
+         <a class="btn btn-radius-solid btn--shadow" href= <%= item_path(item.id) %>><i class="fas fa-hand-point-right"></i>レビューを見る<i class="fas fa-angle-right fa-position-right"></i></a>
         </div>
         </div>
        </div>
