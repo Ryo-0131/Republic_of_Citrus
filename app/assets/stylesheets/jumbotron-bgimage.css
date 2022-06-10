@@ -1,5 +1,6 @@
-body {
-  padding-top:54px;
+body{
+   padding-top:54px;
+   font-family:'メイリオ','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',sans-serif;
 } 
 
 .jumbotron {
@@ -25,4 +26,8 @@ body {
 
 .jumbotron {
   margin-bottom: 0px!important;
+  }
+
+  body {
+
   }
