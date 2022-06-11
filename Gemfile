@@ -67,3 +67,5 @@ gem 'jquery-rails'
 gem 'gon'
 
 gem 'chartkick'
+
+gem 'ransack'

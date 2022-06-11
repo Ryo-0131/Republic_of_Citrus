@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
     @rating4 = "食べやすさ評価"  
     @itemname =  Item.pluck(:item_name)
     gon.itemname = @itemname
+    @data = [['a', 100], ['b', 200], ['c', 500]]
    end
 
   def show

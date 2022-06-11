@@ -80,3 +80,71 @@ background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
   width: 20%;
   padding: 0px 0px 0px 0px;
 }
+
+.box28 {
+  position: relative;
+  margin: 1em 1em;
+  padding: 40px 20px 30px;
+  border: solid 2px #FFC107;
+  width:20%;
+}
+.box28 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -2px;
+  left: -2px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #FFC107;
+  color: #ffffff;
+  font-weight: bold;
+}
+.box28 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.index-search-box {
+  margin-top: 5px;
+  /* height: 48px; */
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fae59f;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: none;
+  width: 70%;
+}
+
+
+.box28a {
+  position: relative;
+  margin: 1em 1em;
+  padding: 40px 20px 30px;
+  border: solid 2px #FFC107;
+  width:80%;
+}
+.box28a .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -2px;
+  left: -2px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #FFC107;
+  color: #ffffff;
+  font-weight: bold;
+}
+.box28a p {
+  margin: 0; 
+  padding: 0;
+}
+
+.main-search-box{
+  display: flex;
+}
