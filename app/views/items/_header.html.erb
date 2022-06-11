@@ -32,10 +32,28 @@
  <% end %>
 </ul>
  <form class="d-flex">
-  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-   <button class="btn btn-outline-success" type="submit">Search</button>
+
+   
+  <%= search_form_for @search, url: items_path do |f| %>
+  <%= f.text_field :item_name_cont, class: "form-control me-2", placeholder: 'かんきつ類を入力...'%>
+  <button class="btn btn-outline-success" type="submit">Search</button>
+  <% end %>
+
+ <% if @search_items.blank? %>
+ <i class="fas fa-arrow-alt-circle-right fa-2x"></i>
+  <div>該当するかんきつ類はありません</div>
+ <% end %>
+
+ <% if @search.conditions.present? %>
+  <% @search_items.each do |item| %>
+  <i class="fas fa-arrow-alt-circle-right fa-2x searcharrow"></i>
+  <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a> 
+  <% end %>
+<% end %>  <br>
  </form>
 
 </div>
 </div>
 </nav>
+
+

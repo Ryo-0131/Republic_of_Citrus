@@ -56,26 +56,41 @@
     
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
+<div class="main-search-box">
  
-  <br>検索から探す：
+ <div class="box28">
+  <span class="box-title">検索から探す<i class="fas fa-search"></i></span>
   <%= search_form_for @search, url: items_path do |f| %>
-
-  <%= f.text_field :item_name_cont, placeholder: '名前を入力...'%>
-  <%= f.submit ("検索する") %>
+  <%= f.text_field :item_name_cont, class: "index-search-box", placeholder: '名前を入力...'%>
+  <button class="btn btn-outline-success" type="submit">Search</button>
   <% end %>
-   <br>
- <% if @search.conditions.present? %>
- <% @search_items.each do |item| %>
- <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %><i class="fas fa-angle-right fa-position-right"></i></a> 
- <% end %>
- <% end %>
-
-  <br>一覧から探す：<br>
-  <% @items.each do |item| %>
-  <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %><i class="fas fa-angle-right fa-position-right"></i></a>  
-    <% end %>
   <br>
 
+
+
+ <% if @search_items.blank? %>
+  <div>該当するかんきつ類はありません</div>
+ <% end %>
+
+ <% if @search.conditions.present? %>
+  <% @search_items.each do |item| %>
+  <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a> 
+  <% end %>
+<% end %>  <br>
+
+</div>
+
+
+ <div class="box28a">
+    <span class="box-title">一覧から探す<i class="fas fa-search"></i></span>
+   <% @items.each do |item| %>
+   <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a>  
+  <% end %>
+ <br>
+
+</div>
+
+</div>
 
   </main>
  </body>
