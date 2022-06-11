@@ -56,6 +56,27 @@
     
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
+ 
+  <br>検索から探す：
+  <%= search_form_for @search, url: items_path do |f| %>
+
+  <%= f.text_field :item_name_cont, placeholder: '名前を入力...'%>
+  <%= f.submit ("検索する") %>
+  <% end %>
+   <br>
+ <% if @search.conditions.present? %>
+ <% @search_items.each do |item| %>
+ <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %><i class="fas fa-angle-right fa-position-right"></i></a> 
+ <% end %>
+ <% end %>
+
+  <br>一覧から探す：<br>
+  <% @items.each do |item| %>
+  <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %><i class="fas fa-angle-right fa-position-right"></i></a>  
+    <% end %>
+  <br>
+
+
   </main>
  </body>
 </html>
