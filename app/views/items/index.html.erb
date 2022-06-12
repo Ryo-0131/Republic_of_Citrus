@@ -80,7 +80,6 @@
 
 </div>
 
-
  <div class="box28a">
     <span class="box-title">一覧から探す<i class="fas fa-search"></i></span>
    <% @items.each do |item| %>
@@ -97,12 +96,6 @@
 </html>
 
 <%= render partial: 'item', collection: @items %>
-
-
-
-
-
-
 
 <%= bar_chart @data, discrete: true %>
 
