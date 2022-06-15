@@ -9,5 +9,5 @@ environment.plugins.prepend('Provide',
   })
 )
 // 追加ここまで
-
+environment.loaders.delete('nodeModules');
 module.exports = environment
