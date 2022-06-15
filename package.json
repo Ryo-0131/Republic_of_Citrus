@@ -2,6 +2,7 @@
   "name": "rpc_app",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@popperjs/core": "^2.11.5",
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
@@ -11,12 +12,11 @@
     "chart.js": "^3.7.1",
     "chartkick": "^4.1.1",
     "jquery": "^3.6.0",
-    "turbolinks": "^5.2.0",
-    "@fortawesome/fontawesome-free": "^5.15.4"
+    "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^4.8.1"
+    "webpack-dev-server": "^4.9.2"
   },
   "engines": {
     "node": "v14.19.1"
