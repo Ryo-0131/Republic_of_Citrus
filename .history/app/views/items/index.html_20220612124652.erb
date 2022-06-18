@@ -1,0 +1,101 @@
+<!doctype html>
+
+<%= render partial: 'header' %>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Fixed top navbar example · Bootstrap v5.0</title>
+    <%# <link rel="stylesheet" href="jumbotron-bgimage.css">  %>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+<!-- Bootstrap core CSS -->
+<%# <link rel="stylesheet" href="../assets/stylesheets/jumbotron-bgimage.css">  %>
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <%# <link rel="stylesheet" href="css/bootstrap.min.css"> %>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+ 
+    <!-- Custom styles for this template -->
+  <link href="navbar-top-fixed.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+
+<main>
+ <%# <div class="jumbotron jumbotron-fluid" style="background-image:url(back.jpg); background-size:cover;"> %>
+<div class="jumbotron jumbotron-fluid" >
+ <div class="container">
+  <div class="textcolor">
+   <h1 class="display-4">かんきつ共和国🍊</h1>
+    <p class="lead">同じ分類でありながら、100種類以上もあると言われる果物”かんきつ”。ほろ酔いやアロマ等、実は多くの場面で遭遇するかんきつ類は日本が誇る果物なのです。ようこそ、かんきつ共和国へ!</p>
+   <%# <a class="btn btn-outline-primary btn-lg" href="#" role="button">マイページへ</a> %>
+  </div>
+ </div>
+</div>
+<%# </div> %>
+    
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="main-search-box">
+ 
+ <div class="box28">
+  <span class="box-title">検索から探す<i class="fas fa-search"></i></span>
+  <%= search_form_for @search, url: items_path do |f| %>
+  <%= f.text_field :item_name_cont, class: "index-search-box", placeholder: '名前を入力...'%>
+  <button class="btn btn-outline-success" type="submit">Search</button>
+  <% end %>
+  <br>
+
+
+
+ <% if @search_items.blank? %>
+  <div>該当するかんきつ類はありません</div>
+ <% end %>
+
+ <% if @search.conditions.present? %>
+  <% @search_items.each do |item| %>
+  <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a> 
+  <% end %>
+<% end %>  <br>
+
+</div>
+
+ <div class="box28a">
+    <span class="box-title">一覧から探す<i class="fas fa-search"></i></span>
+   <% @items.each do |item| %>
+   <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a>  
+  <% end %>
+ <br>
+
+</div>
+
+</div>
+
+  </main>
+ </body>
+</html>
+
+<%= render partial: 'item', collection: @items %>
+
+<%= bar_chart @data, discrete: true %>
+
