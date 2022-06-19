@@ -75,4 +75,4 @@ gem 'rubocop-rails', require: false
 
 gem 'bootstrap-sass'
 
-gem 'seed-fu'
+seed-fu
