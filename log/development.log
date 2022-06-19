@@ -1,0 +1,652 @@
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (26.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (25.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (93.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `rpc_app_development`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS `rpc_app_test`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `rpc_app_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `rpc_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (43.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (50.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1902142553966559345', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20220504073118)
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `nickname` varchar(255) NOT NULL, `prefecture_id` int NOT NULL, `favorite_id` int NOT NULL, `introduction` text NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (45.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (45.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (22.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220504073118')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateItems (20220504083757)
+  [1m[35m (53.8ms)[0m  [1m[35mCREATE TABLE `items` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `item_name` varchar(255) NOT NULL, `description` text NOT NULL, `image_url` varchar(255) NOT NULL, `star` float(24) NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220504083757')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20220507012827)
+  [1m[35m (50.0ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `byte_size` bigint NOT NULL, `checksum` varchar(255) NOT NULL, `created_at` datetime NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key`  (`key`))[0m
+  [1m[35m (50.4ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime NOT NULL,  INDEX `index_active_storage_attachments_on_blob_id`  (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness`  (`record_type`, `record_id`, `name`, `blob_id`), CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220507012827')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20220509121300)
+  [1m[35m (38.3ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `comment` text NOT NULL, `all_rating` float(24) DEFAULT 0.0 NOT NULL, `rating1` float(24) DEFAULT 0.0 NOT NULL, `rating2` float(24) DEFAULT 0.0 NOT NULL, `rating3` float(24) DEFAULT 0.0 NOT NULL, `rating4` float(24) DEFAULT 0.0 NOT NULL, `user_id` bigint NOT NULL, `item_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_reviews_on_user_id`  (`user_id`),  INDEX `index_reviews_on_item_id`  (`item_id`), CONSTRAINT `fk_rails_74a66bd6c5`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_1b37fb5a2a`
+FOREIGN KEY (`item_id`)
+  REFERENCES `items` (`id`)
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220509121300')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLikes (20220516123542)
+  [1m[35m (39.2ms)[0m  [1m[35mCREATE TABLE `likes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int NOT NULL, `item_id` int NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220516123542')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (24.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-06-19 01:38:08.451095', '2022-06-19 01:38:08.451095')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1902142553966559345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (4.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('アカマドカ（紅まどか）', '文旦の一種であり、「平戸文旦」と「麻豆（まとう）文旦」を掛け合わせた品種です。“紅”と名前にあるように、果肉が薄いピンクなのが特徴です。文旦類の中では甘みが強く、苦みが控えめです。果皮に傷がつきやすく販売用に向かないため、市場で見かけることはまれです。旬は1月中旬〜2月です。', 'https://nogyoya.itembox.design/product/071/000000007118/000000007118-01-l.jpg?t=20220617163118', 0.0, '2022-06-19 01:40:32.847953', '2022-06-19 01:40:32.847953')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('アカマドンナ（紅まどんな）', '南香（なんこう）と天草を掛け合わせた品種で、2005年に愛媛県の試験場で品種登録された新しい柑橘です。甘平と同様に、愛媛県のみで栽培が許されている限定品種です。房の薄皮が非常に薄く、水分量が多く、まるでゼリーのよう。外皮も薄いためむきにくいのですが、半分に切ってスプーンですくって食べることで、さじょうのとろけるゼリーのような食感をさらに感じることができ、オススメです。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/b87e992960de5932afe7bcf8a0d731c8.jpg.webp', 0.0, '2022-06-19 01:40:32.851198', '2022-06-19 01:40:32.851198')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (25.5ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('アスミ（あすみ）', 'あすみは2014年に登録された新品種です。スイートスプリングとトロビタオレンジを掛けたものにはるみを交配しました。明日のカンキツ産業を担うはるみの子品種ということで「あすみ」と名付けられました。大きさは温州ミカンと同じくらいです。味は非常に濃く甘く、時には濃すぎるくらいです。また、独特の芳香があります。外皮、薄皮共に薄く、ペリペリとむくことができます。旬は2〜3月です。', 'https://image1.shopserve.jp/556.jp/pic-labo/llimg/asu33.JPG?t=20170223194629', 0.0, '2022-06-19 01:40:32.854121', '2022-06-19 01:40:32.854121')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('アマクサ（天草）', '天草は清見と興津早生を掛けたものにページオレンジを交配したもので、1995年に登録されました。赤橙色の果皮をしており、球に近い形をしています。一番の特徴はそのプルンプルンでジューシーな食感です。紅まどんなや大分果研4号といったゼリーのような食感を売りにした品種にはこの天草が親品種として使われています。外皮や薄皮は非常に薄くむきづらいため、スマイルカットにして楽しむのがおすすめです。旬は1月です。', 'https://img13.shop-pro.jp/PA01281/595/etc/jiten_amakusa.jpg?cmsp_timestamp=20190404183533', 0.0, '2022-06-19 01:40:32.885081', '2022-06-19 01:40:32.885081')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (30.9ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('アマナツ（甘夏）', '品種名は「川野夏橙（かわのなつだいだい）」といい、大分県津久見市の川野豊さんの農園で夏ミカンの枝変わりとして発見され1950年に品種登録されました。外皮は分厚くゴツゴツしており、房の袋も厚めです。香りが非常に良く、味は夏ミカンより酸味が弱く、優しい甘さと苦さがあります。食感は硬めでシャキシャキしています。主な産地は熊本、鹿児島、愛媛で、旬は1〜6月です。', 'https://lowch.com/wp-content/uploads/2016/01/amanatsu.jpg', 0.0, '2022-06-19 01:40:32.934269', '2022-06-19 01:40:32.934269')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('イヨカン（伊予柑）', '伊予柑は山口県で発見された柑橘です。ミカンとオレンジの交雑種ではないかと言われています。愛媛に持ち込まれ栽培が盛んになったことから”伊予”柑と呼ばれるようになりました。現在も愛媛県が一番の生産量を誇ります。果皮は厚めですが手で簡単に剥くことができます。かなり多汁で、爽やかな甘みを口いっぱいに味わうことができます。伊予柑にも複数品種があり、主流な品種は宮内伊予柑です。旬は12月下旬〜2月です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/cc0a0881314a3d1338bf799a7c79298c.jpg.webp', 0.0, '2022-06-19 01:40:32.938336', '2022-06-19 01:40:32.938336')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('オウゴンカン（黄金柑）', '黄金柑は日本に古くから自生していた柑橘の一つとも言われており、明治時代にはその存在が確認されています。見た目から、黄金柑のほかにゴールデンオレンジや黄蜜柑（きみかん）などという名前で呼ばれることもあります。小さくて黄色いので酸っぱそうなイメージがありますが、まろやかな甘さと酸味のバランスが良く、とてもおいしいです。旬は3〜4月です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/4331e65957b685aefb4568776a600bf6.jpg.webp', 0.0, '2022-06-19 01:40:32.942349', '2022-06-19 01:40:32.942349')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('オバラベニワセ（小原紅早生）', '1973年に香川県の小原さんという農家さんの畑で偶然見つかった宮川早生（主流の温州ミカン種）の枝変わり（突然変異種）です。一番の特徴はなんといってもその赤橙色（せきとうしょく）をした表皮でしょう。普通の温州ミカンと比べるとその差は一目瞭然です。味は通常の温州ミカンより甘く濃厚です。食べやすさは通常の温州と変わらず、簡単にむくことができます。価格はやや高めですが、値段を裏切らないおいしさを持っています。旬は12月です。', 'https://img.furusato-tax.jp/cdn-cgi/image/width=520,height=323/img/x/product/details/20201127/sd1_f6d5e1543bf1dc32d180171f7c978eac925ba20f.jpg', 0.0, '2022-06-19 01:40:32.945948', '2022-06-19 01:40:32.945948')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('カワチバンカン（河内晩柑）', '自然交配によって偶発的に生まれた品種で、1935年頃に熊本県の河内町で見つかりました。文旦の血を引いているとされています。サイズは大きめで縦長の形をしており、外皮は黄色くやや厚いです。房の袋も少し厚めですが、粒は柔らかく圧倒的な果汁量があります。和製グレープフルーツとも呼ばれ、爽やかな甘さ、酸味、苦みが特徴です。旬は4〜7月と長く、春から初夏のものはとても瑞々しく、後半のものは比較的身が引き締まっています。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/228e93792e3426ced0eabf9742983522.jpg.webp', 0.0, '2022-06-19 01:40:32.949114', '2022-06-19 01:40:32.949114')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (25.6ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('カンペイ（甘平）', '西之香（にしのかおり）というタンゴール（ミカンとオレンジを交配したもの）とポンカンをかけ合わせて生まれ、2007年に品種登録されました。愛媛県でのみ栽培が許された限定品種です。大きくて扁平（へんぺい）な形と、粒のシャキッとした食感が一番の特徴です。外皮も房の袋も非常に薄いため、むくときや房同士をはがす時にパリッと音がします。味は非常に濃く甘く、果汁もかなり多くずっしりとしています。旬は1月下旬〜3月中旬です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/a86a8d5e0ab5619c95388b9d8a067fe9.jpg.webp', 0.0, '2022-06-19 01:40:32.954186', '2022-06-19 01:40:32.954186')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('キヨミ（清見）', '清見は1979年に登録された国内初のタンゴールです。タンゴールとはミカンとオレンジを交配した柑橘の総称です。清見は宮川早生（ミカン）と、トロビタオレンジの交配により誕生しました。ミカンとオレンジの交配は技術的に難しいため、清見の誕生の意義は非常に大きく、以後の品種開発に大きな影響を与えました。外皮はむきづらいですが、果肉はゼリーのようにプルプルで甘く、新品種にも負けないおいしさです。旬は4月です。', 'https://www.kankitsu.aifood.jp/assets/img/about/07/img-01.jpg', 0.0, '2022-06-19 01:40:32.984540', '2022-06-19 01:40:32.984540')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('クレメンティン', 'アルジェリアで偶発的に生まれ、地中海マンダリンの雑種とされています。その後種がないものがスペインで発見され、日本に伝わってきました。やや小ぶりで形は球に近く、外皮はむきやすく温州（うんしゅう）ミカンと似ています。香りが強く、食感は少しサクサクで、味はすっきりした甘さがあります。佐賀県で多く作られており、旬は12〜2月です。', 'https://s3-ap-northeast-1.amazonaws.com/tabiiro.jp/client_otoriyose/otoriyose/s/310074-fujitsu-yamamotonouen/415825/img1-1608543349874-2618.jpg', 0.0, '2022-06-19 01:40:32.988468', '2022-06-19 01:40:32.988468')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ショウナンゴールド（湘南ゴールド）', '黄金柑に今村温州を掛け合わせた品種で、1999年に神奈川県で品種登録されました。神奈川県のみで栽培が許されている品種です。見た目は黄金柑とさほど変わりませんが、香りが豊かで少し甘みが強いように感じられます。神奈川県では本品種を使用した加工品に力を入れており、湘南ゴールドの果汁を使用したさまざまな商品が発売されています。旬は3?4月です。', 'https://www.g-call.com/shopping/goods/images/33648_1.jpg', 0.0, '2022-06-19 01:40:32.991697', '2022-06-19 01:40:32.991697')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('シラヌイ（不知火）', '1972年に長崎県の試験場にて、清見と中野3号ポンカンの掛け合わせによって誕生したタンゴールです。生産が始まった熊本県不知火地区の名前にちなんでつけられました。中でも、糖度13度以上、クエン酸1.0％以下、かつJAに加盟している農家さんによるもののみが「デコポン」（商標）として出荷されます。ゴツゴツした外皮とてっぺんのこぶが特徴です。味は酸味も甘さも非常に濃く、果汁もたっぷりです。旬はハウス物だと12月頃から、露地物は2月頃〜4月です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/eaa3f29363192a351021fd03907dfa99.jpg.webp', 0.0, '2022-06-19 01:40:32.996428', '2022-06-19 01:40:32.996428')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('スイートスプリング', 'スイートスプリングは八朔と上田温州を交配した品種です。1982年に登録されました。外皮は硬くて厚く、むきづらいです。また、薄皮は少し厚いためむく人もいます。果皮の色は緑色〜黄色です。果皮が緑色の時でも中身はしっかりと熟しており、おいしく食べることができます。果肉はその見た目とは裏腹に明るいオレンジ色をしており、味は酸味や苦みが全くない分、かなり甘く感じられます。旬は1〜2月です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/8f51644aa2e18b255cda5fff2b612885.jpg.webp', 0.0, '2022-06-19 01:40:33.000887', '2022-06-19 01:40:33.000887')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (25.8ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('スイショウブンタン（水晶文旦）', 'その名のとおり、果肉が水晶のように透き通った文旦です。栽培が難しく、ハウス栽培のものがほとんどです。他の文旦類と比べるとジューシーで、砂糖菓子のような上品なほのかな甘みと柔らかな苦みが文旦類の中でも際だって上品です。旬は10〜11月です。', 'https://m.media-amazon.com/images/I/81oU2GLiOZL._AC_SX679_.jpg', 0.0, '2022-06-19 01:40:33.005107', '2022-06-19 01:40:33.005107')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.9ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('セトカ（せとか）', '「清見」に「アンコール」を掛け合わせたものに、「マーコット」を掛け合わせたタンゴールです。長崎の試験場で生まれ、2001年に品種登録されました。サイズは大きくやや扁平で、外皮は非常に薄くなめらかで、房の袋は無いに等しいほど薄いです。アンコール由来の独特な香りと、頭一つ抜きん出たコク深い甘さがあります。柑橘の大トロという二つ名で親しまれ、柔らかいゼリーのようにとろける舌触りも魅力の一つです。全体の約7割が愛媛で生産されています。旬は2月〜3月下旬です。', 'https://baseec-img-mng.akamaized.net/images/item/origin/2390a04454949972f7c896a01b8eeb79.jpg?imformat=generic', 0.0, '2022-06-19 01:40:33.036244', '2022-06-19 01:40:33.036244')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('セトミ（せとみ）', '「清見」に「吉浦ポンカン」を掛け合わせた品種で、山口県の研究所で2004年に品種登録された山口県のオリジナル品種です。せとみの中でも一定の糖度、酸度の基準を満たしたものは「ゆめほっぺ」という名称で販売されます。収穫後およそ1カ月貯蔵してから出荷されるため、酸味が抜けておりとても甘さを感じます。旬は3〜4月です。', 'https://tshop.r10s.jp/hamanaka/cabinet/imgrc0073626062.jpg?fitin=720%3A720', 0.0, '2022-06-19 01:40:33.042067', '2022-06-19 01:40:33.042067')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('タロッコ', 'イタリア地中海地域原産で、国内で生産されているブラッドオレンジ2種のうちの一つです。スペインのサンギネッロ種の突然変異と言われています。温暖化に伴って愛媛の南予地域でも生産されるようになってきました。外皮・果肉ともに濃い赤とオレンジがグラデーションのようになった色をしています。皮はややむきにくいですが、房の袋は薄く種もあまり多くありません。甘さも酸味も非常に濃く、ジュースとしても人気があります。旬は3〜5月です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/86fa5f162ea3d76ba0b2be99d118b754.jpg.webp', 0.0, '2022-06-19 01:40:33.045344', '2022-06-19 01:40:33.045344')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ツノカカガヤ（津之輝）', '津之輝は清見と興津早生を掛けたものにアンコールを交配した、2009年に登録された比較的新しい品種です。表皮は濃い橙（だいだい）色で、少しゴツゴツとしており、手に持つとズッシリとした重みを感じられます。一番の特徴はまるでゼリーの集合体を食しているようなプリプリな食感です。味は甘く濃く、薄皮は薄いです。また、アンコールに似た芳香がほのかに香ります。旬は1月中旬〜2月中旬です。', 'https://shop.takii.co.jp/simages/product_image_large/55702702-NKA327.jpg?1', 0.0, '2022-06-19 01:40:33.048409', '2022-06-19 01:40:33.048409')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (25.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('トサブンタン（土佐文旦）', '文旦の中でも一番メジャーな品種がこの土佐文旦です。土佐とあるように高知県で栽培が盛んです。土佐文旦の収穫は12月からですが、甘みを増すためにしばらく貯蔵をするため、2月から出荷となります。外皮はかなり厚く、薄皮も厚いためむくのには手間がかかりますが、一房が大きいため食べ応えがあります。ザクザクとした食感で、甘みと特有の苦みが調和した爽やかな味がします。また、皮は砂糖漬けにして食べることもできます。', 'https://rimage.gnst.jp/gurutabi.gnavi.co.jp/image/public/img/article/e9/27/art002910/article_art002910_2.jpg?20190219093100&rw=600', 0.0, '2022-06-19 01:40:33.054727', '2022-06-19 01:40:33.054727')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ナツミ（南津海）', '「カラマンダリン」と「吉浦ポンカン」を掛け合わせた品種で、研究所ではなく、山口県の山本柑橘園の園主である山本弘三さんの手によって交配されたという珍しいエピソードを持つ品種です。旬が5〜6月と遅いですが、鮮やかなオレンジ色でとても甘いのが特徴です。', 'https://tsukijiichiba.s3.ap-northeast-1.amazonaws.com/user/images/pg/765/210405-ntm-07.jpg', 0.0, '2022-06-19 01:40:33.085784', '2022-06-19 01:40:33.085784')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ネーブル', 'ネーブルオレンジは早生（わせ）のスイートオレンジです。底部分にあるくぼみにちなんで英語で「へそ」という意味の名前が付けられました。形は球〜やや縦長で、外皮と薄皮は薄く種も少ないため生食に向いています。ただし手でむくのは難しいためナイフを使うことが多いです。甘みが強く、華やかな香りがあります。アメリカ産のものが多く、輸入物は11〜4月頃に出回り、日本のものは2〜3月頃が旬です。', 'https://stat.ameba.jp/user_images/20210211/09/taizankan1377/a2/0f/j/o0679056414894609104.jpg', 0.0, '2022-06-19 01:40:33.093361', '2022-06-19 01:40:33.093361')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ハッサク（八朔）', '江戸時代末期に広島県・因島のお寺の境内で原木が発見されたと言われています。親品種は明らかになっていませんが、文旦の血を引いているのではと推測されます。外皮も房の袋も分厚く、身はしまっていてシャキシャキとした歯ごたえがあり、甘さ、酸味、ほろ苦さのバランスがとれた味です。名前は「八月の朔日（1日）には食べられる」という意味から来ているそうですが、現在の旬とはずれていますね。旬は2月〜4月下旬頃です。代表的な産地は和歌山です。', 'https://www.nagomi-shop.jp/img/item/hassaku/wakeari-hassaku-center01.jpg', 0.0, '2022-06-19 01:40:33.102385', '2022-06-19 01:40:33.102385')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (24.1ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ハルカ（はるか）', '日向夏の自然交雑品種として生まれたといわれています。アルベドまで甘い点は日向夏に似ていますが、お尻の丸いリング状のへこみがはるかの特徴です。このリングのへこみが薄ければ薄いほどおいしいはるかとされています。皮が厚く手でむきにくいですが、お尻のリングをはがしてからむくと比較的簡単に手でむくことができます。旬は3〜4月です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/433a3678add7a8cb1c4c198ab4a6c962.jpg.webp', 0.0, '2022-06-19 01:40:33.132311', '2022-06-19 01:40:33.132311')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ハルミ（はるみ）', 'はるみはポンカンと清見を交配した品種です。1999年に登録されました。むきやすく、種もなく、薄皮も薄い食べやすい品種です。味は甘みだけでなく、うまみが濃く感じられます。また、果肉のつぶつぶ（さじょう）一つ一つがしっかりしていることが一番の特徴で、つぶつぶとした食感を楽しめます。同じ掛け合わせの品種に不知火とせとみ、はるきがありますが皆違う個性を持っています。旬は2月です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/0fe6a8c4c6dbb34cd8fbdd2347113c86.jpg.webp', 0.0, '2022-06-19 01:40:33.137695', '2022-06-19 01:40:33.137695')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('バンペイユ（晩白柚）', 'ザボンの一種で、原産地はマレー半島です。柑橘類最大級のサイズを誇り、大きいものだと3キロを超えます。外皮は抜きん出て分厚く、内側はふわふわのクッションのような触り心地です。房の袋も非常に分厚く、基本的に全てむいてから食べます。酸味はあまりなく、優しい甘さとかすかに感じる苦さが上品な味です。また甘く爽やかな香りも特徴的です。身はかなり引き締まって硬く、一粒一粒シャキシャキした歯ごたえがあります。旬は1〜3月です。', 'https://www.karasirenkon.com/upload/save_image/07031132_53b4c0c9a4b31.png', 0.0, '2022-06-19 01:40:33.143505', '2022-06-19 01:40:33.143505')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ヒメコハル（媛小春）', '黄金柑（おうごんかん）に清見を交配して育成されました。愛媛県オリジナルの品種で2008年に登録されました。黄色く、上部が膨らんでいる形が特徴的で、「紅まどんな」や「甘平」と並ぶ愛媛県の主要品種です。黄色い見た目で酸っぱそうに見えますが、実は酸味は少なく黄金柑譲りの爽やかさと清見譲りのまろやかな甘さが特徴的な隠れた美味柑橘です。外皮もむきやすく、薄皮も厚くないため気軽に食べられます。旬は2〜3月です。', 'https://pds.exblog.jp/pds/1/201101/16/64/e0197164_23382610.jpg', 0.0, '2022-06-19 01:40:33.150513', '2022-06-19 01:40:33.150513')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (25.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ヒュウガナツ（日向夏）', '宮崎県が原産地とされており、1820年頃発見されたと言われています。小夏やニューサマーオレンジという名前で呼ばれることもあります。果実はさっぱりとした甘みと酸味がありますが、アルベド（皮と果肉の間の白いふわふわな部分）が甘いのが特徴的です。外皮のみをカットして果肉を一口サイズにカットして食べます。このようにしてアルベドと一緒に食べることでより一層甘みが感じられます。旬は4〜5月です。', 'https://www.ehealthyrecipe.com/meal/syokuzai/syokupic/p_07112.jpg', 0.0, '2022-06-19 01:40:33.182266', '2022-06-19 01:40:33.182266')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ポンカン', 'ポンカンはインド原産とされアジア各地で栽培されている品種です。種がやや多いのが難点ですが、外皮はむきやすく薄皮も厚くないため食べやすいです。酸味が少なく、まろやかな甘さが際立ちます。また、独特の芳香があります。実はポンカンには太田ポンカン、吉田ポンカン、今津ポンカンなどいくつもの品種があります。品種の交配にもよく利用され、不知火や甘平といった人気品種を多く生み出しました。旬は1〜2月です。', 'https://image.rakuten.co.jp/buntan/cabinet/03197000/imgrc0085141297.jpg', 0.0, '2022-06-19 01:40:33.191005', '2022-06-19 01:40:33.191005')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ミハヤ（みはや）', 'みはやは2014年に登録された新品種です。津之望（つののぞみ）に清見とイヨカンを掛けたものを交配しました。一番の特徴は目を引く濃い赤橙色で、果肉も同じように濃い色をしています。また、果皮はツヤツヤとしています。独特の芳香があり、味は甘く、濃いめながらさっぱりとしています。酸味はかなり少ないです。温州ミカンよりはむきづらいですが、薄皮は厚くなくそのまま食べられます。旬は12〜1月です。', 'https://tshop.r10s.jp/hanatomidori/cabinet/pr/03729353/imgrc0078445002.jpg?fitin=720%3A720', 0.0, '2022-06-19 01:40:33.198575', '2022-06-19 01:40:33.198575')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (26.8ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('モロ', 'イタリア地中海地域原産で、国内で生産されているブラッドオレンジ2種のうちの一つです。サンギネッロ種の突然変異と言われています。タロッコと同じように近年温暖化に伴い日本でも育てられるようになりました。外皮・果肉ともに鮮烈な赤黒い色が特徴で、甘美かつ独特な香りです。味は濃く甘酸っぱく、タロッコに比べるとほんの少しえぐみがあります。アントシアニンがたっぷりです。主な産地は愛媛で、旬は2〜3月です。', 'https://pds.exblog.jp/pds/1/201704/18/67/b0089967_22402977.jpg', 0.0, '2022-06-19 01:40:33.205755', '2022-06-19 01:40:33.205755')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` IS NULL LIMIT 1[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`item_name`, `description`, `image_url`, `star`, `created_at`, `updated_at`) VALUES ('ユゲヒョウカン（弓削瓢柑）', 'その名のとおり、ひょうたんのように細長い形をした珍しい柑橘です。房も細長く、むいて楽しい柑橘の一つです。文旦類の一種と言われており、その味はグレープフルーツに例えられることが多いですが、グレープフルーツに比べ甘み・酸味共に優しいです。グレープフルーツなどに含まれている「フラノクマリン」という成分が含まれていないため、これと相互作用を起こす医薬品を服薬中でも食べることができます。旬は4〜5月です。', 'https://agri.mynavi.jp/wp-content/uploads/2020/01/ea51c249ede892873f60aebfee0f5372.jpg.webp', 0.0, '2022-06-19 01:40:33.241672', '2022-06-19 01:40:33.241672')[0m
+  ↳ (eval):5:in `block (3 levels) in run_file'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2022-06-19 10:40:42 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ItemsController#index as HTML
+Filter chain halted as :basic_auth rendered or redirected
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 909)
+
+
+Started GET "/" for ::1 at 2022-06-19 10:40:44 +0900
+Processing by ItemsController#index as HTML
+  [1m[35m (41.7ms)[0m  [1m[34mSELECT `items`.`item_name` FROM `items`[0m
+  ↳ app/controllers/items_controller.rb:11:in `index'
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/items/_header.html.erb:13
+  [1m[36mItem Load (24.5ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/_header.html.erb:42
+  Rendered items/_header.html.erb (Duration: 80.8ms | Allocations: 8764)
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT `items`.* FROM `items`[0m
+  ↳ app/views/items/index.html.erb:69
+  Rendered likes/_like.html.erb (Duration: 1.9ms | Allocations: 293)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 1[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 1[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 1[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 1[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 1[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 1[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 2[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 2[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 2[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 2[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 2[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 2[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 3[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 3[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 3[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 3[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 3[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 3[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 4[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (25.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 4[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 4[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 4[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 4[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 4[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 5[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 5[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 5[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 5[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 5[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 5[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 6[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 6[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 6[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 6[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (24.1ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 6[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 6[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 7[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 7[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 7[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 7[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 7[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 7[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 8[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 8[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 8[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 8[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 8[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 8[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (23.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 9[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 9[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 9[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 9[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 9[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 9[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 10[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 10[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 10[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 10[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 10[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 10[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.2ms | Allocations: 40)
+  [1m[35m (25.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 11[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 11[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 11[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 11[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 11[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 11[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 12[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 12[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 12[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 12[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 12[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 12[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (24.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 13[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 13[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 13[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 13[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 13[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 13[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (20.9ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 14[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 14[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 14[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 14[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (24.9ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 14[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 14[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 15[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 15[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 15[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 15[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (22.9ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 15[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 15[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 16[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 16[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 16[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 16[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (23.7ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 16[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 16[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 17[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 17[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 17[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 17[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 17[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 17[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.2ms | Allocations: 40)
+  [1m[35m (26.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 18[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 18[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 18[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 18[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 18[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 18[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 19[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 19[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 19[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 19[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 19[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 19[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 20[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (25.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 20[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 20[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 20[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 20[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 20[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.2ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 21[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 21[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 21[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 21[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 21[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 21[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 22[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (24.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 22[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 22[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 22[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 22[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 22[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.2ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 23[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 23[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 23[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 23[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 23[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 23[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (26.9ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 24[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 24[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 24[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 24[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 24[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 24[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.2ms | Allocations: 40)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 25[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 25[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 25[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (26.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 25[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 25[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 25[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.2ms | Allocations: 40)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 26[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 26[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (24.6ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 26[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 26[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 26[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 26[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 27[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 27[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 27[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 27[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 27[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 27[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.2ms | Allocations: 40)
+  [1m[35m (23.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 28[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 28[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 28[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 28[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 28[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 28[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.3ms | Allocations: 40)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 29[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 29[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 29[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 29[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (23.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 29[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 29[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 30[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 30[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 30[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 30[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 30[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 30[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 31[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 31[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 31[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 31[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (24.6ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 31[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 31[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 32[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 32[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 32[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 32[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 32[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 32[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered likes/_like.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating1`) FROM `reviews` WHERE `reviews`.`item_id` = 33[0m
+  ↳ app/views/items/_item.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating2`) FROM `reviews` WHERE `reviews`.`item_id` = 33[0m
+  ↳ app/views/items/_item.html.erb:65
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating3`) FROM `reviews` WHERE `reviews`.`item_id` = 33[0m
+  ↳ app/views/items/_item.html.erb:66
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG(`reviews`.`rating4`) FROM `reviews` WHERE `reviews`.`item_id` = 33[0m
+  ↳ app/views/items/_item.html.erb:67
+  [1m[35m (26.2ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 33[0m
+  ↳ app/views/items/_item.html.erb:74
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT AVG(`reviews`.`all_rating`) FROM `reviews` WHERE `reviews`.`item_id` = 33[0m
+  ↳ app/views/items/_item.html.erb:75
+  Rendered collection of items/_item.html.erb [33 times] (Duration: 4178.5ms | Allocations: 2604707)
+  Rendered items/index.html.erb within layouts/application (Duration: 4277.4ms | Allocations: 2616296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4509ms (Views: 3744.7ms | ActiveRecord: 702.7ms | Allocations: 2661395)
+
+
