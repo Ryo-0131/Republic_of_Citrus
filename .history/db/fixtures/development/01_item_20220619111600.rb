@@ -1,8 +1,8 @@
 require 'csv'
 
-csv = CSV.read('db/items.csv', encoding: 'UTF-16')
+csv = CSV.read('db/items.csv', encoding: 'Shift_JIS:UTF-8')
 csv.each do |row|
-Item.seed(:item_name, :description, :image_url) do |s|
+Item.seed do |s|
 s.item_name = row[0]
 s.description = row[1]
 s.image_url = row[2]
