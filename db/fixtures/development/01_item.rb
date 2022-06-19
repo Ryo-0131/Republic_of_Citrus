@@ -4,7 +4,7 @@ csv = CSV.read('db/items.csv', encoding: 'UTF-16')
 csv.each do |row|
   row_id= row[0]
 Item.seed(:item_name, :description, :image_url) do |s|
-s.row.id= row_id
+s.row_id= row_id
 s.item_name = row[1]
 s.description = row[2]
 s.image_url = row[3]
