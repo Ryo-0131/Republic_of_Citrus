@@ -15,18 +15,18 @@ require 'csv'
 
 csv = CSV.read('db/items.csv', encoding: 'UTF-16')
 csv.each do |row|
-  item_id = row[0]
+  row_id = row[0]
   item_name = row[1]
   description = row[2]
   image_url = row[3]
   star = row[4]
 
-  Item.seed(:item_id) do |s|
-    s.item_id = item_id
+  Line.seed(:row_id) do |s|
+    s.row_id = row_id
     s.item_name = item_name
     s.description = description
     s.image_url = image_url
-    s.star = star
+    s.star = rstar
   end
 end
 

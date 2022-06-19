@@ -21,7 +21,7 @@ csv.each do |row|
   image_url = row[3]
   star = row[4]
 
-  Item.seed(:item_id) do |s|
+  Item.seed(:row_id) do |s|
     s.item_id = item_id
     s.item_name = item_name
     s.description = description
