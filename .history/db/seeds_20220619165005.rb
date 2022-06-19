@@ -14,7 +14,7 @@
 
 require 'csv'
 
-csv = CSV.read('db/fixtures/items.csv', encoding: 'UTF-16')
+csv = CSV.read('db/items.csv', encoding: 'UTF-16')
 csv.each do |row|
   item_id = row[0]
   item_name = row[1]

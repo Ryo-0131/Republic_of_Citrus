@@ -1,15 +1,15 @@
 # require 'csv'
 
-# csv = CSV.read('db/items.csv', encoding: 'UTF-16')
-# csv.each do |row|
-#   row_id= row[0]
-# Item.seed(:item_name, :description, :image_url) do |s|
-# s.item_name = row[1]
-# s.description = row[2]
-# s.image_url = row[3]
-# s.star = row[4]
-# end
-# end
+csv = CSV.read('db/items.csv', encoding: 'UTF-16')
+csv.each do |row|
+  row_id= row[0]
+Item.seed(:item_name, :description, :image_url) do |s|
+s.item_name = row[1]
+s.description = row[2]
+s.image_url = row[3]
+s.star = row[4]
+end
+end
 
 require 'csv'
 

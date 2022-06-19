@@ -11,24 +11,24 @@
 # end
 # end
 
-require 'csv'
+# require 'csv'
 
-csv = CSV.read('db/fixtures/items.csv', encoding: 'UTF-16')
-csv.each do |row|
-  item_id = row[0]
-  item_name = row[1]
-  description = row[2]
-  image_url = row[3]
-  star = row[4]
+# csv = CSV.read('db/items.csv', encoding: 'UTF-16')
+# csv.each do |row|
+#   item_id = row[0]
+#   item_name = row[1]
+#   description = row[2]
+#   image_url = row[3]
+#   star = row[4]
 
-  Item.seed(:item_id) do |s|
-    s.item_id = item_id
-    s.item_name = item_name
-    s.description = description
-    s.image_url = image_url
-    s.star = star
-  end
-end
+#   Item.seed(:item_id) do |s|
+#     s.item_id = item_id
+#     s.item_name = item_name
+#     s.description = description
+#     s.image_url = image_url
+#     s.star = star
+#   end
+# end
 
 
 # csv = CSV.read('db/fixtures/line.csv' , encoding: 'Shift_JIS:UTF-8')
