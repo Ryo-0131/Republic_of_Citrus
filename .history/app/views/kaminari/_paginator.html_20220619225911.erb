@@ -1,0 +1,35 @@
+<%= paginator.render do %>
+  <nav>
+    <ul class="pagination">
+      <%= first_page_tag unless current_page.first? %>
+      <%= prev_page_tag unless current_page.first? %>
+      <% each_page do |page| %>
+        <% if page.left_outer? || page.right_outer? || page.inside_window? %>
+          <%= page_tag page %>
+        <% elsif !page.was_truncated? -%>
+          <%= gap_tag %>
+        <% end %>
+      <% end %>
+      <%= next_page_tag unless current_page.last? %>
+      <%= last_page_tag unless current_page.last? %>
+    </ul>
+  </nav>
+<% end %>
+
+<div class="pagination-wrapper">
+	<div class="pagination">
+		<ul class="pagination__list">
+			<li class="pagination__item"><a href="">1</a></li>
+			<li class="pagination__item"><a href="">2</a></li>
+			<li class="pagination__item--current">3</li>
+			<li class="pagination__item"><a href="">4</a></li>
+			<li class="pagination__item"><a href="">5</a></li>
+			<li class="pagination__item"><a href="">6</a></li>
+		</ul>
+		<p class="pagination__pos">Page 3/6</p>
+		<a class="pagination__btn--first" href="">&lt;&lt;</a>
+		<a class="pagination__btn--prev" href="">&lt;</a>
+		<a class="pagination__btn--next" href="">&gt;</a>
+		<a class="pagination__btn--last" href="">&gt;&gt;</a>
+	</div>
+</div>
