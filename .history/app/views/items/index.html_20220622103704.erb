@@ -1,0 +1,65 @@
+<!doctype html>
+<%= render partial: 'header' %>
+
+
+
+<body>
+ <main>
+ <%# <div class="jumbotron jumbotron-fluid" style="background-image:url(back.jpg); background-size:cover;"> %>
+<div class="jumbotron jumbotron-fluid" >
+ <div class="container ">
+  <div class="textcolor " style="box-shadow: 3px 3px 6px -2px #555,  3px 3px 8px rgba(255,255,255,0.9) inset;;">
+   <h1 class="display-4">かんきつ共和国🍊</h1>
+    <p class="lead">同じ分類でありながら、100種類以上もあると言われる果物”かんきつ”。ほろ酔いやアロマ等、実は多くの場面で遭遇するかんきつ類は日本が誇る果物なのです。ようこそ、かんきつ共和国へ!</p>
+   <%# <a class="btn btn-outline-primary btn-lg" href="#" role="button">マイページへ</a> %>
+  </div>
+ </div>
+</div>
+<%# </div> %>
+    
+  <%# <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> %>
+
+ <div class="main-search-box">
+  <div class="box28">
+  <span class="box-title">検索から探す<i class="fas fa-search"></i></span>
+  <%= search_form_for @search, url: items_path do |f| %>
+  <%= f.text_field :item_name_cont, style: "width:90%;height:auto;margin-bottom:20px;border-color:#5cb525;", class: "form-control me-2", placeholder: 'かんきつ類を入力...'%>
+  <button class="btn btn-outline-success" type="submit">Search</button>
+  <% end %>
+  <br>
+
+  
+ <% if @search_items.blank? %>
+  <div>該当するかんきつ類はありません</div>
+ <% end %>
+
+ <% if @search.conditions.present? %>
+  <% @search_items.each do |item| %>
+  <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a> 
+  <% end %>
+<% end %>  <br>
+
+</div>
+
+ <div class="box28a">
+    <span class="box-title">一覧から探す<i class="fas fa-search"></i></span>
+   <% @itemsindex.each do |item| %>
+   <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a>  
+  <% end %>
+ <br>
+
+</div>
+</div>
+
+ <%= paginate @items %>
+
+ </main>
+
+</body>
+
+
+<%= render partial: 'item', collection: @items %>
+
+<%# <%= bar_chart @data, discrete: true %>
+
+ <%= paginate @items %>
