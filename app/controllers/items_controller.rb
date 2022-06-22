@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
     @rating4 = '食べやすさ評価'
     @itemname =  Item.pluck(:item_name)
     gon.itemname = @itemname
-    @data = [['a', 100], ['b', 200], ['c', 500]]
+    # @data = [['a', 100], ['b', 200], ['c', 500]]
   end
 
   def show
@@ -34,23 +34,24 @@ class ItemsController < ApplicationController
     gon.allave = @reviews.average(:all_rating)
   end
 
-  def ranking
-    @items = Item.all
-    reviews = Review.all
-    @itemname = Item.pluck(:item_name)
-    @datas = Review.pluck(:all_rating)
+  # ランキング機能はなしとする
+  # def ranking
+  #   @items = Item.all
+  #   reviews = Review.all
+  #   @itemname = Item.pluck(:item_name)
+  #   @datas = Review.pluck(:all_rating)
 
-    @items.each do |item|
-      @ratesum = item.reviews.sum(:all_rating) # カラムのデータの合計値
-      @ratecount = item.reviews.count(:all_rating) # カラムのデータ個数
-      @rateavg = @ratesum.to_f / @ratecount
-      gon.rateavg = @rateavg
-    end
+  #   @items.each do |item|
+  #     @ratesum = item.reviews.sum(:all_rating) # カラムのデータの合計値
+  #     @ratecount = item.reviews.count(:all_rating) # カラムのデータ個数
+  #     @rateavg = @ratesum.to_f / @ratecount
+  #     gon.rateavg = @rateavg
+  #   end
 
-    gon.allavg = @reviews.average(:all_rating).to_f.round(1)
+  #   gon.allavg = @reviews.average(:all_rating).to_f.round(1)
 
-    reviews = Review.all
-    @all = reviews.map { |review| review.all_rating }
-    gon.all = @all
-  end
+  #   reviews = Review.all
+  #   @all = reviews.map { |review| review.all_rating }
+  #   gon.all = @all
+  # end
 end
