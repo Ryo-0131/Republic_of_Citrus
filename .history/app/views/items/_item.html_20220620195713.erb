@@ -1,0 +1,131 @@
+<%# トップページには、以下の項目が一括表示されている %>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Jumbotron example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      
+    </style>
+
+    
+  </head>
+  <body>
+    
+    
+<main>
+
+     
+	
+<div class="bg_pattern Cross"></div>
+ <%# <div class="itempage"> %>
+ <div class="container py-4">
+ <%# <header class="pb-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+  </a>
+ </header> %>
+  <div class="p-1 mb-1 bg-warning rounded-3">
+   <div class="itemtitle">
+    <div class="jumbotron-fluid" >
+     <div class="container-fluid py-1">
+      <h1 class="display-7 fw-bold "><%= item.item_name %></h1>
+     </div>   
+    </div>
+   </div>     
+  </div>
+       
+
+    <div class="row align-items-md-stretch">
+     <div class="col-md-6">
+      <div class="mainbox rounded-3">
+        <div class="h-100 p-5 border rounded-3">
+ 
+          <%# <h2><%= item.item_name %>
+          <%= image_tag "#{item.image_url}" width ="200" height="200" %>
+          <%# <p> <img src=<%= item.image_url %>></p> %>
+           <div class="border rounded-3">
+          <p><%= item.description %></p>   
+         </div>
+        <div id="likes_buttons_<%= item.id %>">
+       <%= render partial: 'likes/like', locals: {item: item} %>
+      </div>
+     </div>
+    </div>
+   </div>
+    
+
+ <div class="col-md-6">
+  <div class="ratebox rounded-3">
+   <div class="h-100 p-5 border rounded-3">
+    <h2><%= "#{item.item_name}""の評価" %></h2>
+     <%= column_chart  [
+     # [@all_rating, item.reviews.average(:all_rating).to_f.round(1)],
+     ["甘い！", item.reviews.average(:rating1).to_f.round(1)],
+     ["酸っぱい！", item.reviews.average(:rating2).to_f.round(1)],
+     ["水分多い！", item.reviews.average(:rating3).to_f.round(1)],
+     ["食べやすい！", item.reviews.average(:rating4).to_f.round(1)],
+      ] , label: "#{item.item_name}の評価" , width: "300px", height: "300px" , min: 0, max: 5, 
+     colors: ["#FF0000", "#FFA500", "#AFDFE4", "#F0FFF0"] 
+     %>
+     <p>
+     
+     <%# 星評価機能raty.js %>
+     <div class="average-review-rating" data-score=<%= item.reviews.average(:all_rating) %>></div>         
+      <p> <%=@all_rating %>：<%= item.reviews.average(:all_rating).to_f.round(1) %></p>
+       <a class="btn btn-radius-solid btn--shadow" href= <%= item_path(item.id) %>><i class="fas fa-hand-point-right"></i>レビューを見る<i class="fas fa-angle-right fa-position-right"></i></a>
+   </div>
+  </div>
+ </div>
+    
+    
+    </div>
+   </div>
+ 
+  </main>
+ </body>
+</html>
+
+
+<%# チャートのスクリプトは以下 %>
+<script>
+ $('.average-review-rating').empty();
+  $('.average-review-rating').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
+
+
+

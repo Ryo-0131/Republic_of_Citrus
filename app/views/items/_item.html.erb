@@ -68,7 +68,8 @@
         <div class="h-100 p-5 border rounded-3">
  
           <%# <h2><%= item.item_name %>
-          <p> <img src=<%= item.image_url %>></p>
+          <%# <%= image_tag "#{item.image_url}" %> 
+          <p> <img src=<%= item.image_url%> width="300" height="auto" ></p> 
            <div class="border rounded-3">
           <p><%= item.description %></p>   
          </div>
