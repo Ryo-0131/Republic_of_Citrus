@@ -10,17 +10,18 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-has_many :reviews, dependent: :destroy
-has_many :likes, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
-validates :nickname, presence: true
-validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'Include both letters and numbers', on: :create  }
+  validates :nickname, presence: true
+  validates :password,
+            format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'Include both letters and numbers',
+                      on: :create }
 
-validates :prefecture_id, numericality: { other_than: 1 , message: "can't be blank"}
-validates :favorite_id, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :favorite_id, numericality: { other_than: 1, message: "can't be blank" }
 
-def liked_by?(item_id)
-  likes.where(item_id: item_id).exists?
-end
-
+  def liked_by?(item_id)
+    likes.where(item_id: item_id).exists?
+  end
 end
