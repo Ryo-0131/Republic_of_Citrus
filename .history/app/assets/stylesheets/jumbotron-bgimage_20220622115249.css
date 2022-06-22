@@ -5,7 +5,7 @@ body{
 } 
 
 .jumbotron {
-
+  opacity: 0.8;
   background-image: url("back.jpg");
   background-repeat: no-repeat;
   /* background: url(../images/back.jpg) */
@@ -18,7 +18,7 @@ body{
 
 .textcolor{
   color:orange;
-  background-color: rgb(250, 227, 198);
+  background-color: rgb(248, 225, 195);
   opacity: 0.9;
   padding: 10px;
   /* text-align: center; */

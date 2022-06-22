@@ -11,14 +11,14 @@ body{
   /* background: url(../images/back.jpg) */
   background-size: cover;
   background-position: center 60%;
-  border: solid orange 1px;
+  border: solid rgb(200, 231, 139) 1px;
   background-color: #e9ecef;
   border-radius: .3rem;
 }
 
 .textcolor{
   color:orange;
-  background-color: rgb(250, 227, 198);
+  background-color: rgb(219, 198, 172);
   opacity: 0.9;
   padding: 10px;
   /* text-align: center; */
