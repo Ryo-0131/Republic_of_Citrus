@@ -1,0 +1,51 @@
+<%= render partial: 'items/header' %>
+
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+    
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+     <%# 部分テンプレートでフォームを表示する %>
+      <%= render partial: "items/form", locals: { item: @item } %>
+    </div>
+  </div>
+
+<div class="reviewlist">
+ <div class="box26">
+  <span class="box-title">💬レビュー一覧💬</span>
+   <% @reviews.each do |review| %>
+    <p>
+    <%# コメントが吹き出しになる %>
+     <div class="box24">
+      <%= review.comment %>
+     </div>
+     <i class="fas fa-user"></i>
+     <%= link_to "#{review.user.nickname}さん", user_path(id: review.user.id), class: :comment_user %>
+     <%# ログイン中かつ自分のレビューだけ編集できる %>
+     <% if user_signed_in? && current_user.id == review.user_id %> 
+     <%# item_idおよびreview_idどちらも紐づいている必要がある %>
+     <i class="fas fa-edit"></i>
+       <%= link_to '編集する', edit_item_review_path(@item.id, review.id), class: :review_btn %>
+       <%= link_to "削除する", item_review_path(@item.id, review.id), method: :delete, class: :review_btn %>
+     <% end %> 
+    </p>
+   <% end %>
+ </div>
+  </div>
+
+
+<div class="avgbox">
+ <div class="box26">
+  <span class="box-title">⭐️みんなの評価の平均値⭐️</span>
+
+<%# チャート機能chart.js %>
+<%= render partial: "items/show_chart" %>
+<%= render partial: "items/show_rate", locals: { item: @item } %>
+</div>
+</div>
+</div>
+
+<button class="btn btn-light btn-lg text-light bg-warning" type="button" ><%= link_to "トップページへもどる", root_path, class: "top-button"%></button>
