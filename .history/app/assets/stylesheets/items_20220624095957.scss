@@ -225,10 +225,14 @@ ul.pagination li.active .page-link {
 .box28s {
   background: rgba(217, 200, 156, 0.4);
   position: relative;
-  margin: 1em 25em;
+  margin: 1em150em;
   padding: 40px 20px 30px;
   border: solid 2px #FFC107;
   border-width:5px;
+
+  display: flex;
+  justify-content: center;
+
  }
 .box28s .box-title {
   position: absolute;
