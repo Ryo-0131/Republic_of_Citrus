@@ -1,0 +1,1137 @@
+@media (min-width: 768px) {
+  /* line 5, /Users/ishiiryo/rpc_app/app/assets/stylesheets/custom.scss */
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+/* line 11, /Users/ishiiryo/rpc_app/app/assets/stylesheets/custom.scss */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* line 21, /Users/ishiiryo/rpc_app/app/assets/stylesheets/custom.scss */
+* {
+  float: none;
+  position: static;
+}
+
+/* line 27, /Users/ishiiryo/rpc_app/app/assets/stylesheets/custom.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 1, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 12, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 18, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.furima-icon {
+  width: 10vw;
+  margin-right: 10vw;
+}
+
+/* line 23, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+/* line 30, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.search-form > .input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+/* line 36, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #3ccace;
+  padding: 8px;
+}
+
+/* line 44, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.search-icon {
+  width: 100%;
+}
+
+/* line 48, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+/* line 57, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.lists-left {
+  display: flex;
+  min-width: 200px;
+}
+
+/* line 63, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.category-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+/* line 69, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.brand-list {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* line 74, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+/* line 81, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+/* line 89, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* line 94, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+/* line 101, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* line 106, /Users/ishiiryo/rpc_app/app/assets/stylesheets/header.scss */
+.searcharrow {
+  color: #5cb525;
+}
+@charset "UTF-8";
+/* line 5, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.review-button {
+  text-decoration: none;
+  color: blue;
+}
+
+/* line 10, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.col-xs-12 col-md-4 text-center {
+  display: inline-block;
+}
+
+/* line 22, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.itemtitle {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(90deg, #fde641 15%, white);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4);
+  padding: 7px;
+  border-radius: 10px;
+}
+
+/* line 32, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.top-button {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 37, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.update-button {
+  text-decoration: none;
+  color: blue;
+}
+
+/* line 46, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.mainbox {
+  background-color: #fbf0e5;
+  opacity: 0.8;
+}
+
+/* line 53, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.ratebox {
+  background-color: #fbf0e5;
+  opacity: 0.8;
+}
+
+/* line 62, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe9a7;
+  z-index: -1;
+}
+
+/* line 71, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.Cross {
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+/* line 76, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.sendform {
+  width: 60%;
+  padding: 0px 0px 20px 20px;
+}
+
+/* line 81, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.form-login {
+  display: flex;
+  flex-flow: column;
+  width: 20%;
+  padding: 0px 0px 0px 0px;
+}
+
+/* line 88, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28 {
+  background: rgba(217, 200, 156, 0.4);
+  position: relative;
+  margin: 1em 1em;
+  padding: 40px 20px 30px;
+  border: solid 2px #FFC107;
+  border-width: 5px;
+  width: 20%;
+}
+
+/* line 98, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -5px;
+  left: -5px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #FFC107;
+  color: #878282;
+  font-weight: bold;
+}
+
+/* line 111, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28 p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 116, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.index-search-box {
+  margin-top: 5px;
+  /* height: 48px; */
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fae59f;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+/* line 129, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28a {
+  background: rgba(217, 200, 156, 0.4);
+  position: relative;
+  margin: 1em 1em;
+  padding: 40px 20px 30px;
+  border: solid 2px #FFC107;
+  border-width: 5px;
+  width: 80%;
+}
+
+/* line 138, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28a .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -5px;
+  left: -5px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #FFC107;
+  color: #878282;
+  font-weight: bold;
+}
+
+/* line 151, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28a p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 156, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.main-search-box {
+  display: flex;
+}
+
+/* line 160, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.bulb {
+  color: #fabb00;
+}
+
+/* line 165, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box29 {
+  margin: 2em 0;
+  background: #b2f1bc;
+}
+
+/* line 169, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box29 .box-title {
+  font-size: 1.2em;
+  background: #40c54b;
+  padding: 4px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+/* line 178, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box29 p {
+  padding: 15px 20px;
+  margin: 0;
+}
+
+/* line 191, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 196, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.pagination > li > a {
+  border: none;
+  /*枠線をなくす*/
+  background: #ffb701;
+  /*背景の色を変える*/
+  color: #878282;
+  /*文字の色を変える*/
+}
+
+/* line 203, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+ul.pagination li.active .page-link {
+  background-color: white;
+  color: #ffb701;
+  border: none;
+}
+
+/* 表示しているページ番号のデザイン */
+/* line 212, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.pagination > .active > a {
+  background: #faff93;
+  /*背景の色を変える*/
+}
+
+/*ホバー時のデザイン*/
+/* line 225, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28s {
+  background: rgba(217, 200, 156, 0.4);
+  position: relative;
+  margin: 1em 25em;
+  padding: 40px 20px 30px;
+  border: solid 2px #FFC107;
+  border-width: 5px;
+}
+
+/* line 233, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28s .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -5px;
+  left: -5px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #FFC107;
+  color: #878282;
+  font-weight: bold;
+}
+
+/* line 246, /Users/ishiiryo/rpc_app/app/assets/stylesheets/items.scss */
+.box28s p {
+  margin: 0;
+  padding: 0;
+}
+@charset "UTF-8";
+/* line 1, /Users/ishiiryo/rpc_app/app/assets/stylesheets/jumbotron-bgimage.scss */
+body {
+  padding-top: 54px;
+  /* font-familyは、以下、bootstrapのreboot.scssで設定されている
+  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; */
+}
+
+/* line 7, /Users/ishiiryo/rpc_app/app/assets/stylesheets/jumbotron-bgimage.scss */
+.jumbotron {
+  background-image: url(/assets/back-09ddfa40c8eb397cc5a6ca4b7731c6a7d7044f7a46199dc4b49401617a130a9a.jpg);
+  background-repeat: no-repeat;
+  /* background: url(/../images/back.jpg) */
+  background-size: cover;
+  background-position: center 60%;
+  border: solid orange 1px;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
+
+/* line 18, /Users/ishiiryo/rpc_app/app/assets/stylesheets/jumbotron-bgimage.scss */
+.textcolor {
+  color: orange;
+  background-color: #fae3c6;
+  opacity: 0.9;
+  padding: 10px;
+  /* text-align: center; */
+  border-radius: 20px;
+  width: 70%;
+  box-shadow: 0px 1px 6px 3px #fec90a, 3px 3px 8px rgba(255, 255, 255, 0.8) inset;
+}
+
+/* line 30, /Users/ishiiryo/rpc_app/app/assets/stylesheets/jumbotron-bgimage.scss */
+.jumbotron {
+  margin-bottom: 0px !important;
+}
+/* line 5, /Users/ishiiryo/rpc_app/app/assets/stylesheets/likes.scss */
+.like-btn {
+  font-size: 15px;
+  color: #808080;
+}
+
+/* line 10, /Users/ishiiryo/rpc_app/app/assets/stylesheets/likes.scss */
+.unlike-btn {
+  font-size: 15px;
+  color: #e54747;
+}
+
+/* line 15, /Users/ishiiryo/rpc_app/app/assets/stylesheets/likes.scss */
+.likelist {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 21, /Users/ishiiryo/rpc_app/app/assets/stylesheets/likes.scss */
+.box30 {
+  margin: 2em 0;
+  background: #fffecf;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  width: 30%;
+}
+
+/* line 28, /Users/ishiiryo/rpc_app/app/assets/stylesheets/likes.scss */
+.box30 .box-title {
+  font-size: 1.2em;
+  background: #e55f5f;
+  padding: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+/* line 39, /Users/ishiiryo/rpc_app/app/assets/stylesheets/likes.scss */
+.box30 p {
+  padding: 15px 20px;
+  margin: 0;
+}
+
+/* line 45, /Users/ishiiryo/rpc_app/app/assets/stylesheets/likes.scss */
+a.btn-radius-solid2 {
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+  background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+  box-shadow: inset 1px 1px 1px #fff;
+}
+
+/* line 55, /Users/ishiiryo/rpc_app/app/assets/stylesheets/likes.scss */
+a.btn-radius-solid2:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fdfbfb), to(#ebedee));
+  background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+}
+/* line 7, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.reviewform {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 13, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.reviewbox {
+  background-color: #fbf0e5;
+  width: 45%;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* line 21, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.textbox {
+  background-color: #ccd9d7;
+  width: 80%;
+  margin: auto;
+  color: #FAFAFA;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 32, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.reviewinfo {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+/* line 41, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.reviewinfobox {
+  background: white;
+  background: linear-gradient(0deg, white 0%, #f4f531 33%, #ccd22a 64%, white 100%);
+  padding: 50px;
+  border-radius: 150px;
+  text-align: center;
+}
+
+/* line 51, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.reviewlist {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 58, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.m-form-text {
+  background-color: #f6f1eb;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 3px solid #fef6fb;
+  box-shadow: 0 0 10px 0 #D09B52;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 10px;
+}
+
+/* line 70, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.m-form-text:focus {
+  outline: 0;
+  box-shadow: 0 0 10px 0 #ffa200 inset;
+}
+
+/* line 75, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+hr.style1 {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+/* line 81, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+hr.style3 {
+  border-top: 1px dashed #8c8b8b;
+}
+
+/* line 91, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.box24 {
+  position: relative;
+  padding: 0.5em 0.7em;
+  margin: 2em 0;
+  background: #e6f4ff;
+  color: #5c98d4;
+  font-weight: bold;
+  width: 80%;
+  border-radius: 20px;
+  align-items: center;
+}
+
+/* line 103, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.box24:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e6f4ff;
+  width: 0;
+  height: 0;
+}
+
+/* line 113, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.box24 p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 120, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.box26 {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+  width: 60%;
+  background-color: #fffefe;
+  opacity: 0.7;
+}
+
+/* line 130, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.box26 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 9px 9px;
+  line-height: 1;
+  font-size: 19px;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+  background-color: #fffefe;
+  color: #95ccff;
+  font-weight: bold;
+}
+
+/* line 144, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.box26 p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 149, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.chartbox {
+  float: left;
+  width: 70%;
+  clear: both;
+  padding: 30px;
+}
+
+/* line 158, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.starrate {
+  font-size: 12px;
+}
+
+/* line 162, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.avgbox {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 167, /Users/ishiiryo/rpc_app/app/assets/stylesheets/reviews.scss */
+.membervoicebox {
+  font-style: oblique !important;
+  background-color: #e2b933;
+  border: 2px dashed #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px #e2b933;
+  color: #fff;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+}
+.second-header {
+  width: 100%;
+  min-width: 800px;
+  height: 130px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-logo {
+  width: 185px;
+  height: 100px;
+}
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-red-btn {
+  width: 100%;
+  background: #FFA500;
+  border: 1px solid #FFA500;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
+
+.login-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color:#ffe9a7;
+  /* background: radial-gradient(circle, transparent 20%, #ffe9a7 20%, #ffe9a7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffe9a7 20%, #ffe9a7 80%, transparent 80%, transparent) 50px 50px, linear-gradient(#ffc107 4px, transparent 4px) 0 -2px, linear-gradient(90deg, #ffc107 4px, #ffe9a7 4px) -2px 0; */
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+  display: flex;
+  justify-content: center;
+
+}
+.registration-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #ffe9a7;
+  /* background: radial-gradient(circle, transparent 20%, #ffe9a7 20%, #ffe9a7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffe9a7 20%, #ffe9a7 80%, transparent 80%, transparent) 50px 50px, linear-gradient(#ffc107 4px, transparent 4px) 0 -2px, linear-gradient(90deg, #ffc107 4px, #ffe9a7 4px) -2px 0; */
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.form-wrap {
+  width: 50%;
+  background-color: #fbf0ca;
+  padding-bottom: 70px;
+  opacity: 0.9;
+}
+
+.form-header {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.form-header-text {
+  line-height: 100px;
+  border-bottom: 1px solid #fdba00;
+  font-weight: bold;
+}
+
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+  
+}
+
+.form-group:first-child {
+  padding: 0;
+}
+
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+  
+}
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  /* height: 48px; */
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fae59f;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+.info-text {
+  color: #888;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+.form-info-header {
+  font-weight: bold;
+}
+
+.form-info-text {
+  font-size: 15px;
+}
+
+.input-name-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-name {
+  width: 130px;
+  margin: 5px 20px 0 20px;
+  height: 48px;
+  line-height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-birth-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-birth-wrap p {
+  line-height: 60px;
+  padding: 0 5px;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+
+.form-bottom-text {
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-bottom-text:last-child {
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+.form-bottom-text>span {
+  color: #0099e8;
+  cursor: pointer;
+}
+
+.register-btn {
+  width: 50%;
+  margin: 0 auto;
+  padding: 60px 0px 20px 0px;
+}
+
+.register-orange-btn {
+  width: 100%;
+  background: #FFA500;
+  border: 1px solid #FFA500;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.register-info {
+  margin: 30px 180px 0 0;
+  color: #00aaff;
+  text-align: right;
+  cursor: pointer;
+}
+
+/* ユーザー登録画面のCSS */
+
+.select-box {
+  height: 50px;
+  width: 100%;
+  background-color: #fae59f;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.intro-row{
+  height: calc( 1.3em * 5 );
+  line-height: 1.3;
+}
+.page-heading {
+  font-size: 30px;
+  /* margin-bottom: 28px; */
+}
+
+.user__wrapper{
+  min-height: calc(100vh - 161px);
+}
+
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 50%;
+}
+.table__col1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+  width: 30%;
+  padding: 8px;
+}
+.table__col2{
+  text-align: left;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+
+.back-btn {
+  background: #FFA500;
+  border: 1px solid #FFA500;
+  width: 70%;
+  padding: 16px 8px;
+  text-decoration: none;
+}
+
+.back-btn-update
+{
+  display: inline-block;
+  background: #FFA500;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+}
+
+/* line 5, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.table-size {
+  width: 60%;
+}
+
+/* line 9, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.table-size2 {
+  width: 75%;
+}
+
+/* line 13, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+
+/* line 18, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+/* line 24, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+/* line 28, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+a.btn-radius-solid {
+  background: #f1e767;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
+  background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%);
+  background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
+}
+
+/* line 35, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+a.btn-radius-solid:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
+  background: -webkit-linear-gradient(bottom, #f1e767 0%, #feb645 100%);
+  background: linear-gradient(to top, #f1e767 0%, #feb645 100%);
+}
+
+/* line 41, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.btn--red,
+a.btn--red {
+  color: #fff !important;
+  background-color: #eb6100 !important;
+}
+
+/* line 47, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.btn--red:hover,
+a.btn--red:hover {
+  color: #fff !important;
+  background: #ff9c07 !important;
+}
+
+/* line 53, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+a.btn--red.btn--cubic {
+  border-bottom: 5px solid #9f000c;
+}
+
+/* line 57, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+a.btn--red.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #9f000c;
+}
+
+/* line 62, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.fa-position-right {
+  position: absolute;
+  top: calc(50% - .5em);
+  right: 1rem;
+}
+
+/* line 69, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.box18 {
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #ffcb8a;
+  border-radius: 3px 0 3px 0;
+  width: 30%;
+  margin: 20px;
+  text-align: center;
+}
+
+/* line 78, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.box18:before, .box18:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid 2px #ffcb8a;
+  border-radius: 50%;
+}
+
+/* line 87, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.box18:after {
+  top: -12px;
+  left: -12px;
+}
+
+/* line 91, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.box18:before {
+  bottom: -12px;
+  right: -12px;
+}
+
+/* line 95, /Users/ishiiryo/rpc_app/app/assets/stylesheets/users.scss */
+.box18 p {
+  margin: 0;
+  padding: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 19, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+* {
+  font-family: "Rounded Mplus 1c";
+}
+
+/* line 23, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-mplus1p {
+  font-family: "Mplus 1p";
+}
+
+/* line 25, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-roundedmplus1c {
+  font-family: "Rounded Mplus 1c";
+}
+
+/* line 27, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-hannari {
+  font-family: "Hannari";
+}
+
+/* line 29, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-kokoro {
+  font-family: "Kokoro";
+}
+
+/* line 31, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-sawarabimincho {
+  font-family: "Sawarabi Mincho";
+}
+
+/* line 33, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-sawarabigothic {
+  font-family: "Sawarabi Gothic";
+}
+
+/* line 35, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-nikukyu {
+  font-family: "Nikukyu";
+}
+
+/* line 37, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-nicomoji {
+  font-family: "Nico Moji";
+}
+
+/* line 39, /Users/ishiiryo/rpc_app/app/assets/stylesheets/application.scss */
+.wf-notosansjapanese {
+  font-family: "Noto Sans Japanese";
+}
