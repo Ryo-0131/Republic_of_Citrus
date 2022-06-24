@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class ItemsController < ApplicationController
   def index
-    @items = Item.all.page(params[:page]).per(10).order(item_name: "ASC")
-    @itemsindex = Item.all.order(item_name: "ASC")
+    @items = Item.all.page(params[:page]).per(10).order(item_name: 'ASC')
+    @itemsindex = Item.all.order(item_name: 'ASC')
     @reviews = Review.all
     @all_rating = '総合評価'
     @rating1 = '甘味評価'

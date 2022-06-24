@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # require 'csv'
 
 # csv = CSV.read('db/items.csv', encoding: 'UTF-16')
@@ -30,7 +32,6 @@ csv.each do |row|
   end
 end
 
-
 # csv = CSV.read('db/fixtures/line.csv' , encoding: 'Shift_JIS:UTF-8')
 # csv.each do |line|
 #   line_id = line[0]
@@ -41,4 +42,3 @@ end
 #     s.name = name
 #   end
 # end
-

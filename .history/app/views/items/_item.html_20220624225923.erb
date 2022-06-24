@@ -5,7 +5,12 @@
 <main>
 
 <div class="bg_pattern Cross"></div>
+ <%# <div class="itempage"> %>
  <div class="container py-4">
+ <%# <header class="pb-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+  </a>
+ </header> %>
   <div class="p-1 mb-1">
    <div class="itemtitle">
     <div class="jumbotron-fluid" >
@@ -16,11 +21,15 @@
    </div>     
   </div>
        
+
     <div class="row align-items-md-stretch">
      <div class="col-md-6">
       <div class="mainbox rounded-3">
         <div class="h-100 p-5 border rounded-3">
+ 
+          <%# <h2><%= item.item_name %>
           <%# <%= image_tag "#{item.image_url}" %> 
+
           <p> <img src=<%= item.image_url %> width="500" height="auto" ></p>
           <div class="box29">
            <div class="box-title">どんな品種？</div>
@@ -39,8 +48,8 @@
     <div class="membervoicebox">
     <h2><%= "共和国民の評価は？" %></h2>
     </div>
-    <%# chartkick.jsを利用 %>
      <%= column_chart  [
+     # [@all_rating, item.reviews.average(:all_rating).to_f.round(1)],
      ["甘い！", item.reviews.average(:rating1).to_f.round(1)],
      ["酸っぱい！", item.reviews.average(:rating2).to_f.round(1)],
      ["水分多い！", item.reviews.average(:rating3).to_f.round(1)],
@@ -57,7 +66,8 @@
    </div>
   </div>
  </div>
-        
+    
+    
     </div>
    </div>
  

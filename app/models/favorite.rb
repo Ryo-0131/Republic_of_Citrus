@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Favorite < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' }, { id: 2, name: 'アスミ（あすみ）' }, { id: 3, name: 'アマクサ（天草）' },
@@ -13,34 +15,9 @@ class Favorite < ActiveHash::Base
     { id: 31, name: 'バンペイユ（晩白柚）' }, { id: 32, name: 'ヒメコハル（媛小春）' }, { id: 33, name: 'ヒュウガナツ（日向夏）' },
     { id: 34, name: '仏手柑（ブッシュカン）' }, { id: 35, name: 'ベニマドカ（紅まどか）' }, { id: 36, name: 'ベニマドンナ（紅まどんな）' },
     { id: 37, name: 'ポンカン' }, { id: 38, name: 'ミハヤ（みはや）' }, { id: 39, name: 'モロオレンジ' },
-    { id: 40, name: 'ユゲヒョウカン（弓削瓢柑）' }, { id: 41, name: 'その他' }  ]
+    { id: 40, name: 'ユゲヒョウカン（弓削瓢柑）' }, { id: 41, name: 'その他' }
+  ]
 
   include ActiveHash::Associations
   has_many :items
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

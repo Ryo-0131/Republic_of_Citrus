@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -29,5 +31,4 @@ class ApplicationController < ActionController::Base
     @search_index_items = @search.result
     @check = params[:q]
   end
-
 end

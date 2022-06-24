@@ -39,7 +39,7 @@
     <div class="membervoicebox">
     <h2><%= "共和国民の評価は？" %></h2>
     </div>
-    <%# chartkick.jsを利用 %>
+    <%# chartkick.jsを利用。 %>
      <%= column_chart  [
      ["甘い！", item.reviews.average(:rating1).to_f.round(1)],
      ["酸っぱい！", item.reviews.average(:rating2).to_f.round(1)],
@@ -57,7 +57,8 @@
    </div>
   </div>
  </div>
-        
+    
+    
     </div>
    </div>
  
