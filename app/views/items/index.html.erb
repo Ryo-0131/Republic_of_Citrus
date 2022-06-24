@@ -22,19 +22,19 @@
  <div class="main-search-box">
   <div class="box28">
   <span class="box-title">検索から探す<i class="fas fa-search"></i></span>
-  <%= search_form_for @search, url: items_path do |f| %>
+  <%= search_form_for @search_index, url: items_path do |f| %>
   <%= f.text_field :item_name_cont, style: "width:90%;height:auto;margin-bottom:20px;border-color:#5cb525;", class: "form-control me-2", placeholder: 'かんきつ類を入力...'%>
   <button class="btn btn-outline-success" type="submit">Search</button>
   <% end %>
   <br>
 
   
- <% if @search_items.blank? %>
+ <% if @search_index_items.blank? %>
   <div>該当するかんきつ類はありません</div>
  <% end %>
 
- <% if @search.conditions.present? %>
-  <% @search_items.each do |item| %>
+ <% if @search_index.conditions.present? %>
+  <% @search_index_items.each do |item| %>
   <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a> 
   <% end %>
 <% end %>  <br>

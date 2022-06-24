@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_search
+  before_action :set_search_index
 
   private
 
@@ -22,4 +23,11 @@ class ApplicationController < ActionController::Base
     @search_items = @search.result
     @check = params[:q]
   end
+
+  def set_search_index
+    @search_index = Item.ransack(params[:q])
+    @search_index_items = @search.result
+    @check = params[:q]
+  end
+
 end
