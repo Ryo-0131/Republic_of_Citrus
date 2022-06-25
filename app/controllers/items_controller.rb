@@ -20,8 +20,8 @@ class ItemsController < ApplicationController
     @review = Review.new
     @reviews = @item.reviews.includes(:user)
     gon.item = @item
-    gon.review = @review
-    gon.all = @item.reviews.average(:all_rating).to_f.round(1)
+    # gon.review = @review
+    # gon.all = @item.reviews.average(:all_rating).to_f.round(1)
     gon.rate1 = @item.reviews.average(:rating1).to_f.round(1)
     gon.rate2 = @item.reviews.average(:rating2).to_f.round(1)
     gon.rate3 = @item.reviews.average(:rating3).to_f.round(1)
@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
     @rating3 = '水分評価'
     @rating4 = '食べやすさ評価'
 
-    gon.allave = @reviews.average(:all_rating)
+    # gon.allave = @reviews.average(:all_rating)
   end
 
   # ランキング機能はなしとする

@@ -3,12 +3,14 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
 
-  def show; end
+  def show
+   end
 
   def create
+    @item = Item.find(params[:item_id])
     @review = Review.create(review_params)
     if @review.save
-      redirect_to root_path
+      redirect_to item_path(@item.id)
     else
       @item = @review.item
       @reviews = @item.reviews
@@ -27,7 +29,7 @@ class ReviewsController < ApplicationController
     @item = Item.find(params[:item_id])
     @review = Review.find(params[:id])
     if @review.update(review_params)
-      redirect_to root_path
+      redirect_to item_path(@item.id)
     else
       render :edit
     end
