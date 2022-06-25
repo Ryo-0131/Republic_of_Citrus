@@ -108,7 +108,7 @@ belongs_to :item
 
 
 # 参照元サイト
-果物ナビ
-旬の食材百科事典
-マイナビ農業
-「みかんな図鑑」伊藤農園
+[果物ナビ]([url](https://www.kudamononavi.com/))
+[旬の食材百科事典]([url](https://foodslink.jp/syokuzaihyakka/))
+[マイナビ農業]([url](https://agri.mynavi.jp/2020_01_24_103980/))
+[「みかんな図鑑」伊藤農園]([url](https://www.ito-noen.com/dictionary/))
