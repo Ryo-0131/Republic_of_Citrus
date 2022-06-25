@@ -4,7 +4,6 @@
 <body>
 <main>
 
-<div class="bg_pattern Cross"></div>
  <div class="container py-4">
   <div class="p-1 mb-1">
    <div class="itemtitle">
@@ -26,6 +25,7 @@
            <div class="box-title">どんな品種？</div>
             <p><%= item.description %></p>   
           </div>
+          <%# お気に入り！機能を実装 %>
         <div id="likes_buttons_<%= item.id %>">
        <%= render partial: 'likes/like', locals: {item: item} %>
       </div>

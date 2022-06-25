@@ -33,7 +33,7 @@
 </ul>
  <form class="d-flex">
 
-   
+   <%# ヘッダーから一発で検索結果が出るように実装 %>
   <%= search_form_for @search, url: items_path do |f| %>
   <%= f.text_field :item_name_cont, class: "form-control me-2", placeholder: 'かんきつ類を入力...'%>
   <button class="btn btn-outline-success" type="submit">Search</button>

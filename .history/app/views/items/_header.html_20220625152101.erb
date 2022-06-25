@@ -1,0 +1,59 @@
+<%# ログインの有無で表示が変わるように分岐%>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-warning" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">かんきつ共和国🍊</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+<div class="collapse navbar-collapse" id="navbarCollapse">
+
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+ <% if user_signed_in? %>
+  <li class="nav-item">
+   <a class="nav-link" href= <%= user_path(id: current_user.id) %>><%=current_user.nickname%>さんのマイページ</a>
+  </li>
+  <li class="nav-item">
+   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+  </li>
+ 
+
+ <% else %>
+
+ <li class="nav-item">
+  <a class="nav-link" href= <%= new_user_session_path %>>ログイン</a>
+ </li>
+
+ <li class="nav-item">
+  <a class="nav-link" href= <%= new_user_registration_path %>>新規登録</a>
+ </li>
+
+ <% end %>
+</ul>
+ <form class="d-flex">
+
+   <%# ヘッダーから一発で検索結果が出るように実装 %>
+  <%= search_form_for @search, url: items_path do |f| %>
+  <%= f.text_field :item_name_cont, class: "form-control me-2", placeholder: 'かんきつ類を入力...'%>
+  <button class="btn btn-outline-success" type="submit">Search</button>
+  <% end %>
+
+ <% if @search_items.blank? %>
+ <i class="fas fa-arrow-alt-circle-right fa-2x"></i>
+  <div>該当するかんきつ類はありません</div>
+ <% end %>
+
+ <% if @search.conditions.present? %>
+  <% @search_items.each do |item| %>
+  <i class="fas fa-arrow-alt-circle-right fa-2x searcharrow"></i>
+  <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a> 
+  <% end %>
+<% end %>  <br>
+ </form>
+
+</div>
+</div>
+</nav>
+
+

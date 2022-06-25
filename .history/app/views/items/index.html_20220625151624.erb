@@ -1,0 +1,74 @@
+<!doctype html>
+<%= render partial: 'header' %>
+
+<body>
+ <main>
+ <div class="bg_pattern Cross"></div>
+<div class="jumbotron jumbotron-fluid" >
+ <div class="container ">
+  <div class="textcolor">
+   <h1 class="display-4">かんきつ共和国🍊</h1>
+    <p class="leadcolor">
+    100種類以上もあると言われる果物”かんきつ”。種類が豊富すぎて違いがよくわからない方も多いのではないでしょうか。
+    ここ『かんきつ共和国』では、様々なかんきつ類への「生の声」が集まっており、いつでも最新かつリアルな情報が入手できます。
+    日本が誇る魅力的なかんきつ類を、皆で盛り上げていきましょう！<br>
+    いざ、かんきつ共和国へ！
+    </p>
+  </div>
+ </div>
+</div>
+    
+<%# <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> %>
+<%# 検索機能【検索から探す】＆【一覧から探す】 %>
+ <div class="main-search-box">
+  <div class="box28">
+  <span class="box-title">検索から探す<i class="fas fa-search"></i></span>
+  <%= search_form_for @search_index, url: items_path do |f| %>
+  <%= f.text_field :item_name_cont, style: "width:90%;height:auto;margin-bottom:20px;border-color:#5cb525;", class: "form-control me-2", placeholder: 'かんきつ類を入力...'%>
+  <button class="btn btn-outline-success" type="submit">Search</button>
+  <% end %>
+  <br>
+ <%# 検索がitem_nameに該当しない場合は「該当ありません」を表示する %>
+ <% if @search_index_items.blank? %>
+  <div>該当するかんきつ類はありません</div>
+ <% end %>
+
+ <% if @search_index.conditions.present? %>
+  <% @search_index_items.each do |item| %>
+  <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a> 
+  <% end %>
+<% end %>  <br>
+
+</div>
+
+ <%# 五十音順はcontroller側で定義（ASC） %>
+ <div class="box28a">
+    <span class="box-title">一覧から探す(五十音順)<i class="fas fa-search"></i></span>
+   <% @itemsindex.each do |item| %>
+   <a class="btn btn-radius-solid2" href= <%= item_path(item.id) %>><%= item.item_name %></a>  
+  <% end %>
+ <br>
+
+</div>
+</div>
+
+ <%= paginate @items %>
+
+ </main>
+
+</body>
+
+
+<%= render partial: 'item', collection: @items %>
+
+<div class="box28s">
+    <span class="box-title">参照元サイト</span>
+    <ul>
+  <li><a href= "https://www.kudamononavi.com">果物ナビ</a></li>
+  <li><a href= "https://foodslink.jp/syokuzaihyakka/">旬の食材百科事典</a></li>
+    <li><a href= "https://agri.mynavi.jp/2020_01_24_103980/">マイナビ農業</a></li>
+    <li><a href= "https://www.ito-noen.com/dictionary/">「みかんな図鑑」伊藤農園</a></li>
+  </ul>
+</div>
+
+ <%= paginate @items %>

@@ -3,6 +3,7 @@
 
 <body>
  <main>
+ <div class="bg_pattern Cross"></div>
 <div class="jumbotron jumbotron-fluid" >
  <div class="container ">
   <div class="textcolor">
@@ -16,7 +17,7 @@
   </div>
  </div>
 </div>
-    
+
 <%# <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> %>
 <%# 検索機能【検索から探す】＆【一覧から探す】 %>
  <div class="main-search-box">
@@ -51,10 +52,10 @@
 </div>
 </div>
 
+ <%# ページネーションで10個リミット %>
  <%= paginate @items %>
 
  </main>
-
 </body>
 
 
@@ -63,10 +64,10 @@
 <div class="box28s">
     <span class="box-title">参照元サイト</span>
     <ul>
-  <li><a href= "https://www.kudamononavi.com">果物ナビ</a></li>
-  <li><a href= "https://foodslink.jp/syokuzaihyakka/">旬の食材百科事典</a></li>
-    <li><a href= "https://agri.mynavi.jp/2020_01_24_103980/">マイナビ農業</a></li>
-    <li><a href= "https://www.ito-noen.com/dictionary/">「みかんな図鑑」伊藤農園</a></li>
+  <li><a href= "https://www.kudamononavi.com" target="_blank">果物ナビ</a></li>
+  <li><a href= "https://foodslink.jp/syokuzaihyakka/" target="_blank">旬の食材百科事典</a></li>
+    <li><a href= "https://agri.mynavi.jp/2020_01_24_103980/" target="_blank">マイナビ農業</a></li>
+    <li><a href= "https://www.ito-noen.com/dictionary/" target="_blank">「みかんな図鑑」伊藤農園</a></li>
   </ul>
 </div>
 

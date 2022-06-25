@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+ <% if current_user.liked_by?(item.id) %>
+   <td>
+   <%# "link_to (省略) do ~~~endと記述すると「~~~」の部分をリンク化することが出来る" %>
+    <%# お気に入り！を消す場合 %>
+   <%= link_to destroy_like_path(item), method: :DELETE, remote: true do %>
+   <i class="fa fa-heart unlike-btn">お気に入り！</i>
+     <% end %>
+      </td>
+ <% else %>
+   <td>
+    <%# お気に入り！をつける場合 %>
+   <%= link_to create_like_path(item), method: :POST, remote: true do %>
+      <i class="fa fa-heart like-btn">お気に入り！</i>
+         <% end %> 
+    </td>
+ <% end %>
+<% end %>
+

@@ -29,6 +29,9 @@
 
 また、ブログや農協のサイトで、比較記事は多数存在するが、記載されているのは投稿者の感じた味と美味しい季節くらいだけで「食べやすさ」「口コミ」というユーザー観点の項目はほぼ無いことにも気づき、その点にフォーカスして作ろうと思った。
 
+![](https://file%2B.vscode-resource.vscode-cdn.net/Users/ishiiryo/Downloads/%E8%AA%B2%E9%A1%8C%E8%A7%A3%E6%B1%BA.jpg?version%3D1656139504399)
+
+
 # 洗い出した要件
 [要件定義シート](https://docs.google.com/spreadsheets/d/1ZCJzbP8E-JMhBnML81W99TWb8m7_5vvOsB21fUtznfY/edit?usp=sharing)
 
@@ -38,7 +41,7 @@
 
 # 画面遷移図
 
-[![Image from Gyazo](https://i.gyazo.com/a289a803ae6245b5435eb1c06ed63d03.png)](https://gyazo.com/a289a803ae6245b5435eb1c06ed63d03)
+[![Image from Gyazo](https://i.gyazo.com/b7a6c625349d6bf1643db33b49a18a9b.png)](https://gyazo.com/b7a6c625349d6bf1643db33b49a18a9b)
 
 # テーブル設計
 
