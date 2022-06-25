@@ -14,7 +14,6 @@ var myChart = new Chart(ctx, {
     labels: ["甘味評価", "酸味評価", "水分評価", "食べやすさ評価"],
     datasets: 
     [
-
         {
         label:  gon.item.item_name ,
         backgroundColor: 'rgba(255,140,0,0.2)',
@@ -22,7 +21,6 @@ var myChart = new Chart(ctx, {
         data: [gon.rate1, gon.rate2, gon.rate3, gon.rate4]
         },
     ]
-
   },
   options: {
       scale: {
@@ -30,14 +28,11 @@ var myChart = new Chart(ctx, {
               suggestedMin: 0,
               suggestedMax: 5
           }
-      }
-      
+      }      
   }
-
 });
    
 </script> 
-
 
 </div>
 

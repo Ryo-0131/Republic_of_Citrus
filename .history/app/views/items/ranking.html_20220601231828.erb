@@ -1,0 +1,63 @@
+# 一旦なしで
+
+<%= @all  %>
+
+<% @items.each do |t| %>
+ </div> 
+ <div class="avg"><%= t.reviews.average(:all_rating)  %></div>
+ <% end %>
+
+ <canvas class="myCharts"></canvas>
+  <script>
+    ctx = document.getElementsByClassName("myCharts");
+    var avg = document.getElementsByClassName("avg");
+    myChart = new Chart(ctx, {
+       type: "horizontalBar",
+      data: {
+            labels: <%== @itemname %>, 
+            datasets: [      
+ 
+                {
+                        data: gon.rateavg, // これができない。
+                    backgroundColor: ["red", "yellow", "green", "blue", "purple"]
+                }
+
+                    ]
+        },
+options: {
+            responsive: false,
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "総合ランキング"
+            },
+            legend: {
+                display: false,
+            },                
+            scales: {
+                xAxes: [ // Ｘ軸のオプション
+                    {
+                        ticks: {
+                            min: 0
+                        }
+                    }
+                ],
+                yAxes: [                   //
+                    {                      //
+                        ticks: {           //
+                            reverse: true  // 行の反転をさせたいのですが無視されています
+                        }                  //
+                    }                      //
+                ]                          //
+            }
+
+        }
+    });
+
+</script>
+ </div>
+
+
+
+
+
