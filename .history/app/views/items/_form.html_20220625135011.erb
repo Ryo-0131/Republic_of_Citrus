@@ -1,0 +1,93 @@
+<%# 入力フォーム＆レビュー一覧を表示 %>
+
+
+<div class="bg_pattern Cross"></div>
+
+
+ <div class="reviewform">    
+  <div class="reviewinfo">
+   <div class="reviewinfobox">
+    <h2><%= item.item_name %></h2>
+    <p> <img src=<%= item.image_url %> ></p>
+    <%=@all_rating %>：<%= @reviews.average(:all_rating).to_f.round(1) %>
+    <div class="average-review-rating" data-score=<%= @reviews.average(:all_rating) %>></div>
+   </div>
+  </div>
+          
+  <div class="reviewbox rounded-3 border">
+   <h2>🍊レビューフォーム🍊</h2>
+    <hr class="style3">
+
+    <% if user_signed_in? %>
+     <%= form_with model: @review, url: item_reviews_path(@item.id), local: true do |f|%> 
+      <div class="field">
+       <i class="fas fa-edit"></i>
+       <%= f.label :comment, " レビューコメント" %><br/>
+       <%= f.text_area :comment,  style: "width:70%;height:90px", rows: 4, cols: 60, class: "m-form-text", placeholder: "ご自由に記載ください", id:"comment_content" %><br/>
+
+<div class="table-size2">
+    <table class="table table-warning table-hover table-bordered">
+        <tbody>
+         <tr> 
+            <th class="table__col1">総合評価：<br>不味い〜美味しい</th>
+            <td class="table__col1">  <div class="field" id="star"><% f.label :all_rating %></div></td>
+          </tr>
+          <tr>
+          <tr>
+            <th class="table__col1">甘味評価：<br>甘い〜とても甘い</th>
+            <td class="table__col1">  <div class="field" id="star1"><% f.label :rating1 %></div></td>
+          </tr>
+          <tr>   
+            <th class="table__col1">酸味評価：<br>酸っぱい〜とても酸っぱい</th>
+            <td class="table__col1">  <div class="field" id="star2"><% f.label :rating2 %></div></td>
+          </tr>
+          <tr>
+            <th class="table__col1">水分評価：<br>水分が少ない〜多い</th>
+            <td class="table__col1">  <div class="field" id="star3"><% f.label :rating3 %></div></td>
+          </tr>
+          <tr>
+            <th class="table__col1">食べやすさ評価：<br>食べにくい〜食べやすい</th>
+            <td class="table__col1">  <div class="field" id="star4"><% f.label :rating4 %></div></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="actions"><br/>
+
+<div class="sendform">
+ <%= button_tag :type => "submit", :class =>"btn btn--red btn--radius btn--cubic" do %>
+  <i class="fas fa-angle-right fa-position-right"></i>送信する!
+
+<% end %>
+</div>
+
+<% end %>
+
+<%= render partial: "items/form_rate", locals: { item: @item } %>
+
+<%# ログインしていないときはログインフォームへ促す %>
+<% else %>
+<br>
+<i class="fas fa-lightbulb bulb fa-2x"></i> ログインするとレビューの書き込みが可能になります<p>
+<p>
+<i class="fas fa-sign-in-alt"></i> ログインフォームはこちらから!
+<div class="form-login">
+<a class="btn btn--red btn--radius btn--cubic" href= <%= new_user_session_path  %>>ログイン</a>
+</div>
+<br><i class="fas fa-sign-in-alt"></i> 登録がまだの方はこちらから!
+<div class="form-login">
+<a class="btn btn--red btn--radius btn--cubic" href= <%= new_user_registration_path  %>>新規登録</a>
+</div>
+
+<% end %>
+
+   </div>
+  </div>
+ </div>
+</div>
+
+<hr class="style1">
+
+
+

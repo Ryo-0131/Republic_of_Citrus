@@ -1,0 +1,103 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.table-size {
+
+}
+
+.table-size2 {
+  width: 75%;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+a.btn--radius {
+   border-radius: 100vh;
+}
+
+a.btn-radius-solid {
+  background: #f1e767;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
+  background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%);
+  background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
+}
+
+a.btn-radius-solid:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
+  background: -webkit-linear-gradient(bottom, #f1e767 0%, #feb645 100%);
+  background: linear-gradient(to top, #f1e767 0%, #feb645 100%);
+}
+
+.btn--red,
+a.btn--red {
+  color: #fff !important;
+  background-color: #eb6100 !important;
+}
+
+.btn--red:hover,
+a.btn--red:hover {
+  color: #fff !important;
+  background: #ff9c07 !important;
+}
+
+a.btn--red.btn--cubic {
+  border-bottom: 5px solid #9f000c;
+}
+
+a.btn--red.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #9f000c;
+}
+
+.fa-position-right {
+  position: absolute;
+  top: calc(50% - .5em);
+  right: 1rem;
+} 
+
+
+.box18{
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #ffcb8a;
+  border-radius: 3px 0 3px 0;
+
+  margin:20px;
+  text-align: center;
+}
+.box18:before,.box18:after
+{
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px #ffcb8a;
+  border-radius: 50%;
+}
+.box18:after {
+  top:-12px;
+  left:-12px;
+}
+.box18:before {
+  bottom:-12px;
+  right:-12px;
+}
+.box18 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.userpage_wrapper{
+  display: flex;
+  justify-content: center;
+}
